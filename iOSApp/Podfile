@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'iOSDCJP2016' do
+  pod 'APIKit', '~> 2.0'
+  pod 'Unbox', '~> 1.7'
+  pod 'NJKScrollFullScreen', '~> 0.2'
+end
+

@@ -1,0 +1,19 @@
+PODS:
+  - APIKit (2.0.1):
+    - Result (~> 2.0.0)
+  - NJKScrollFullScreen (0.2.6)
+  - Result (2.0.0)
+  - Unbox (1.7)
+
+DEPENDENCIES:
+  - APIKit (~> 2.0)
+  - NJKScrollFullScreen (~> 0.2)
+  - Unbox (~> 1.7)
+
+SPEC CHECKSUMS:
+  APIKit: 7b61788273235bab213477b22f1897872047da10
+  NJKScrollFullScreen: 13e370f935da7385b92779644b31df8d83a91447
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  Unbox: 576f1470399f84c411ced0a8ce4c4caaeb8acf1d
+
+COCOAPODS: 0.39.0
