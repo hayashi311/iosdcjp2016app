@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import APIKit
 
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let r = WebAPI.SpeakersRequest()
+        APIKit.Session.sendRequest(r) {
+            result in
+            switch result {
+            case let .Success(response):
+                print(response)
+            case let .Failure(e):
+                print(e)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

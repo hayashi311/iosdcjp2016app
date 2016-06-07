@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		539DABBC4F41B6C8A13C6BA5 /* Pods_iOSDCJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BD65453FC4F4E15C4CB6AA /* Pods_iOSDCJP2016.framework */; };
+		DA5F184B1D059AA30058723E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F184A1D059AA30058723E /* API.swift */; };
 		DAF595711D042C7B005FBB63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595701D042C7B005FBB63 /* AppDelegate.swift */; };
 		DAF595731D042C7B005FBB63 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595721D042C7B005FBB63 /* FirstViewController.swift */; };
 		DAF595751D042C7B005FBB63 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595741D042C7B005FBB63 /* SecondViewController.swift */; };
@@ -20,6 +21,7 @@
 		3C6EB386CEF3558251409046 /* Pods-iOSDCJP2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDCJP2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDCJP2016/Pods-iOSDCJP2016.release.xcconfig"; sourceTree = "<group>"; };
 		920A09655047443BDD6CED4B /* Pods-iOSDCJP2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDCJP2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDCJP2016/Pods-iOSDCJP2016.debug.xcconfig"; sourceTree = "<group>"; };
 		D6BD65453FC4F4E15C4CB6AA /* Pods_iOSDCJP2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDCJP2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5F184A1D059AA30058723E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DAF5956D1D042C7B005FBB63 /* iOSDCJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDCJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF595701D042C7B005FBB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF595721D042C7B005FBB63 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA5F18491D059A7C0058723E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F184A1D059AA30058723E /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		DAF595641D042C7B005FBB63 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		DAF5956F1D042C7B005FBB63 /* iOSDCJP2016 */ = {
 			isa = PBXGroup;
 			children = (
+				DA5F18491D059A7C0058723E /* API */,
 				DAF595701D042C7B005FBB63 /* AppDelegate.swift */,
 				DAF595721D042C7B005FBB63 /* FirstViewController.swift */,
 				DAF595741D042C7B005FBB63 /* SecondViewController.swift */,
@@ -215,6 +226,7 @@
 			files = (
 				DAF595751D042C7B005FBB63 /* SecondViewController.swift in Sources */,
 				DAF595711D042C7B005FBB63 /* AppDelegate.swift in Sources */,
+				DA5F184B1D059AA30058723E /* API.swift in Sources */,
 				DAF595731D042C7B005FBB63 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
