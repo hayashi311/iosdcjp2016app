@@ -9,9 +9,17 @@
 /* Begin PBXBuildFile section */
 		539DABBC4F41B6C8A13C6BA5 /* Pods_iOSDCJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BD65453FC4F4E15C4CB6AA /* Pods_iOSDCJP2016.framework */; };
 		DA5F184B1D059AA30058723E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F184A1D059AA30058723E /* API.swift */; };
+		DA7440401D06E5E600433C9F /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74403F1D06E5E600433C9F /* SpeakerTableViewCell.swift */; };
+		DA7440421D06E67500433C9F /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7440411D06E67500433C9F /* SessionTableViewCell.xib */; };
+		DA7440471D08672B00433C9F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7440461D08672B00433C9F /* Speaker.swift */; };
+		DA7440491D08673800433C9F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7440481D08673800433C9F /* Session.swift */; };
+		DA74404D1D086C3B00433C9F /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */; };
+		DA74404F1D087D3300433C9F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74404E1D087D3300433C9F /* DataSource.swift */; };
+		DACEF6651D09889700865293 /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */; };
+		DACEF6671D09ADCE00865293 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6661D09ADCE00865293 /* Style.swift */; };
 		DAF595711D042C7B005FBB63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595701D042C7B005FBB63 /* AppDelegate.swift */; };
-		DAF595731D042C7B005FBB63 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595721D042C7B005FBB63 /* FirstViewController.swift */; };
-		DAF595751D042C7B005FBB63 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595741D042C7B005FBB63 /* SecondViewController.swift */; };
+		DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595721D042C7B005FBB63 /* SessionsViewController.swift */; };
+		DAF595751D042C7B005FBB63 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595741D042C7B005FBB63 /* SpeakersViewController.swift */; };
 		DAF595781D042C7B005FBB63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF595761D042C7B005FBB63 /* Main.storyboard */; };
 		DAF5957A1D042C7B005FBB63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF595791D042C7B005FBB63 /* Assets.xcassets */; };
 		DAF5957D1D042C7B005FBB63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF5957B1D042C7B005FBB63 /* LaunchScreen.storyboard */; };
@@ -22,10 +30,18 @@
 		920A09655047443BDD6CED4B /* Pods-iOSDCJP2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDCJP2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDCJP2016/Pods-iOSDCJP2016.debug.xcconfig"; sourceTree = "<group>"; };
 		D6BD65453FC4F4E15C4CB6AA /* Pods_iOSDCJP2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDCJP2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F184A1D059AA30058723E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DA74403F1D06E5E600433C9F /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		DA7440411D06E67500433C9F /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
+		DA7440461D08672B00433C9F /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		DA7440481D08673800433C9F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		DA74404E1D087D3300433C9F /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
+		DACEF6661D09ADCE00865293 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		DAF5956D1D042C7B005FBB63 /* iOSDCJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDCJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF595701D042C7B005FBB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAF595721D042C7B005FBB63 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DAF595741D042C7B005FBB63 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DAF595721D042C7B005FBB63 /* SessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		DAF595741D042C7B005FBB63 /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		DAF595771D042C7B005FBB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF595791D042C7B005FBB63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF5957C1D042C7B005FBB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +85,26 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		DA74403E1D06E5C300433C9F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA74403F1D06E5E600433C9F /* SpeakerTableViewCell.swift */,
+				DA7440411D06E67500433C9F /* SessionTableViewCell.xib */,
+				DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */,
+				DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA7440451D08671600433C9F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DA7440461D08672B00433C9F /* Speaker.swift */,
+				DA7440481D08673800433C9F /* Session.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		DAF595641D042C7B005FBB63 = {
 			isa = PBXGroup;
 			children = (
@@ -90,14 +126,18 @@
 		DAF5956F1D042C7B005FBB63 /* iOSDCJP2016 */ = {
 			isa = PBXGroup;
 			children = (
+				DA7440451D08671600433C9F /* Entities */,
+				DA74403E1D06E5C300433C9F /* Cells */,
 				DA5F18491D059A7C0058723E /* API */,
 				DAF595701D042C7B005FBB63 /* AppDelegate.swift */,
-				DAF595721D042C7B005FBB63 /* FirstViewController.swift */,
-				DAF595741D042C7B005FBB63 /* SecondViewController.swift */,
+				DAF595721D042C7B005FBB63 /* SessionsViewController.swift */,
+				DAF595741D042C7B005FBB63 /* SpeakersViewController.swift */,
 				DAF595761D042C7B005FBB63 /* Main.storyboard */,
 				DAF595791D042C7B005FBB63 /* Assets.xcassets */,
 				DAF5957B1D042C7B005FBB63 /* LaunchScreen.storyboard */,
 				DAF5957E1D042C7B005FBB63 /* Info.plist */,
+				DA74404E1D087D3300433C9F /* DataSource.swift */,
+				DACEF6661D09ADCE00865293 /* Style.swift */,
 			);
 			path = iOSDCJP2016;
 			sourceTree = "<group>";
@@ -163,9 +203,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACEF6651D09889700865293 /* SpeakerTableViewCell.xib in Resources */,
 				DAF5957D1D042C7B005FBB63 /* LaunchScreen.storyboard in Resources */,
 				DAF5957A1D042C7B005FBB63 /* Assets.xcassets in Resources */,
 				DAF595781D042C7B005FBB63 /* Main.storyboard in Resources */,
+				DA7440421D06E67500433C9F /* SessionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF595751D042C7B005FBB63 /* SecondViewController.swift in Sources */,
+				DA74404D1D086C3B00433C9F /* SessionTableViewCell.swift in Sources */,
+				DAF595751D042C7B005FBB63 /* SpeakersViewController.swift in Sources */,
 				DAF595711D042C7B005FBB63 /* AppDelegate.swift in Sources */,
+				DA7440401D06E5E600433C9F /* SpeakerTableViewCell.swift in Sources */,
+				DA7440491D08673800433C9F /* Session.swift in Sources */,
+				DA7440471D08672B00433C9F /* Speaker.swift in Sources */,
 				DA5F184B1D059AA30058723E /* API.swift in Sources */,
-				DAF595731D042C7B005FBB63 /* FirstViewController.swift in Sources */,
+				DA74404F1D087D3300433C9F /* DataSource.swift in Sources */,
+				DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */,
+				DACEF6671D09ADCE00865293 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

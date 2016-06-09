@@ -57,20 +57,6 @@ final class WebAPI {
 }
 
 
-struct Session: Unboxable {
-    let title: String
-    let description: String
-    let from: String
-    let to: String
-    
-    init(unboxer: Unboxer) {
-        title = unboxer.unbox("title")
-        description = unboxer.unbox("description")
-        from = unboxer.unbox("from")
-        to = unboxer.unbox("to")
-    }
-}
-
 struct SessionsResponse: Unboxable  {
     let sessions: [Session]
     
@@ -79,19 +65,6 @@ struct SessionsResponse: Unboxable  {
     }
 }
 
-struct Speaker: Unboxable {
-    let identifier: Int
-    let name: String
-    let twitterAccount: String
-    let image: String
-    
-    init(unboxer: Unboxer) {
-        identifier = unboxer.unbox("id")
-        name = unboxer.unbox("name")
-        twitterAccount = unboxer.unbox("twitter_account")
-        image = unboxer.unbox("image")
-    }
-}
 
 struct SpeakersResponse: Unboxable  {
     let speakers: [Speaker]
