@@ -5,6 +5,7 @@ import yaml
 import json
 import datetime
 import glob
+import itertools
 
 app = Flask(__name__)
 
@@ -26,12 +27,26 @@ def speakers():
     return jsonify(speakers=data)
 
 
+def group_by_time(paths):
+    tires = itertools.groupby(sorted(paths),
+                             key=lambda p: path.basename(p).split("-")[0])
+    groups = []
+    for k, g in tires:
+        print(k, g)
+        time = k.replace("_", ":")
+        s = list(map(lambda path: yaml.load(open(path).read()), g))
+        yield {"time": time, "sessions": s}
+
+    return groups
+
+
 @app.route('/sessions')
 def sessions():
     yaml_path = path.join(base_path, "source", "sessions", "*.yaml")
     match = glob.glob(yaml_path)
-    data = list(map(lambda path: yaml.load(open(path).read()), match))
-    return jsonify(sessions=data)
+    # sorted(match)
+    # data = list(map(lambda path: yaml.load(open(path).read()), match))
+    return jsonify(schedule=list(group_by_time(match)))
 
 
 @app.route('/<category>/<entity>')

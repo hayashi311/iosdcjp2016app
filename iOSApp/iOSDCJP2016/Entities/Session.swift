@@ -22,3 +22,13 @@ struct Session: Unboxable {
         room = unboxer.unbox("room")
     }
 }
+
+struct SessionGroup: Unboxable {
+    let time: String
+    let sessions: [Session]
+    
+    init(unboxer: Unboxer) {
+        time = unboxer.unbox("time")
+        sessions = unboxer.unbox("sessions")
+    }
+}

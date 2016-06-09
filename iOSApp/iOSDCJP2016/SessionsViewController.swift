@@ -34,10 +34,10 @@ class SessionsViewController: UIViewController {
             guard let s = self else { return }
             switch result {
             case let .Success(response):
-                s.dataSource.entities = response.sessions.map {
-                    AnyEntity.Session(session: $0)
-                }
-                s.tableView.reloadData()
+//                s.dataSource.entities = response.sessions.map {
+//                    AnyEntity.Session(session: $0)
+//                }
+//                s.tableView.reloadData()
                 print(response)
             case let .Failure(e):
                 print(e)

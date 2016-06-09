@@ -58,10 +58,10 @@ final class WebAPI {
 
 
 struct SessionsResponse: Unboxable  {
-    let sessions: [Session]
+    let schedule: [SessionGroup]
     
     init(unboxer: Unboxer) {
-        sessions = unboxer.unbox("sessions")
+        schedule = unboxer.unbox("schedule")
     }
 }
 
