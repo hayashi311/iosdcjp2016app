@@ -27,43 +27,28 @@ enum AnyEntity {
     }
 }
 
-protocol EntityCellMapper: class, UITableViewDataSource {
+protocol EntityProvider: class {
     func entityAtIndexPath(index: NSIndexPath) -> AnyEntity?
     func numberOfSections() -> Int
     func numberOfEntitiesInSection(section: Int) -> Int
 }
 
-class DataSource: NSObject, UITableViewDataSource {
+class EntityCellMapper: NSObject, UITableViewDataSource {
     
     static let cellIds = ["SpeakerTableViewCell", "SessionTableViewCell"]
     
-    var entities: [AnyEntity] = []
+    weak var entityProvider: EntityProvider? = nil
     
-    func numberOfEntitiesInSection(section: Int) -> Int {
-        return entities.count
-    }
-    
-    func entityAtIndexPath(index: NSIndexPath) -> AnyEntity? {
-        guard entities.indices.contains(index.row) else {
-            return nil
-        }
-        return entities[index.row]
-    }
-
-    func numberOfSections() -> Int {
-        return 1
-    }
-
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return numberOfSections()
+        return entityProvider?.numberOfSections() ?? 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfEntitiesInSection(section)
+        return entityProvider?.numberOfEntitiesInSection(section) ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let entity = entityAtIndexPath(indexPath),
+        guard let entity = entityProvider?.entityAtIndexPath(indexPath),
               let cell = tableView.dequeueReusableCellWithIdentifier(entity.cellId) else {
                 return UITableViewCell()
         }

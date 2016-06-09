@@ -9,20 +9,22 @@
 import UIKit
 import APIKit
 
-class SpeakersViewController: UIViewController {
+class SpeakersViewController: UIViewController, EntityProvider {
 
-    let dataSource = DataSource()
+    let dataSource = EntityCellMapper()
+    var speakers: [Speaker] = []
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DataSource.cellIds.forEach {
+        EntityCellMapper.cellIds.forEach {
             tableView.registerNib(UINib(nibName: $0, bundle: nil),
                 forCellReuseIdentifier: $0)
         }
 
+        dataSource.entityProvider = self
         tableView.dataSource = dataSource
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -34,15 +36,26 @@ class SpeakersViewController: UIViewController {
             guard let s = self else { return }
             switch result {
             case let .Success(response):
-                s.dataSource.entities = response.speakers.map {
-                    AnyEntity.Speaker(speaker: $0)
-                }
+                s.speakers = response.speakers
                 s.tableView.reloadData()
                 print(response)
             case let .Failure(e):
                 print(e)
             }
         }
+    }
+    
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfEntitiesInSection(section: Int) -> Int {
+        return speakers.count
+    }
+    
+    func entityAtIndexPath(index: NSIndexPath) -> AnyEntity? {
+        guard speakers.indices.contains(index.row) else { return nil }
+        return .Speaker(speaker: speakers[index.row])
     }
 }
 
