@@ -8,7 +8,6 @@ import glob
 import itertools
 
 app = Flask(__name__)
-
 base_path = path.dirname(path.dirname(path.abspath(__file__)))
 
 
@@ -43,8 +42,6 @@ def group_by_time(paths):
 def sessions():
     yaml_path = path.join(base_path, "source", "sessions", "*.yaml")
     match = glob.glob(yaml_path)
-    # sorted(match)
-    # data = list(map(lambda path: yaml.load(open(path).read()), match))
     return jsonify(schedule=list(group_by_time(match)))
 
 

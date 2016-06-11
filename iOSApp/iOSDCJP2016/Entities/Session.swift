@@ -28,7 +28,7 @@ struct SessionGroup: Unboxable {
     let sessions: [Session]
     
     init(unboxer: Unboxer) {
-        time = unboxer.unbox("time")
+        time = unboxer.unbox("start_at")
         sessions = unboxer.unbox("sessions")
     }
 }

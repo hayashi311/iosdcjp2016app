@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SessionSectionHeaderView" customModule="iOSDCJP2016" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SectionHeaderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fLS-xF-5Ab">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-5a-lEV">
+                    <rect key="frame" x="15" y="5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bUA-5a-lEV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="0nK-fg-6me"/>
+                <constraint firstAttribute="trailing" secondItem="fLS-xF-5Ab" secondAttribute="trailing" id="BFF-ym-ziI"/>
+                <constraint firstItem="fLS-xF-5Ab" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Oh1-0x-Z4P"/>
+                <constraint firstAttribute="bottom" secondItem="fLS-xF-5Ab" secondAttribute="bottom" id="WS3-0K-c0p"/>
+                <constraint firstItem="fLS-xF-5Ab" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dHD-t5-E2Q"/>
+                <constraint firstItem="bUA-5a-lEV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="j4U-fU-0hn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="bUA-5a-lEV" id="jkv-5G-Mtb"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="SectionHeaderBackground" width="48" height="32"/>
+    </resources>
+</document>

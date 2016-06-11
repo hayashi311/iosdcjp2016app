@@ -24,11 +24,10 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1298">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
-                <marker date="1465651340000" expanded="true" signature="1196:1288" ph="..." />
               </folding>
             </state>
           </provider>
@@ -402,7 +401,6 @@
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
-            <marker date="1465651340000" expanded="true" signature="1196:1288" ph="..." />
           </folding>
         </state>
       </provider>
@@ -502,11 +500,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
-            <marker date="1465651340000" expanded="true" signature="1196:1288" ph="..." />
           </folding>
         </state>
       </provider>

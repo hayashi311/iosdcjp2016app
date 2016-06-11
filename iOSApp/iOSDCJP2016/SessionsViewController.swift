@@ -9,7 +9,7 @@
 import UIKit
 import APIKit
 
-class SessionsViewController: UIViewController, EntityProvider {
+class SessionsViewController: UIViewController, EntityProvider, UITableViewDelegate {
 
     let dataSource = EntityCellMapper()
     var schedule: [SessionGroup] = []
@@ -26,9 +26,13 @@ class SessionsViewController: UIViewController, EntityProvider {
 
         dataSource.entityProvider = self
         tableView.dataSource = dataSource
+        tableView.delegate = self
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
+        
+        tableView.registerNib(UINib(nibName: "SessionSectionHeaderView", bundle: nil),
+                              forHeaderFooterViewReuseIdentifier: "SectionHeader")
         
         let r = WebAPI.SessionsRequest()
         APIKit.Session.sendRequest(r) {
@@ -55,6 +59,15 @@ class SessionsViewController: UIViewController, EntityProvider {
     func entityAtIndexPath(index: NSIndexPath) -> AnyEntity? {
         let s = schedule[index.section].sessions[index.row]
         return .Session(session: s)
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let h = tableView.dequeueReusableHeaderFooterViewWithIdentifier("SectionHeader")
+                                                                as? SessionSectionHeaderView else {
+            return nil
+        }
+        h.label.text = schedule[section].time
+        return h
     }
 }
 
