@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from os import path
-from flask import Flask, jsonify
+from flask import Flask, jsonify, abort
 import yaml
 import json
 import datetime
@@ -28,16 +28,15 @@ def speakers():
 
 
 def group_by_time(paths):
-    tires = itertools.groupby(sorted(paths),
-                             key=lambda p: path.basename(p).split("-")[0])
-    groups = []
-    for k, g in tires:
-        print(k, g)
-        time = k.replace("_", ":")
-        s = list(map(lambda path: yaml.load(open(path).read()), g))
-        yield {"time": time, "sessions": s}
+    s = list(map(lambda path: yaml.load(open(path).read()), paths))
 
-    return groups
+    def start_at(s):
+        return s["start_at"]
+
+    tires = itertools.groupby(sorted(s, key=start_at), key=start_at)
+    for k, g in tires:
+        yield {"start_at": k,
+               "sessions": sorted(list(g), key=lambda s: s["room"])}
 
 
 @app.route('/sessions')
@@ -51,9 +50,13 @@ def sessions():
 
 @app.route('/<category>/<entity>')
 def get_entity(category, entity):
-    yaml_path = path.join(base_path, "source", category, entity + ".yaml")
-    yaml_data = open(yaml_path).read()
-    return jsonify(yaml.load(yaml_data))
+    try:
+        yaml_path = path.join(base_path, "source", category, entity + "_*.yaml")
+        match = glob.glob(yaml_path)
+        yaml_data = open(match[0]).read()
+        return jsonify(yaml.load(yaml_data))
+    except:
+        abort(404)
 
 
 if __name__ == '__main__':
