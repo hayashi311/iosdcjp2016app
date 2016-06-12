@@ -73,5 +73,18 @@ class SessionsViewController: UIViewController, EntityProvider, UITableViewDeleg
         }
         return h
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard case let .Some(.Session(session: session)) = entityAtIndexPath(indexPath) else {
+            return
+        }
+        guard let controller = storyboard?.instantiateViewControllerWithIdentifier("SessionDetailViewController")
+                                                                            as? SessionDetailViewController else {
+            return
+        }
+
+        controller.session = session
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 

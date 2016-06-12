@@ -1,7 +1,7 @@
 speaker: &speaker
   name: "大林 亮太"
   twitter_account: "hayashi313"
-  image: ""
+  image: "static/hayashi311.jpg"
 
 session:
   start_at: !!str 11:00

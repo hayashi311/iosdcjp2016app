@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		539DABBC4F41B6C8A13C6BA5 /* Pods_iOSDCJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BD65453FC4F4E15C4CB6AA /* Pods_iOSDCJP2016.framework */; };
+		DA3DE7741D0D50F500D4CAED /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */; };
 		DA5F184B1D059AA30058723E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F184A1D059AA30058723E /* API.swift */; };
 		DA7440401D06E5E600433C9F /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74403F1D06E5E600433C9F /* SpeakerTableViewCell.swift */; };
 		DA7440421D06E67500433C9F /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7440411D06E67500433C9F /* SessionTableViewCell.xib */; };
@@ -31,6 +32,7 @@
 		3C6EB386CEF3558251409046 /* Pods-iOSDCJP2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDCJP2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDCJP2016/Pods-iOSDCJP2016.release.xcconfig"; sourceTree = "<group>"; };
 		920A09655047443BDD6CED4B /* Pods-iOSDCJP2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDCJP2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDCJP2016/Pods-iOSDCJP2016.debug.xcconfig"; sourceTree = "<group>"; };
 		D6BD65453FC4F4E15C4CB6AA /* Pods_iOSDCJP2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDCJP2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
 		DA5F184A1D059AA30058723E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA74403F1D06E5E600433C9F /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
 		DA7440411D06E67500433C9F /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				DAF5957E1D042C7B005FBB63 /* Info.plist */,
 				DA74404E1D087D3300433C9F /* DataSource.swift */,
 				DACEF6661D09ADCE00865293 /* Style.swift */,
+				DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */,
 			);
 			path = iOSDCJP2016;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				DA74404F1D087D3300433C9F /* DataSource.swift in Sources */,
 				DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */,
 				DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */,
+				DA3DE7741D0D50F500D4CAED /* SessionDetailViewController.swift in Sources */,
 				DACEF6671D09ADCE00865293 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

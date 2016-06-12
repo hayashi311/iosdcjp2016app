@@ -12,6 +12,7 @@ import Unbox
 struct Session: Unboxable {
     let title: String
     let description: String
+    let startAt: String
     let time: String
     let room: Room
     let speaker: Speaker?
@@ -28,6 +29,7 @@ struct Session: Unboxable {
     init(unboxer: Unboxer) {
         title = unboxer.unbox("title")
         description = unboxer.unbox("description")
+        startAt = unboxer.unbox("start_at")
         time = unboxer.unbox("time")
         room = unboxer.unbox("room")
         speaker = unboxer.unbox("speaker")

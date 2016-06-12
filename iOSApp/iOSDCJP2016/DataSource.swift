@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 typealias SpeakerEntity = Speaker
 typealias SessionEntity = Session
@@ -60,20 +61,28 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
                 builder in
                 builder.color = UIColor.twitterColor()
             }
+            let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(s.image)
+            
+            let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                size: c.iconImageView.frame.size,
+                radius: 20.0
+            )
+            
+            c.iconImageView.af_setImageWithURL(
+                URL,
+                placeholderImage: nil,
+                filter: filter,
+                imageTransition: .CrossDissolve(0.2)
+            )
         case let (c as SessionTableViewCell, .Session(s)):
             c.titleLabel.attributedText = NSAttributedString(string: s.title, style: .Title)
-            c.timeLabel.attributedText = NSAttributedString(string: s.time, style: .Small)
+            c.timeLabel.attributedText = NSAttributedString(string: s.time, style: .Body)
             if let speakerName = s.speaker?.name {
                 c.speakerLabel.attributedText = NSAttributedString(string: speakerName, style: .Body)
             }
-            c.roomLabel.attributedText = NSAttributedString(string: s.room.rawValue, style: .Small) {
+            c.roomLabel.attributedText = NSAttributedString(string: s.room.rawValue, style: .Body) {
                 builder in
-                switch s.room {
-                case .A:
-                    builder.color = UIColor.accentColor()
-                case .B:
-                    builder.color = UIColor.secondaryAccentColor()
-                }
+                builder.color = UIColor.colorForRoom(s.room)
             }
         default:
             break

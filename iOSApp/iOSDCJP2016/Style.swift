@@ -30,6 +30,15 @@ extension UIColor {
     static func twitterColor() -> UIColor {
         return UIColor(red: 0.0, green: 0.67, blue: 0.93, alpha: 1.0)
     }
+    
+    static func colorForRoom(room: Session.Room) -> UIColor {
+        switch room {
+        case .A:
+            return UIColor.accentColor()
+        case .B:
+            return  UIColor.secondaryAccentColor()
+        }
+    }
 }
 
 
@@ -84,13 +93,19 @@ enum TextStyle {
     case Small
     
     var builder: AttributedStringBuilder {
+        // http://www.modularscale.com/?14&px&1.333&web&text
+        let baseSize: CGFloat = 14
+        let scale: CGFloat = 1.333
         switch self {
         case .Title:
-            return AttributedStringBuilder(size: 18, color: UIColor.primaryTextColor(), textAlignment: .Left, weight: .Thin)
+            return AttributedStringBuilder(size: baseSize * scale, color: UIColor.primaryTextColor(),
+                                           textAlignment: .Left, weight: .Thin)
         case .Body:
-            return AttributedStringBuilder(size: 14, color: UIColor.primaryTextColor(), textAlignment: .Left, weight: .Regular)
+            return AttributedStringBuilder(size: 14, color: UIColor.primaryTextColor(),
+                                           textAlignment: .Left, weight: .Regular)
         case .Small:
-            return AttributedStringBuilder(size: 12, color: UIColor.secondaryTextColor(), textAlignment: .Left, weight: .Regular)
+            return AttributedStringBuilder(size: baseSize * (1 / scale), color: UIColor.secondaryTextColor(),
+                                           textAlignment: .Left, weight: .Regular)
         }
     }
 }

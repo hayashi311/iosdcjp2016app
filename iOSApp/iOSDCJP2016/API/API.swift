@@ -10,13 +10,15 @@ import Foundation
 import APIKit
 import Unbox
 
+let APIBaseURL = "http://127.0.0.1:5000"
+
 protocol IOSDCRequestType: RequestType {
     
 }
 
 extension IOSDCRequestType {
     var baseURL: NSURL {
-        return NSURL(string: "http://127.0.0.1:5000")!
+        return NSURL(string: APIBaseURL)!
     }
 }
 
