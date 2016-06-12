@@ -13,7 +13,16 @@ struct Session: Unboxable {
     let title: String
     let description: String
     let time: String
-    let room: String
+    let room: Room
+    
+    enum Room: String, UnboxableEnum {
+        case A = "A会場"
+        case B = "B会場"
+
+        static func unboxFallbackValue() -> Room {
+            return .A
+        }
+    }
     
     init(unboxer: Unboxer) {
         title = unboxer.unbox("title")
@@ -24,11 +33,11 @@ struct Session: Unboxable {
 }
 
 struct SessionGroup: Unboxable {
-    let time: String
+    let startAt: String
     let sessions: [Session]
     
     init(unboxer: Unboxer) {
-        time = unboxer.unbox("start_at")
+        startAt = unboxer.unbox("start_at")
         sessions = unboxer.unbox("sessions")
     }
 }

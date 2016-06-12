@@ -29,3 +29,79 @@ extension UIColor {
 }
 
 
+class AttributedStringBuilder {
+    enum Weight {
+        case Thin
+        case Regular
+        case Bold
+        
+        var fontWeight: CGFloat {
+            get {
+                switch self {
+                case .Thin:
+                    return UIFontWeightThin
+                case .Regular:
+                    return UIFontWeightRegular
+                case .Bold:
+                    return UIFontWeightBold
+                }
+            }
+        }
+    }
+
+    let size: CGFloat
+    var color: UIColor
+    var textAlignment: NSTextAlignment
+    var weight: Weight
+    
+    init(size: CGFloat, color: UIColor, textAlignment: NSTextAlignment, weight: Weight) {
+        self.size = size
+        self.color = color
+        self.textAlignment = textAlignment
+        self.weight = weight
+    }
+    
+    func build() -> [String: AnyObject] {
+        let style = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+        style.alignment = textAlignment
+        
+        return [
+            NSForegroundColorAttributeName: color,
+            NSFontAttributeName: UIFont.systemFontOfSize(size, weight: weight.fontWeight),
+            NSParagraphStyleAttributeName: style,
+        ]
+    }
+}
+
+
+enum TextStyle {
+    case Title
+    case Body
+    case Small
+    
+    var builder: AttributedStringBuilder {
+        switch self {
+        case .Title:
+            return AttributedStringBuilder(size: 18, color: UIColor.primaryTextColor(), textAlignment: .Left, weight: .Thin)
+        case .Body:
+            return AttributedStringBuilder(size: 14, color: UIColor.primaryTextColor(), textAlignment: .Left, weight: .Regular)
+        case .Small:
+            return AttributedStringBuilder(size: 12, color: UIColor.secondaryTextColor(), textAlignment: .Left, weight: .Regular)
+        }
+    }
+}
+
+
+extension NSAttributedString {
+    convenience init(string: String, style: TextStyle) {
+        let attrs = style.builder.build()
+        self.init(string: string, attributes: attrs)
+    }
+
+    convenience init(string: String, style: TextStyle, tweak: ((inout builder: AttributedStringBuilder) -> Void)) {
+        var builder = style.builder
+        tweak(builder: &builder)
+        let attrs = builder.build()
+        self.init(string: string, attributes: attrs)
+    }
+}

@@ -66,7 +66,11 @@ class SessionsViewController: UIViewController, EntityProvider, UITableViewDeleg
                                                                 as? SessionSectionHeaderView else {
             return nil
         }
-        h.label.text = schedule[section].time
+        let startAt = schedule[section].startAt
+        h.label.attributedText = NSAttributedString(string: startAt, style: .Body) {
+            builder in
+            builder.weight = .Bold
+        }
         return h
     }
 }
