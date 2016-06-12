@@ -65,7 +65,7 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
             
             let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
                 size: c.iconImageView.frame.size,
-                radius: 20.0
+                radius: iconImageRadius
             )
             
             c.iconImageView.af_setImageWithURL(

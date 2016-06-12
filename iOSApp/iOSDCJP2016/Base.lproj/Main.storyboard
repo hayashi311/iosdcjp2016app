@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Sessions View Controller-->
@@ -82,17 +83,40 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-MZ-rKR">
+                                                <rect key="frame" x="15" y="128" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="H9i-MZ-rKR" secondAttribute="height" multiplier="1:1" id="bKa-i6-ehH"/>
+                                                    <constraint firstAttribute="height" constant="72" id="nBH-Cy-duX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmZ-uk-Tgz">
+                                                <rect key="frame" x="95" y="128" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-oE-Dbg">
+                                                <rect key="frame" x="95" y="157" width="108" height="30"/>
+                                                <state key="normal" title="Twitter Account"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="u6S-1L-vjm" firstAttribute="leading" secondItem="Q5c-Pf-I1l" secondAttribute="leading" constant="15" id="1pU-5g-PoL"/>
+                                            <constraint firstItem="LOl-oE-Dbg" firstAttribute="leading" secondItem="H9i-MZ-rKR" secondAttribute="trailing" constant="8" id="3Lk-mh-qgG"/>
+                                            <constraint firstItem="XmZ-uk-Tgz" firstAttribute="top" secondItem="H9i-MZ-rKR" secondAttribute="top" id="EDq-p5-XBW"/>
                                             <constraint firstAttribute="trailing" secondItem="u6S-1L-vjm" secondAttribute="trailing" constant="15" id="ELa-fd-Qhq"/>
+                                            <constraint firstItem="XmZ-uk-Tgz" firstAttribute="leading" secondItem="H9i-MZ-rKR" secondAttribute="trailing" constant="8" id="Mo9-hZ-4td"/>
                                             <constraint firstItem="CPg-mz-eOo" firstAttribute="leading" secondItem="Q5c-Pf-I1l" secondAttribute="leading" constant="15" id="Tlh-bP-q4P"/>
                                             <constraint firstItem="2UY-EV-vpJ" firstAttribute="baseline" secondItem="mrT-fs-mx5" secondAttribute="baseline" id="aFb-tO-NZj"/>
+                                            <constraint firstItem="LOl-oE-Dbg" firstAttribute="top" secondItem="XmZ-uk-Tgz" secondAttribute="bottom" constant="8" id="b6e-qb-phG"/>
+                                            <constraint firstItem="H9i-MZ-rKR" firstAttribute="top" secondItem="u6S-1L-vjm" secondAttribute="bottom" constant="15" id="eXe-Ct-5Sm"/>
                                             <constraint firstItem="CPg-mz-eOo" firstAttribute="top" secondItem="mrT-fs-mx5" secondAttribute="bottom" constant="8" id="f7y-i2-eHL"/>
                                             <constraint firstItem="2UY-EV-vpJ" firstAttribute="leading" secondItem="mrT-fs-mx5" secondAttribute="trailing" constant="8" id="glK-RZ-JpG"/>
                                             <constraint firstItem="mrT-fs-mx5" firstAttribute="top" secondItem="Q5c-Pf-I1l" secondAttribute="top" constant="15" id="jX0-lS-1OI"/>
                                             <constraint firstAttribute="trailing" secondItem="CPg-mz-eOo" secondAttribute="trailing" constant="15" id="rYe-Wl-TNz"/>
+                                            <constraint firstItem="H9i-MZ-rKR" firstAttribute="leading" secondItem="Q5c-Pf-I1l" secondAttribute="leading" constant="15" id="wLf-95-N3a"/>
                                             <constraint firstItem="mrT-fs-mx5" firstAttribute="leading" secondItem="Q5c-Pf-I1l" secondAttribute="leading" constant="15" id="yLz-lg-nbc"/>
                                             <constraint firstItem="u6S-1L-vjm" firstAttribute="top" secondItem="CPg-mz-eOo" secondAttribute="bottom" constant="15" id="znc-QD-Gam"/>
                                         </constraints>
@@ -116,11 +140,17 @@
                             <constraint firstItem="br4-Is-Mln" firstAttribute="leading" secondItem="Ux8-Ox-O19" secondAttribute="leading" id="qNE-6s-IUD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JbJ-ic-5Y5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dN1-dw-KIa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="u6S-1L-vjm" id="lfG-2U-uVG"/>
+                        <outlet property="iconImageView" destination="H9i-MZ-rKR" id="GHV-0t-iqN"/>
+                        <outlet property="nameLabel" destination="XmZ-uk-Tgz" id="f7e-b7-b4z"/>
                         <outlet property="roomLabel" destination="mrT-fs-mx5" id="wDN-G7-c9p"/>
                         <outlet property="startAtLabel" destination="2UY-EV-vpJ" id="QBo-aI-Q46"/>
                         <outlet property="titleLabel" destination="CPg-mz-eOo" id="9PJ-8z-kTP"/>
+                        <outlet property="twitterLabel" destination="LOl-oE-Dbg" id="Z3i-ty-Vut"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxp-ZP-8Do" userLabel="First Responder" sceneMemberID="firstResponder"/>
