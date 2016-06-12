@@ -55,8 +55,11 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
         
         switch (cell, entity) {
         case let (c as SpeakerTableViewCell, .Speaker(s)):
-            c.nameLabel.text = s.name
-            c.twitterAccountLabel.text = s.twitterAccount
+            c.nameLabel.attributedText = NSAttributedString(string: s.name, style: .Body)
+            c.twitterAccountLabel.attributedText = NSAttributedString(string: "@" + s.twitterAccount, style: .Small) {
+                builder in
+                builder.color = UIColor.twitterColor()
+            }
         case let (c as SessionTableViewCell, .Session(s)):
             c.titleLabel.attributedText = NSAttributedString(string: s.title, style: .Title)
             c.timeLabel.attributedText = NSAttributedString(string: s.time, style: .Small)

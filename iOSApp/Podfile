@@ -5,5 +5,7 @@ target 'iOSDCJP2016' do
   pod 'APIKit', '~> 2.0'
   pod 'Unbox', '~> 1.7'
   pod 'NJKScrollFullScreen', '~> 0.2'
+  pod 'Alamofire', '~> 3.4'
+  pod 'AlamofireImage', '~> 2.4'
 end
 
