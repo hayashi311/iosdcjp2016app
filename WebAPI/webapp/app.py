@@ -4,7 +4,7 @@ from flask import Flask, jsonify, abort
 import yaml
 import json
 import datetime
-import glob
+from glob import glob
 import itertools
 
 app = Flask(__name__)
@@ -19,41 +19,46 @@ class DateTimeSupportJSONEncoder(json.JSONEncoder):
 
 
 @app.route('/speakers')
-def speakers():
-    yaml_path = path.join(base_path, "source", "speakers", "*.yaml")
-    match = glob.glob(yaml_path)
-    data = list(map(lambda path: yaml.load(open(path).read()), match))
-    return jsonify(speakers=data)
+def speakers_list():
+    yaml_path = path.join(base_path, "source", "*.yaml")
+    speakers = map(lambda path: yaml.load(open(path).read()), glob(yaml_path))
+
+    def f(speakers):
+        for s in speakers:
+            r = s["speaker"]
+            r["session"] = s["session"]
+            del(r["session"]["speaker"])
+            yield r
+    return jsonify(speakers=list(f(speakers)))
 
 
 def group_by_time(paths):
-    s = list(map(lambda path: yaml.load(open(path).read()), paths))
+    data = list(map(lambda path: yaml.load(open(path).read()), paths))
+    sessions = map(lambda x: x["session"], data)
 
-    def start_at(s):
-        return s["start_at"]
+    def start_at(session):
+        return session["start_at"]
 
-    tires = itertools.groupby(sorted(s, key=start_at), key=start_at)
+    tires = itertools.groupby(sorted(sessions, key=start_at), key=start_at)
     for k, g in tires:
         yield {"start_at": k,
                "sessions": sorted(list(g), key=lambda s: s["room"])}
 
 
 @app.route('/sessions')
-def sessions():
-    yaml_path = path.join(base_path, "source", "sessions", "*.yaml")
-    match = glob.glob(yaml_path)
+def sessions_list():
+    yaml_path = path.join(base_path, "source", "*.yaml")
+    match = glob(yaml_path)
     return jsonify(schedule=list(group_by_time(match)))
 
 
-@app.route('/<category>/<entity>')
-def get_entity(category, entity):
-    try:
-        yaml_path = path.join(base_path, "source", category, entity + "_*.yaml")
-        match = glob.glob(yaml_path)
-        yaml_data = open(match[0]).read()
+@app.route('/<entity>')
+def get_entity(entity):
+    match = glob(path.join(base_path, "source", entity + "*.yaml"))
+    for m in match:
+        yaml_data = open(m).read()
         return jsonify(yaml.load(yaml_data))
-    except:
-        abort(404)
+    abort(404)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,12 @@
+speaker: &speaker
+  name: "林 亮太"
+  twitter_account: "hayashi311"
+  image: ""
+
+session:
+  start_at: !!str 10:00
+  title: 本物のiOSエンジニアになるための10か条
+  description: 本物のiOSエンジニアになりたいな、ならなくちゃ、絶対なってやる~
+  time: 30min
+  room: B会場
+  speaker: *speaker
