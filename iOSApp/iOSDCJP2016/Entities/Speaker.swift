@@ -11,6 +11,7 @@ import Unbox
 
 struct Speaker: Unboxable {
     let name: String
+    let company: String?
     let twitterAccount: String
     let image: String
 //    let session: Session?
@@ -19,6 +20,7 @@ struct Speaker: Unboxable {
         name = unboxer.unbox("name")
         twitterAccount = unboxer.unbox("twitter_account")
         image = unboxer.unbox("image")
+        company = unboxer.unbox("company")
 //        session = unboxer.unbox("session")
     }
 }

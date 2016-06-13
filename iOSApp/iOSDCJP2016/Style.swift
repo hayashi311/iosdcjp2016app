@@ -10,6 +10,9 @@ import UIKit
 
 
 extension UIColor {
+    static func darkPrimaryTextColor() -> UIColor {
+        return UIColor(red: 0.01, green: 0.14, blue: 0.31, alpha: 1.0)
+    }
 
     static func primaryTextColor() -> UIColor {
         return UIColor(red: 0.29, green: 0.29, blue: 0.29, alpha: 1.0)
@@ -130,8 +133,8 @@ protocol DefaultLineHeight: NSLayoutManagerDelegate {
 
 extension DefaultLineHeight {
     func layoutManager(layoutManager: NSLayoutManager, lineSpacingAfterGlyphAtIndex glyphIndex: Int, withProposedLineFragmentRect rect: CGRect) -> CGFloat {
-        return 8
+        return 12
     }
 }
 
-let iconImageRadius: CGFloat = 12
+let iconImageRadius: CGFloat = 36

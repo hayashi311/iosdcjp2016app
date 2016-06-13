@@ -11,9 +11,8 @@ import UIKit
 class SpeakerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var twitterAccountLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
     
-    @IBOutlet weak var sessionLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
     

@@ -20,32 +20,39 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var twitterLabel: UIButton!
+    @IBOutlet weak var companyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         roomLabel.attributedText = NSAttributedString(string: session.room.rawValue, style: .Body) {
             builder in
-            builder.color = UIColor.colorForRoom(self.session.room)
+            builder.color = UIColor.secondaryTextColor()
         }
         
-        startAtLabel.attributedText = NSAttributedString(string: session.startAt + "-", style: .Body)
-        titleLabel.attributedText = NSAttributedString(string: session.title, style: .Title)
+        startAtLabel.attributedText = NSAttributedString(string: session.startAt + "-", style: .Body) {
+            builder in
+            builder.color = UIColor.secondaryTextColor()
+        }
+        titleLabel.attributedText = NSAttributedString(string: session.title, style: .Title) {
+            builder in
+            builder.weight = .Bold
+            builder.color = UIColor.darkPrimaryTextColor()
+        }
         descriptionTextView.attributedText = NSAttributedString(string: session.description, style: .Body)
         descriptionTextView.textContainer.lineFragmentPadding = 0
         descriptionTextView.layoutMargins = UIEdgeInsetsZero
         descriptionTextView.layoutManager.delegate = self
         guard let speaker = session.speaker else { return }
         
-        
-        let buttonTitle = NSAttributedString(string: speaker.twitterAccount, style: .Body) {
-            builder in
-            builder.color = UIColor.twitterColor()
+        switch speaker.company {
+        case let .Some(c):
+            companyLabel.attributedText = NSAttributedString(string: c, style: .Small)
+        default:
+            companyLabel.hidden = true
         }
-        twitterLabel.setAttributedTitle(buttonTitle, forState: .Normal)
         
-        nameLabel.attributedText = NSAttributedString(string: speaker.name, style: .Body)
+        nameLabel.attributedText = NSAttributedString(string: speaker.name, style: .Title)
         let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(speaker.image)
         
         let filter = AspectScaledToFillSizeWithRoundedCornersFilter(

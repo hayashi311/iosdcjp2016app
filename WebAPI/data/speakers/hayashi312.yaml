@@ -1,5 +1,6 @@
 speaker: &speaker
   name: "小林 亮太"
+  company: "株式会社bitFlyer"
   twitter_account: "hayashi312"
   image: "static/hayashi311.jpg"
 

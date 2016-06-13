@@ -56,11 +56,14 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
         
         switch (cell, entity) {
         case let (c as SpeakerTableViewCell, .Speaker(s)):
-            c.nameLabel.attributedText = NSAttributedString(string: s.name, style: .Body)
-            c.twitterAccountLabel.attributedText = NSAttributedString(string: "@" + s.twitterAccount, style: .Small) {
-                builder in
-                builder.color = UIColor.twitterColor()
+            c.nameLabel.attributedText = NSAttributedString(string: s.name, style: .Title)
+            switch s.company {
+            case let .Some(company):
+                c.companyLabel.attributedText = NSAttributedString(string: company, style: .Small)
+            default:
+                c.companyLabel.hidden = true
             }
+            
             let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(s.image)
             
             let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
