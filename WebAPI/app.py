@@ -7,6 +7,9 @@ import datetime
 from glob import glob
 import itertools
 import urbanairship as ua
+import redis
+import datetime
+import time
 
 app = Flask(__name__)
 base_path = path.dirname(path.abspath(__file__))
@@ -14,6 +17,8 @@ base_path = path.dirname(path.abspath(__file__))
 ua_app_key = environ["UA_APP_KEY"]
 ua_master_secret = environ["UA_MASTER_SECRET"]
 airship = ua.Airship(ua_app_key, ua_master_secret)
+
+r = redis.from_url(environ.get("REDIS_URL"))
 
 
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
@@ -25,6 +30,11 @@ class DateTimeSupportJSONEncoder(json.JSONEncoder):
 
 @app.route('/apns')
 def apns_send():
+    now = datetime.datetime.now()
+    timestamp = int(time.mktime(now.timetuple()))
+    notification = json.dumps({"message": "Hello, world!",
+                               "url": "hoge.com", "created_at": timestamp})
+    r.set("notification:{}".format(timestamp), notification)
     try:
         push = airship.create_push()
         push.audience = ua.all_
@@ -34,6 +44,14 @@ def apns_send():
     except:
         return "error"
     return "success"
+
+
+@app.route('/notifications')
+def notifications_list():
+    keys = sorted(r.keys("notification:*"), reverse=True)
+    notifications = r.mget(keys)
+    n = map(lambda n: json.loads(n.decode('utf-8')), notifications)
+    return jsonify(notification=list(n))
 
 
 @app.route('/speakers')
