@@ -1,0 +1,1 @@
+../../../UrbanAirship-iOS-SDK/Airship/Inbox/UAInbox.h

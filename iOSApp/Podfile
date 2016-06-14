@@ -7,5 +7,6 @@ target 'iOSDCJP2016' do
   pod 'NJKScrollFullScreen', '~> 0.2'
   pod 'Alamofire', '~> 3.4'
   pod 'AlamofireImage', '~> 2.4'
+  pod 'UrbanAirship-iOS-SDK', '~> 7.2'
 end
 

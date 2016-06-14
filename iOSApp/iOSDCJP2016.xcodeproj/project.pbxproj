@@ -17,6 +17,8 @@
 		DA74404D1D086C3B00433C9F /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */; };
 		DA74404F1D087D3300433C9F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74404E1D087D3300433C9F /* DataSource.swift */; };
 		DAAE06001D1026A100F6C0E5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE05FF1D1026A100F6C0E5 /* InfoViewController.swift */; };
+		DABC09691D1043500067D67C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC09681D1043500067D67C /* NotificationService.swift */; };
+		DABC096B1D1049900067D67C /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DABC096A1D1049900067D67C /* AirshipConfig.plist */; };
 		DACEF6651D09889700865293 /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */; };
 		DACEF6671D09ADCE00865293 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6661D09ADCE00865293 /* Style.swift */; };
 		DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6681D0C4D2A00865293 /* SessionSectionHeaderView.swift */; };
@@ -42,6 +44,8 @@
 		DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		DA74404E1D087D3300433C9F /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		DAAE05FF1D1026A100F6C0E5 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		DABC09681D1043500067D67C /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		DABC096A1D1049900067D67C /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = SOURCE_ROOT; };
 		DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		DACEF6661D09ADCE00865293 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		DACEF6681D0C4D2A00865293 /* SessionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSectionHeaderView.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		DAF5956F1D042C7B005FBB63 /* iOSDCJP2016 */ = {
 			isa = PBXGroup;
 			children = (
+				DABC096A1D1049900067D67C /* AirshipConfig.plist */,
 				DA7440451D08671600433C9F /* Entities */,
 				DA74403E1D06E5C300433C9F /* Cells */,
 				DA5F18491D059A7C0058723E /* API */,
@@ -150,6 +155,7 @@
 				DACEF6661D09ADCE00865293 /* Style.swift */,
 				DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */,
 				DAAE05FF1D1026A100F6C0E5 /* InfoViewController.swift */,
+				DABC09681D1043500067D67C /* NotificationService.swift */,
 			);
 			path = iOSDCJP2016;
 			sourceTree = "<group>";
@@ -190,6 +196,11 @@
 					DAF5956C1D042C7B005FBB63 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = C5S5625B4L;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -217,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACEF6651D09889700865293 /* SpeakerTableViewCell.xib in Resources */,
+				DABC096B1D1049900067D67C /* AirshipConfig.plist in Resources */,
 				DAF5957D1D042C7B005FBB63 /* LaunchScreen.storyboard in Resources */,
 				DAF5957A1D042C7B005FBB63 /* Assets.xcassets in Resources */,
 				DAF595781D042C7B005FBB63 /* Main.storyboard in Resources */,
@@ -282,6 +294,7 @@
 			files = (
 				DA74404D1D086C3B00433C9F /* SessionTableViewCell.swift in Sources */,
 				DAF595751D042C7B005FBB63 /* SpeakersViewController.swift in Sources */,
+				DABC09691D1043500067D67C /* NotificationService.swift in Sources */,
 				DAF595711D042C7B005FBB63 /* AppDelegate.swift in Sources */,
 				DA7440401D06E5E600433C9F /* SpeakerTableViewCell.swift in Sources */,
 				DA7440491D08673800433C9F /* Session.swift in Sources */,
@@ -408,7 +421,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSDCJP2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hayashi311.iOSDCJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hayashi311.iosdcjp2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -423,7 +436,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSDCJP2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hayashi311.iOSDCJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hayashi311.iosdcjp2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

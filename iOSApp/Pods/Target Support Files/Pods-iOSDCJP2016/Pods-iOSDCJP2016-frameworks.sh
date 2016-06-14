@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-iOSDCJP2016/NJKScrollFullScreen.framework"
   install_framework "Pods-iOSDCJP2016/Result.framework"
   install_framework "Pods-iOSDCJP2016/Unbox.framework"
+  install_framework "Pods-iOSDCJP2016/AirshipKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iOSDCJP2016/APIKit.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iOSDCJP2016/NJKScrollFullScreen.framework"
   install_framework "Pods-iOSDCJP2016/Result.framework"
   install_framework "Pods-iOSDCJP2016/Unbox.framework"
+  install_framework "Pods-iOSDCJP2016/AirshipKit.framework"
 fi
