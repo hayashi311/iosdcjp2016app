@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
-from os import path
+from os import path, environ
 from flask import Flask, jsonify, abort
 import yaml
 import json
 import datetime
 from glob import glob
 import itertools
+import urbanairship as ua
 
 app = Flask(__name__)
 base_path = path.dirname(path.abspath(__file__))
+
+ua_app_key = environ["UA_APP_KEY"]
+ua_master_secret = environ["UA_MASTER_SECRET"]
+airship = ua.Airship(ua_app_key, ua_master_secret)
 
 
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
@@ -16,6 +21,19 @@ class DateTimeSupportJSONEncoder(json.JSONEncoder):
         if isinstance(o, datetime.datetime):
             return o.isoformat()
         return super(DateTimeSupportJSONEncoder, self).default(o)
+
+
+@app.route('/apns')
+def apns_send():
+    try:
+        push = airship.create_push()
+        push.audience = ua.all_
+        push.notification = ua.notification(alert="Hello, world!")
+        push.device_types = ua.all_
+        push.send()
+    except:
+        return "error"
+    return "success"
 
 
 @app.route('/speakers')

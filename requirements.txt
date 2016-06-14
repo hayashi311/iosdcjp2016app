@@ -6,4 +6,6 @@ Jinja2==2.8
 MarkupSafe==0.23
 pytz==2016.4
 PyYAML==3.11
+requests==2.10.0
+urbanairship==0.7.4
 Werkzeug==0.11.10
