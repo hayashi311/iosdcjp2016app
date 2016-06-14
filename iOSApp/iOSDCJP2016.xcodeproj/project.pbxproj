@@ -16,6 +16,7 @@
 		DA7440491D08673800433C9F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7440481D08673800433C9F /* Session.swift */; };
 		DA74404D1D086C3B00433C9F /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */; };
 		DA74404F1D087D3300433C9F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74404E1D087D3300433C9F /* DataSource.swift */; };
+		DAAE06001D1026A100F6C0E5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE05FF1D1026A100F6C0E5 /* InfoViewController.swift */; };
 		DACEF6651D09889700865293 /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */; };
 		DACEF6671D09ADCE00865293 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6661D09ADCE00865293 /* Style.swift */; };
 		DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6681D0C4D2A00865293 /* SessionSectionHeaderView.swift */; };
@@ -40,6 +41,7 @@
 		DA7440481D08673800433C9F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		DA74404C1D086C3B00433C9F /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		DA74404E1D087D3300433C9F /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		DAAE05FF1D1026A100F6C0E5 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		DACEF6641D09889700865293 /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		DACEF6661D09ADCE00865293 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		DACEF6681D0C4D2A00865293 /* SessionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSectionHeaderView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				DA74404E1D087D3300433C9F /* DataSource.swift */,
 				DACEF6661D09ADCE00865293 /* Style.swift */,
 				DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */,
+				DAAE05FF1D1026A100F6C0E5 /* InfoViewController.swift */,
 			);
 			path = iOSDCJP2016;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				DA5F184B1D059AA30058723E /* API.swift in Sources */,
 				DA74404F1D087D3300433C9F /* DataSource.swift in Sources */,
 				DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */,
+				DAAE06001D1026A100F6C0E5 /* InfoViewController.swift in Sources */,
 				DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */,
 				DA3DE7741D0D50F500D4CAED /* SessionDetailViewController.swift in Sources */,
 				DACEF6671D09ADCE00865293 /* Style.swift in Sources */,

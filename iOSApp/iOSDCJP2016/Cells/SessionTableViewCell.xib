@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Du-Zf-nmO">
-                        <rect key="frame" x="15" y="15" width="33.5" height="21"/>
+                        <rect key="frame" x="15" y="15" width="312" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -32,12 +32,6 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58K-u8-t35">
-                        <rect key="frame" x="327" y="42" width="33.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gll-ge-3Sv" firstAttribute="leading" secondItem="8Du-Zf-nmO" secondAttribute="leading" id="4ML-l8-ieE"/>
@@ -46,16 +40,13 @@
                     <constraint firstItem="pci-2i-WSS" firstAttribute="leading" secondItem="gll-ge-3Sv" secondAttribute="trailing" constant="8" id="HDI-0U-x4S"/>
                     <constraint firstItem="gll-ge-3Sv" firstAttribute="top" secondItem="8Du-Zf-nmO" secondAttribute="bottom" constant="8" id="Hi1-b4-khU"/>
                     <constraint firstItem="8Du-Zf-nmO" firstAttribute="top" secondItem="gDu-Sy-quc" secondAttribute="top" constant="15" id="NNU-Xg-q5e"/>
-                    <constraint firstItem="58K-u8-t35" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Du-Zf-nmO" secondAttribute="trailing" constant="8" id="ac4-Mc-3R6"/>
+                    <constraint firstAttribute="trailing" secondItem="8Du-Zf-nmO" secondAttribute="trailing" constant="15" id="VwA-3v-U5Z"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gll-ge-3Sv" secondAttribute="bottom" constant="15" id="nX4-MN-dHO"/>
-                    <constraint firstItem="58K-u8-t35" firstAttribute="centerY" secondItem="gDu-Sy-quc" secondAttribute="centerY" id="opK-Sr-TRQ"/>
-                    <constraint firstAttribute="trailing" secondItem="58K-u8-t35" secondAttribute="trailing" constant="15" id="wxT-iL-zwk"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="roomLabel" destination="pci-2i-WSS" id="g4V-5m-Rqv"/>
                 <outlet property="speakerLabel" destination="gll-ge-3Sv" id="Bed-02-PMu"/>
-                <outlet property="timeLabel" destination="58K-u8-t35" id="API-h7-Rhu"/>
                 <outlet property="titleLabel" destination="8Du-Zf-nmO" id="cxd-Rb-rmY"/>
             </connections>
             <point key="canvasLocation" x="262.5" y="215.5"/>

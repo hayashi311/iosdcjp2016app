@@ -30,10 +30,11 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
             builder.color = UIColor.secondaryTextColor()
         }
         
-        startAtLabel.attributedText = NSAttributedString(string: session.startAt + "-", style: .Body) {
+        startAtLabel.attributedText = NSAttributedString(string: session.startAt + "- (\(session.time))", style: .Body) {
             builder in
             builder.color = UIColor.secondaryTextColor()
         }
+        
         titleLabel.attributedText = NSAttributedString(string: session.title, style: .Title) {
             builder in
             builder.weight = .Bold

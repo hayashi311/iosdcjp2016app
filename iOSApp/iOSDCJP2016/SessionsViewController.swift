@@ -48,6 +48,11 @@ class SessionsViewController: UIViewController, EntityProvider, UITableViewDeleg
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+        tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
+    }
+    
     func numberOfSections() -> Int {
         return schedule.count
     }

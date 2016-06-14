@@ -79,7 +79,6 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
             )
         case let (c as SessionTableViewCell, .Session(s)):
             c.titleLabel.attributedText = NSAttributedString(string: s.title, style: .Title)
-            c.timeLabel.attributedText = NSAttributedString(string: s.time, style: .Body)
             if let speakerName = s.speaker?.name {
                 c.speakerLabel.attributedText = NSAttributedString(string: speakerName, style: .Body)
             }

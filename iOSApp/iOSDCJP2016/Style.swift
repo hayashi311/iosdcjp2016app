@@ -107,7 +107,7 @@ enum TextStyle {
             return AttributedStringBuilder(size: 14, color: UIColor.primaryTextColor(),
                                            textAlignment: .Left, weight: .Regular)
         case .Small:
-            return AttributedStringBuilder(size: baseSize * (1 / scale), color: UIColor.secondaryTextColor(),
+            return AttributedStringBuilder(size: 12, color: UIColor.secondaryTextColor(),
                                            textAlignment: .Left, weight: .Regular)
         }
     }

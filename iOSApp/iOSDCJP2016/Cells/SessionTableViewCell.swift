@@ -14,7 +14,6 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var roomLabel: UILabel!
     
     @IBOutlet weak var speakerLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
