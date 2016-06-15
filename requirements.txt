@@ -1,5 +1,7 @@
 click==6.6
 Flask==0.11
+Flask-Admin==1.4.2
+Flask-WTF==0.12
 gunicorn==19.6.0
 itsdangerous==0.24
 Jinja2==2.8
@@ -10,3 +12,4 @@ redis==2.10.5
 requests==2.10.0
 urbanairship==0.7.4
 Werkzeug==0.11.10
+WTForms==2.1
