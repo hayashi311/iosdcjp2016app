@@ -3,13 +3,14 @@ from os import path, environ
 from flask import Flask, jsonify, abort
 import yaml
 import json
-import datetime
 from glob import glob
 import itertools
 import urbanairship as ua
 import redis
 import datetime
 import time
+from flask_admin import Admin, BaseView, expose
+from flask_admin.contrib import rediscli
 
 app = Flask(__name__)
 base_path = path.dirname(path.abspath(__file__))
@@ -95,6 +96,18 @@ def get_entity(entity):
         yaml_data = open(m).read()
         return jsonify(yaml.load(yaml_data))
     abort(404)
+
+admin = Admin(app, name='iosdc', template_mode='bootstrap3')
+admin.add_view(rediscli.RedisCli(r))
+
+
+class AdminNotificationView(BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('admin_notifications_index.html')
+
+
+admin.add_view(AdminNotificationView(name='Notification', endpoint='notifications'))
 
 
 if __name__ == '__main__':
