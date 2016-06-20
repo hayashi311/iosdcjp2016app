@@ -107,7 +107,16 @@ admin.add_view(rediscli.RedisCli(r))
 
 
 class NortificationForm(Form):
-    name = StringField('name', validators=[DataRequired()])
+    message = StringField('message', validators=[DataRequired()])
+
+
+def send_apns(message, url):
+    push = airship.create_push()
+    push.audience = ua.all_
+    push.notification = ua.ios(alert=message, extra={'urlscheme': url})
+    # push.notification = ua.ios(alert=message)
+    push.device_types = ua.all_
+    push.send()
 
 
 class AdminNotificationView(BaseView):
@@ -115,7 +124,7 @@ class AdminNotificationView(BaseView):
     def index(self):
         form = NortificationForm(csrf_enabled=False)
         if form.validate_on_submit():
-            return redirect('/success')
+            send_apns(message=form.message.data, url='hogehoge')
         return self.render('admin_notifications_index.html', form=form)
 
 

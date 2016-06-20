@@ -1,8 +1,8 @@
 {% extends 'admin/master.html' %}
 {% block body %}
-<form method="POST" action="/">
+<form method="POST" action="/admin/notifications/">
     {{ form.hidden_tag() }}
-    {{ form.name.label }} {{ form.name(size=20) }}
+    {{ form.message.label }} {{ form.message(size=400) }}
     <input type="submit" value="Go">
 </form>
 {% endblock %}
