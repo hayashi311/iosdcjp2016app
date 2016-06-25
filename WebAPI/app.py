@@ -9,6 +9,8 @@ import urbanairship as ua
 import redis
 import datetime
 import time
+import uuid
+import sys
 from flask_admin import Admin, BaseView, expose
 from flask_admin.contrib import rediscli
 from flask_wtf import Form
@@ -16,15 +18,11 @@ from wtforms import StringField
 from wtforms.validators import DataRequired
 
 app = Flask(__name__)
-app.config[ 'WTF_CSRF_SECRET_KEY' ] = 'random key for form'
-
 base_path = path.dirname(path.abspath(__file__))
 
 ua_app_key = environ['UA_APP_KEY']
 ua_master_secret = environ['UA_MASTER_SECRET']
 airship = ua.Airship(ua_app_key, ua_master_secret)
-
-r = redis.from_url(environ.get('REDIS_URL'))
 
 
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
@@ -34,30 +32,98 @@ class DateTimeSupportJSONEncoder(json.JSONEncoder):
         return super(DateTimeSupportJSONEncoder, self).default(o)
 
 
-@app.route('/apns')
-def apns_send():
+class Notification:
+    def __init__(self, uuid, message, url, created_at):
+        self.uuid = uuid
+        self.message = message
+        self.url = url
+        self.created_at = created_at
+
+    def key(self):
+        return "notification.{}".format(self.uuid)
+
+    def to_json(self):
+        return json.dumps(self.to_hash())
+
+    def to_hash(self):
+        return {'uuid': self.uuid, 'message': self.message,
+                'url': self.url, 'created_at': self.created_at}
+
+    @classmethod
+    def loads(cls, json_str):
+        d = json.loads(json_str)
+        return Notification(**d)
+
+
+class NotificationStore:
+    key = 'notifications'
+
+    def __init__(self):
+        self.r = redis.from_url(environ.get('REDIS_URL'))
+
+    def add_notification(self, notification):
+        self.r.zadd(self.key, notification.key(), notification.created_at)
+        self.r.set(notification.key(), notification.to_json())
+
+    def fetch_notifications(self):
+        keys = self.r.zrange(self.key, 0, 100, desc=True)
+        if len(keys) == 0:
+            return []
+        notifications = self.r.mget(keys)
+        print(keys, file=sys.stderr)
+        print(notifications, file=sys.stderr)
+        return map(lambda n: Notification.loads(n.decode('utf-8')),
+                   notifications)
+
+    def remove_all(self):
+        self.r.delete(self.key)
+
+
+store = NotificationStore()
+
+
+def send_notification(message):
     now = datetime.datetime.now()
     timestamp = int(time.mktime(now.timetuple()))
-    notification = json.dumps({'message': 'Hello, world!',
-                               'url': 'hoge.com', 'created_at': timestamp})
-    r.set('notification:{}'.format(timestamp), notification)
+    store.add_notification(Notification(str(uuid.uuid4()), message,
+                                        "hoge.com", timestamp))
     try:
         push = airship.create_push()
         push.audience = ua.all_
-        push.notification = ua.notification(alert='Hello, world!')
+        push.notification = ua.notification(alert=message)
         push.device_types = ua.all_
         push.send()
     except:
-        return 'error'
+        return False
+    return True
+
+
+@app.route('/remove-all')
+def remove_all():
+    store.remove_all()
+    return "done"
+
+
+@app.route('/apns')
+def apns_send():
+    message = 'Hello world2'
+    send_notification(message)
+    push = airship.create_push()
+    push.audience = ua.all_
+    push.notification = ua.notification(alert=message)
+    push.device_types = ua.all_
+    push.send()
+    # try:
+    # except:
+    #     return 'error'
     return 'success'
 
 
 @app.route('/notifications')
 def notifications_list():
-    keys = sorted(r.keys('notification:*'), reverse=True)
-    notifications = r.mget(keys)
-    n = map(lambda n: json.loads(n.decode('utf-8')), notifications)
-    return jsonify(notification=list(n))
+    notifications = store.fetch_notifications()
+    n = map(lambda n: n.to_hash(), notifications)
+    return jsonify(notifications=list(n))
 
 
 @app.route('/speakers')
@@ -102,24 +168,6 @@ def get_entity(entity):
         return jsonify(yaml.load(yaml_data))
     abort(404)
 
-admin = Admin(app, name='iosdc', template_mode='bootstrap3')
-admin.add_view(rediscli.RedisCli(r))
-
-
-class NortificationForm(Form):
-    name = StringField('name', validators=[DataRequired()])
-
-
-class AdminNotificationView(BaseView):
-    @expose('/', methods=('GET', 'POST'))
-    def index(self):
-        form = NortificationForm(csrf_enabled=False)
-        if form.validate_on_submit():
-            return redirect('/success')
-        return self.render('admin_notifications_index.html', form=form)
-
-
-admin.add_view(AdminNotificationView(name='Notification', endpoint='notifications'))
 
 
 if __name__ == '__main__':
