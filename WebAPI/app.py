@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from os import path, environ
-from flask import Flask, jsonify, abort, redirect
+from flask import Flask, jsonify, abort
 import yaml
 import json
 from glob import glob
@@ -11,11 +11,7 @@ import datetime
 import time
 import uuid
 import sys
-from flask_admin import Admin, BaseView, expose
-from flask_admin.contrib import rediscli
-from flask_wtf import Form
-from wtforms import StringField
-from wtforms.validators import DataRequired
+
 
 app = Flask(__name__)
 base_path = path.dirname(path.abspath(__file__))
@@ -32,22 +28,38 @@ class DateTimeSupportJSONEncoder(json.JSONEncoder):
         return super(DateTimeSupportJSONEncoder, self).default(o)
 
 
+class Session:
+    def __init__(self, title, name, room, type=None):
+        self.title = title
+        self.name = name
+        self.room = room
+
+    def to_json(self):
+        return json.dumps(self.to_hash())
+
+    def to_hash(self):
+        return {'title': self.title, 'name': self.name, 'room': self.room,
+                'type': 'session'}
+
+
 class Notification:
-    def __init__(self, uuid, message, url, created_at):
+    def __init__(self, uuid, message, url, created_at, image):
         self.uuid = uuid
         self.message = message
         self.url = url
+        self.image = image
         self.created_at = created_at
 
     def key(self):
-        return "notification.{}".format(self.uuid)
+        return 'notification.{}'.format(self.uuid)
 
     def to_json(self):
         return json.dumps(self.to_hash())
 
     def to_hash(self):
         return {'uuid': self.uuid, 'message': self.message,
-                'url': self.url, 'created_at': self.created_at}
+                'url': self.url, 'created_at': self.created_at,
+                'image': self.image}
 
     @classmethod
     def loads(cls, json_str):
@@ -86,12 +98,15 @@ def send_notification(message):
     now = datetime.datetime.now()
     timestamp = int(time.mktime(now.timetuple()))
     store.add_notification(Notification(str(uuid.uuid4()), message,
-                                        "hoge.com", timestamp))
+                                        'hoge.com', timestamp,
+                                        'http://image.com'))
     try:
         push = airship.create_push()
         push.audience = ua.all_
-        push.notification = ua.notification(alert=message)
-        push.device_types = ua.all_
+        notification = ua.ios(alert=message,
+                              extra={'url': 'https://google.com'})
+        push.ios = notification
+        push.device_types = ua.ios
         push.send()
     except:
         return False
@@ -101,7 +116,7 @@ def send_notification(message):
 @app.route('/remove-all')
 def remove_all():
     store.remove_all()
-    return "done"
+    return 'done'
 
 
 @app.route('/apns')
@@ -167,8 +182,6 @@ def get_entity(entity):
         yaml_data = open(m).read()
         return jsonify(yaml.load(yaml_data))
     abort(404)
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

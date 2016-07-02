@@ -56,6 +56,18 @@ final class WebAPI {
             return "/speakers"
         }
     }
+
+    struct NotificationsRequest: IOSDCRequestType {
+        typealias Response = NotificationsResponse
+
+        var method: HTTPMethod {
+            return .GET
+        }
+        
+        var path: String {
+            return "/notifications"
+        }
+    }
 }
 
 
@@ -73,5 +85,11 @@ struct SpeakersResponse: Unboxable  {
     
     init(unboxer: Unboxer) {
         speakers = unboxer.unbox("speakers")
+    }
+}
+
+struct NotificationsResponse: Unboxable {
+    init(unboxer: Unboxer) {
+        
     }
 }
