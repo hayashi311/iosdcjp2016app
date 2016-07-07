@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 class InfoViewController: UITableViewController {
     
@@ -28,8 +29,20 @@ class InfoViewController: UITableViewController {
             builder in
             builder.color = UIColor.secondaryTextColor()
         }
-        wifiLabel.attributedText = NSAttributedString(string: "iosdc", style: .Body)
-        wifiPasswordLabel.attributedText = NSAttributedString(string: "cookpad-yeah!", style: .Body)
+
+
+        let r = WebAPI.WifiRequest()
+        APIKit.Session.sendRequest(r) {
+            [weak self] result in
+            guard let s = self else { return }
+            switch result {
+            case let .Success(response):
+                s.wifiLabel.attributedText = NSAttributedString(string: response.network, style: .Body)
+                s.wifiPasswordLabel.attributedText = NSAttributedString(string: response.password, style: .Body)
+            case let .Failure(e):
+                print(e)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

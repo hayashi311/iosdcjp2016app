@@ -70,7 +70,7 @@ final class WebAPI {
     }
 
     struct WifiRequest: IOSDCRequestType {
-        typealias Response = NotificationsResponse
+        typealias Response = WifiResponse
 
         var method: HTTPMethod {
             return .GET
