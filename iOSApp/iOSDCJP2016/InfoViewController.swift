@@ -30,6 +30,8 @@ class InfoViewController: UITableViewController {
             builder.color = UIColor.secondaryTextColor()
         }
 
+        wifiLabel.text = nil
+        wifiPasswordLabel.text = nil
 
         let r = WebAPI.WifiRequest()
         APIKit.Session.sendRequest(r) {

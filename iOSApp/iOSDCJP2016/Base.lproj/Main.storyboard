@@ -76,9 +76,7 @@
                             <constraint firstItem="fyi-Qi-eur" firstAttribute="top" secondItem="Ux8-Ox-O19" secondAttribute="top" id="ug0-75-sXn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JbJ-ic-5Y5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dN1-dw-KIa"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="JbJ-ic-5Y5"/>
                     <connections>
                         <outlet property="companyLabel" destination="qiP-92-7YU" id="X6O-sZ-I2U"/>
                         <outlet property="descriptionTextView" destination="u6S-1L-vjm" id="lfG-2U-uVG"/>
