@@ -12,6 +12,7 @@ import AlamofireImage
 class SessionDetailViewController: UIViewController, DefaultLineHeight {
     var session: Session!
 
+    @IBOutlet weak var header: UIView!
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var startAtLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -21,7 +22,9 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var companyLabel: UILabel!
-    
+
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +58,6 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
         
         nameLabel.attributedText = NSAttributedString(string: speaker.name, style: .Title)
         let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(speaker.image)
-        print("\(#function):\(#line)",  "URL = \(URL.absoluteString)")
         
         let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
             size: iconImageView.frame.size,
@@ -68,8 +70,16 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
             filter: filter,
             imageTransition: .CrossDissolve(0.2)
         )
+
+
+        header.bounds = CGRect(origin: CGPointZero, size: UIScreen.mainScreen().bounds.size)
+        header.setNeedsLayout()
+        header.layoutIfNeeded()
+        let headerSize = header.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        header.bounds = CGRect(origin: CGPointZero, size: headerSize)
+        tableView.tableHeaderView = header
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
