@@ -7,8 +7,19 @@
 //
 
 import Foundation
+import Unbox
 
-enum Notification {
-    case Session(session: iOSDCJP2016.Session)
-    case Link(session: iOSDCJP2016.Session)
+struct Notification: Unboxable {
+    let createdAt: NSDate
+    let image: String?
+    let message: String
+    let url: String?
+
+    init(unboxer: Unboxer) {
+        let unixtime: NSTimeInterval = unboxer.unbox("created_at")
+        createdAt = NSDate(timeIntervalSince1970: unixtime)
+        image = unboxer.unbox("image")
+        message = unboxer.unbox("message")
+        url = unboxer.unbox("url")
+    }
 }

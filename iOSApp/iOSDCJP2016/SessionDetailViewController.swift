@@ -55,6 +55,7 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
         
         nameLabel.attributedText = NSAttributedString(string: speaker.name, style: .Title)
         let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(speaker.image)
+        print("\(#function):\(#line)",  "URL = \(URL.absoluteString)")
         
         let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
             size: iconImageView.frame.size,

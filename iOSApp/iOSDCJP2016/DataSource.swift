@@ -11,10 +11,12 @@ import AlamofireImage
 
 typealias SpeakerEntity = Speaker
 typealias SessionEntity = Session
+typealias NotificationEntity = Notification
 
 enum AnyEntity {
     case Speaker(speaker: SpeakerEntity)
     case Session(session: SessionEntity)
+    case Notification(notification: NotificationEntity)
     
     var cellId: String {
         get {
@@ -23,6 +25,8 @@ enum AnyEntity {
                 return "SpeakerTableViewCell"
             case .Session:
                 return "SessionTableViewCell"
+            case .Notification:
+                return "NotificationTableViewCell"
             }
         }
     }
@@ -36,7 +40,7 @@ protocol EntityProvider: class {
 
 class EntityCellMapper: NSObject, UITableViewDataSource {
     
-    static let cellIds = ["SpeakerTableViewCell", "SessionTableViewCell"]
+    static let cellIds = ["SpeakerTableViewCell", "SessionTableViewCell", "NotificationTableViewCell"]
     
     weak var entityProvider: EntityProvider? = nil
     
@@ -70,7 +74,7 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
                 size: c.iconImageView.frame.size,
                 radius: iconImageRadius
             )
-            
+
             c.iconImageView.af_setImageWithURL(
                 URL,
                 placeholderImage: nil,
@@ -86,6 +90,21 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
                 builder in
                 builder.color = UIColor.colorForRoom(s.room)
             }
+        case let (c as NotificationTableViewCell, .Notification(n)):
+            let imageURL = "static/hayashi311.jpg"
+            let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(imageURL)
+
+            let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                size: c.notificationImageView.frame.size,
+                radius: iconImageRadius
+            )
+
+            c.notificationImageView.af_setImageWithURL(
+                URL,
+                placeholderImage: nil,
+                filter: filter,
+                imageTransition: .CrossDissolve(0.2)
+            )
         default:
             break
         }

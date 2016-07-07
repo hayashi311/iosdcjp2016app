@@ -68,6 +68,18 @@ final class WebAPI {
             return "/notifications"
         }
     }
+
+    struct WifiRequest: IOSDCRequestType {
+        typealias Response = NotificationsResponse
+
+        var method: HTTPMethod {
+            return .GET
+        }
+        
+        var path: String {
+            return "/misc/wifi"
+        }
+    }
 }
 
 
@@ -89,7 +101,18 @@ struct SpeakersResponse: Unboxable  {
 }
 
 struct NotificationsResponse: Unboxable {
+    let notifications: [Notification]
     init(unboxer: Unboxer) {
-        
+        notifications = unboxer.unbox("notifications")
+    }
+}
+
+struct WifiResponse: Unboxable {
+    let network: String
+    let password: String
+
+    init(unboxer: Unboxer) {
+        network = unboxer.unbox("wifi.network", isKeyPath: true)
+        password = unboxer.unbox("wifi.password", isKeyPath: true)
     }
 }

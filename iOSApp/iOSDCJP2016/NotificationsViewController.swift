@@ -12,7 +12,7 @@ import APIKit
 class NotificationsViewController: UIViewController, EntityProvider {
 
     let dataSource = EntityCellMapper()
-    var speakers: [Speaker] = []
+    var notifications: [Notification] = []
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -37,8 +37,9 @@ class NotificationsViewController: UIViewController, EntityProvider {
             guard let s = self else { return }
             switch result {
             case let .Success(response):
+                s.notifications = response.notifications
                 s.tableView.reloadData()
-                print(response)
+                print(response.notifications)
             case let .Failure(e):
                 print(e)
             }
@@ -54,11 +55,11 @@ class NotificationsViewController: UIViewController, EntityProvider {
     }
     
     func numberOfEntitiesInSection(section: Int) -> Int {
-        return speakers.count
+        return notifications.count
     }
     
     func entityAtIndexPath(index: NSIndexPath) -> AnyEntity? {
-        guard speakers.indices.contains(index.row) else { return nil }
-        return .Speaker(speaker: speakers[index.row])
+        guard notifications.indices.contains(index.row) else { return nil }
+        return .Notification(notification: notifications[index.row])
     }
 }

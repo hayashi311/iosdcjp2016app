@@ -175,9 +175,17 @@ def sessions_list():
     return jsonify(schedule=list(group_by_time(match)))
 
 
-@app.route('/<entity>')
+@app.route('/speakers/<entity>')
 def get_entity(entity):
     match = glob(path.join(base_path, 'data', 'speakers', entity + '*.yaml'))
+    for m in match:
+        yaml_data = open(m).read()
+        return jsonify(yaml.load(yaml_data))
+    abort(404)
+
+@app.route('/misc/<entity>')
+def get_entity(entity):
+    match = glob(path.join(base_path, 'data', 'misc', entity + '*.yaml'))
     for m in match:
         yaml_data = open(m).read()
         return jsonify(yaml.load(yaml_data))

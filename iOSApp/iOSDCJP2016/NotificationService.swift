@@ -12,12 +12,16 @@ import AirshipKit
 class NotificationService {
     static let sharedInstance = NotificationService()
     
-    
     private init() {
         UAirship.takeOff()
     }
     
     func connect() {
         UAirship.push().userPushNotificationsEnabled = true
+        UAirship.push().autobadgeEnabled = true
+        UAirship.push().resetBadge()
+        UAirship.inAppMessaging().displayDelay = 5
+        UAirship.inAppMessaging().displayASAPEnabled = true
+        UAirship.shared().analytics.enabled = false
     }
 }
