@@ -184,7 +184,7 @@ def get_entity(entity):
     abort(404)
 
 @app.route('/misc/<entity>')
-def get_entity(entity):
+def get_misc(entity):
     match = glob(path.join(base_path, 'data', 'misc', entity + '*.yaml'))
     for m in match:
         yaml_data = open(m).read()
