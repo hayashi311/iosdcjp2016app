@@ -113,7 +113,8 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
             c.sponsorImageView.image = nil
             c.sponsorImageView.af_cancelImageRequest()
             if let i = s.image, let imageURL = NSURL(string: i) {
-                c.sponsorImageView.af_setImageWithURL(imageURL)
+                c.sponsorImageView.af_setImageWithURL(imageURL, placeholderImage: nil,
+                                                      filter: nil, imageTransition: .CrossDissolve(0.2))
             }
             c.nameLabel.attributedText = NSAttributedString(string: s.name, style: .Body)
             if let url = s.url {
