@@ -6,24 +6,34 @@ tiers:
         name: ヤフー株式会社
         description: |-
           日本最大級のインターネットの総合情報サイト「Yahoo! JAPAN」を運営するヤフー株式会社は、ITを使って人々や社会のさまざまな「課題」を解決していく「課題解決エンジン」として、いろいろな取り組みを進めています。
+        image: https://iosdc.jp/2016/images/sponsor/diamond-yahoo.png
+        url: http://www.yahoo.co.jp
       -
         name: UIEvolution株式会社
         description: |-
           「あらゆるデバイスからコンテンツへ簡単に接続できるような“おもてなし”を提供する」というミッションの下、現在、クルマ×ネットを実現するプラットフォームの開発、自動車メーカーへの提供をする『Automotive事業』、そして、ホテル、商業施設等におけるデジタルサイネージ等のコンテンツ配信やインタラクティブな体験を演出するプラットフォームの開発・提供をする『Hospitality事業』の２事業を中心に展開している。
+        image: https://iosdc.jp/2016/images/sponsor/diamond-uie.png
+        url: http://www.uievolution.co.jp/
       - &cookpad
         name: クックパッド株式会社
         description: |-
           クックパッドは、「毎日の料理を楽しみに」を軸に、レシピをはじめとした様々な生活に便利なサービスを提供する世界企業です。日本をはじめ、アメリカ・スペイン・インドネシアにサービスを展開しています。/n私たちは、ユーザに素早く価値を提供する必要があります。そのため大きなサービスを小さなサービスに分割するマイクロアーキテクチャや、グローバルのレシピ基盤の開発など、様々なテクノロジーに挑戦しています。
+        image: https://iosdc.jp/2016/images/sponsor/diamond-cookpad.png
+        url: https://info.cookpad.com/
       -
         name: LINE株式会社
         description: |-
            LINE株式会社は、コミュニケーションアプリ「LINE」および、LINEプラットフォーム上で展開する様々なコンテンツ・サービス（ゲーム、マンガ、音楽、決済など）を運営しています。1対1やグループでの多種多様なスタンプを利用したメッセージサービスや、音声・ビデオ通話によって、世界中のLINEユーザーとのコミュニケーションを無料でお楽しみ頂けます。このほか、キュレーションプラットフォーム「NAVERまとめ」、総合ポータルサイト「livedoor」なども展開しています。
+        image: https://iosdc.jp/2016/images/sponsor/diamond-line.png
+        url: http://line.me/
       -
         name: 株式会社AbemaTV
         description: |-
           株式会社AbemaTVは、サイバーエージェントとテレビ朝日が共同で、“インターネットテレビ局”として展開する新たな動画配信事業「AbemaTV」を運営しています。
           「AbemaTV」は、20チャンネル以上の多彩なコンテンツラインナップと高品質な映像、操作性を重視したデザイン、そして、すべてのコンテンツを無料で利用できる点が大きな特長です。
           全く新しいスタイルの動画サービスとして、生活の中に深く浸透したサービスになることを目指し、積極的なサービス開発を行っています。
+        image: https://iosdc.jp/2016/images/sponsor/diamond-abematv.png
+        url: http://abematv.co.jp/
   -
     name: プラチナスポンサー
     sponsors:
@@ -31,21 +41,31 @@ tiers:
         name: Rakuten, Inc.
         description: |-
           楽天グループは、eコマース、電子書籍、トラベル、銀行、証券、クレジットカード、電子マネー、物流、ポータル&メディア、オンラインマーケティング、プロスポーツなど、消費者および企業向けの各種サービスを提供する世界でも有数のインターネット・サービス企業です。現在、アジア、ヨーロッパ、南北アメリカ、オセアニアにて事業を展開しており、グローバル展開を拡大しています。創業は1997年。本社を東京に、全世界で1万2千人以上の従業員およびスタッフを擁します。
+        image: https://iosdc.jp/2016/images/sponsor/platinum-rakuten.png
+        url: http://www.rakuten.co.jp/
       -
         name: 株式会社リクルートマーケティングパートナーズ
         description: |-
           「人生に拍手があふれる世界を。」というスローガンのもと、出会い／結婚／出産・育児、学び、カーライフを中心とするライフイベント領域でビジネスを展開しています。
           近年では、これまでに培ってきたメディア・サービス・人材・ノウハウを生かし、『スタディサプリ』をはじめとするオンライン学習サービス、結婚領域では価値観のあった二人の出会いを創りだす『ゼクシィ恋結び』・『ゼクシィ縁結び』をスタートし、大きく成長させています。このように新たなチャレンジを積極果敢に行い、さらなる飛躍を目指します。
+        image: https://iosdc.jp/2016/images/sponsor/platinum-rmp.png
+        url: http://www.recruit-mp.co.jp/
       -
         name: GMOペパボ株式会社
         description: |-
           GMOペパボは、国内最大のCtoCハンドメイドマーケット「minne（ミンネ）」をはじめ、個人から法人まで幅広くご利用いただいているレンタルサーバー「ロリポップ！」、1枚の画像から在庫を持たずにオリジナルグッズを作成・販売できる「SUZURI」など、ユーザーに寄り添ったウェブサービスを多数提供しています。「もっとおもしろくできる」を企業理念にインターネットを通じてだれもが広く活躍できる環境を創出しています。
+        image: https://iosdc.jp/2016/images/sponsor/platinum-gmopepabo.png
+        url: https://pepabo.com/
       -
         name: 株式会社メルカリ
         description:
+        image: https://iosdc.jp/2016/images/sponsor/platinum-mercari.png
+        url: https://www.mercari.com
       - &handslab
         name: ハンズラボ株式会社
         description:
+        image:
+        url:
   -
     name: ゴールドスポンサー
     sponsors:
@@ -53,10 +73,14 @@ tiers:
         name: 株式会社bitFlyer
         description: |-
           株式会社bitFlyerは、「ビットコイン、ブロックチェーンで世界をもっと簡単にする」ことを目指し、ビットコイン取引総合プラットフォーム「bitFlyer」の運営、及びブロックチェーン技術を活用した新サービスの研究開発を行っております。私たちはサービス開始以来順調に成長し、2016年5月には、ユーザー数20万人超、1ヶ月の取引高450億円超と、日本最大のビットコイン・ブロックチェーン企業となっています。また、ヨーロッパやアジア等へのグローバル展開も進めております。
+        image: https://iosdc.jp/2016/images/sponsor/gold-bitflyer.png
+        url: https://bitflyer.jp/
       -
         name: 株式会社トレタ
         description: |-
           株式会社トレタが手がけているのは、飲食店向けの予約／顧客管理に特化したクラウド型サービスです。紙の予約台帳に置き換わるiPad予約台帳アプリ「トレタ」を中心に、最近では各社POSシステムとシームレスに連携する「POSコネクト」、様々なグルメサービスからの即時予約と予約実績管理を実現する「メディアコネクト」などの新機能を次々に開発しています。トレタは、予約管理・顧客管理の面から飲食店のIT化を牽引する「予約サービスのインフラ」を目指します。
+        image: https://iosdc.jp/2016/images/sponsor/gold-toreta.png
+        url: https://toreta.in/jp/
   -
     name: シルバースポンサー
     sponsors:
@@ -65,52 +89,79 @@ tiers:
         description: |-
           オハコは社会に自然と馴染む心地よさをつくるUX/UIデザインカンパニーです。
           クライアントとのコラボレーションを通して、ユーザーとビジネスの接点となるプロダクトをデザインとテクノロジーによってカタチにしていきます。サービスコンセプトの共創からUIデザイン、細部にこだわったアプリケーション開発で心地よいサービス/プロダクトを増やしていきます。
+        image: https://iosdc.jp/2016/images/sponsor/silver-ohako.png
+        url: http://ohako-inc.jp/
       -
         name: ディップ株式会社
         description: |-
           ディップ株式会社は、「バイトル」「はたらこねっと」「ナースではたらこ」などの求人情報サービスや、「聖地巡礼マップ」という新しい分野のサービスにもチャレンジしています。私たちは［夢とアイデアと情熱で社会を改善する存在となる］を企業理念に掲げ、さまざまなテクノロジーを武器に価値を届け続ける集団を目指し、日々挑戦しています。
+        image: https://iosdc.jp/2016/images/sponsor/silver-dip.png
+        url: http://www.dip-net.co.jp/
       -
         name: スポーツエンターテイメントアプリ「Player!」
         description: |-
           Player!はスポーツの「リアル」を体験できるスマートフォンアプリです。まるでスタジアムにいるかのような臨場感を手元のスマートフォンで感じてください。スポーツの感動の一瞬を見逃すことなく、試合の熱狂をユーザー同士で語り合いながら楽しめます。さらに、サッカー、野球、テニス、ラグビー、バスケなどのメジャースポーツからオリンピック競技等のアマチュアスポーツまで、200を超える幅広いテーマのスポーツコンテンツを、あなたの興味関心に応じて、あなただけのタイムラインで閲覧できます。さぁ、Player!で全く新しいスポーツライフを。
+        image: https://iosdc.jp/2016/images/sponsor/silver-player.png
+        url: http://www.playerapp.tokyo
       -
         name: 株式会社NineDrafts
         description: |-
           NineDraftsは、国内でiPhone 3Gが販売された当初より、数多くのiOSアプリの開発を継続して手 掛けています。新規開発はもとより既存システムの iOS アプリへのリプレースなど、企画段階から デザイン、実装など各フェーズでの iOS に最適な提案はもちろん、最終的なプロダクトリリースやそ の後の運用まで提供いたします。Objective-C によるネイティブアプリはもちろん、各種ミドルウェ アを利用した開発にも対応し、モバイル向けの UI/UX に注力したデザインの提供も可能です。
+        image: https://iosdc.jp/2016/images/sponsor/silver-9drafts.png
+        url: http://www.9drafts.com
       -
         name: Retty株式会社
         description: |-
           Rettyは「食を通じて世界中の人をHappyに」とビジョンを掲げ、「""自分にあった""お店が見つかる」日本最大級実名制のグルメサービス「Retty」を運営しています。
           2016年5月には月間閲覧ユーザー数2,000万人を超えました。今後は国内サービスの充実はもちろんのこと、2020年までに20カ国展開という目標を掲げ、2016年、海外展開の舵を切ります。
+        image: https://iosdc.jp/2016/images/sponsor/silver-retty.png
+        url: http://corp.retty.me/
       -
         name: Clipy
         description: |-
           ClipyはMac上でクリップボード拡張・スニペット管理などを行うことができるオープンソースのMacOS X用アプリケーションです。長年人気のある「ClipMenu」のOSS化に伴い、Swiftで書き直し、リメイクを進めています。今までClipMenuをお使いの方やそうでない方も、これからClipy独自の機能を追加していきますので、皆様どうぞ一度使ってみてください。ソースコードはすべてGitHub上で公開されていますので、Issue・PRなどお待ちしています！
+        image: https://iosdc.jp/2016/images/sponsor/silver-clipy.png
+        url: https://clipy-app.com/
       -
         name: 株式会社そらかぜ
         description: |-
           そらかぜは、京都を拠点にスマートフォン・タブレット・PC向けのアプリケーションを開発しています。天気予報アプリ「そら案内」をはじめとして日々のちょっとした不便を解決するシンプルなアプリ開発を目指しています。業務向けアプリや教育向けアプリなどの開発にも携わっており、iOSを中心に様々なプラットフォームへのモバイルアプリ実装をお手伝いします。
+        image: https://iosdc.jp/2016/images/sponsor/silver-sorakaze.png
+        url: http://sorakaze.co.jp/
       - &prtimes
         name: 株式会社PR TIMES
         description: |-
           「企業と生活者をつなぎ、世の中にいいものを広める」それがPR TIMESです。
            プレスリリース配信サービス「PR TIMES」はプレスリリースにテクノロジーを加えることで、より多彩な表現を実現し、多くの優良なプレスリリースが集まっています。プレスリリース配信シェアとサイト月間PV数は、共に国内N0.1です。
            また、昨年お問い合わせフォームなどが直感的に作成できるカスタマーサポートツール「Tayori」も立ち上げ、好評を頂いています。
+        image: https://iosdc.jp/2016/images/sponsor/silver-prtimes.png
+        url: http://prtimes.co.jp/
       -
         name: ニフティクラウドmobile backend
         description: |-
           ニフティクラウドmobile backendは、スマートフォンアプリのバックエンド機能の開発が不要になるクラウドサービスです。
           クラウド上に用意されたプッシュ通知やデータストアの各種機能はAPIを呼び出すだけでご利用いただけます。
           自社でのサーバー開発や運用が不要となり、アプリケーション開発に注力していただくことで、安く、早くアプリをリリースできます。
+        image: https://iosdc.jp/2016/images/sponsor/silver-niftycloud.png
+        url: http://mb.cloud.nifty.com/
       - &livesense
         name: 株式会社リブセンス
         description: |-
           リブセンスは「あたりまえを、発明しよう。」をビジョンに掲げ、今までにない画期的な行動様式やビジネスモデルを生み出し、展開しています。
           その中の一つ、『転職ドラフト』は、「ITエンジニアの実力が正当に評価される世界の実現」という、新しいあたりまえを目指すサービスです。
           企業がユーザーを年収つきで競争入札し、かつ、その結果を全て公開することで、転職におけるITエンジニア評価の不公平さや不透明さを解消していきます。
+        image: https://iosdc.jp/2016/images/sponsor/silver-livesense.png
+        url: http://www.livesense.co.jp/
       -
         name: クラウド印刷API「Codenberg」
         description:
+        image:
+        url: https://codenberg.io/
+      -
+        name: VOYAGE GROUP
+        description:
+        image:
+        url: http://voyagegroup.com
   -
     name: Wi-Fiスポンサー
     sponsors:
@@ -133,6 +184,8 @@ tiers:
         name: 株式会社グッドパッチ
         description: |-
           ハートに響くUIを追求するグローバルなUIデザインカンパニー、株式会社グッドパッチは東京とベルリンにあるWeb/ iOS / AndroidなどマルチデバイスアプリケーションのUIデザイン会社です。サービスやプロダクトの企画設計から関わりコンセプトメイキング、UX設計、プロトタイピング、実装までワンストップで提供しています。
+        image: https://iosdc.jp/2016/images/sponsor/design-goodpatch.png
+        url: http://goodpatch.com/jp
   -
     name: バッグスポンサー
     sponsors:
@@ -150,3 +203,5 @@ tiers:
         name: デジタルサーカス株式会社
         description: |-
           デジタルサーカスは「スマートフォン」「デジタルマーケティングプラットフォーム」の領域で活動する技術屋集団です。「不可能に思えることを実現する」を合言葉に多数クライアントに最先端のITサービスを提供しています。
+        image: https://iosdc.jp/2016/images/sponsor/accounting-digitalcircus.png
+        url: http://www.dgcircus.com
