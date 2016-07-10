@@ -183,6 +183,7 @@ def get_entity(entity):
         return jsonify(yaml.load(yaml_data))
     abort(404)
 
+
 @app.route('/misc/<entity>')
 def get_misc(entity):
     match = glob(path.join(base_path, 'data', 'misc', entity + '*.yaml'))
