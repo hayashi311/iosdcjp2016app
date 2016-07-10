@@ -11,6 +11,8 @@
 		DA3DE7741D0D50F500D4CAED /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */; };
 		DA4840E21D31D6C200825DB3 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4840E11D31D6C200825DB3 /* Sponsor.swift */; };
 		DA4840E41D31D87500825DB3 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4840E31D31D87500825DB3 /* SponsorsViewController.swift */; };
+		DA4840E71D31DFB400825DB3 /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4840E51D31DFB400825DB3 /* SponsorTableViewCell.swift */; };
+		DA4840E81D31DFB400825DB3 /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA4840E61D31DFB400825DB3 /* SponsorTableViewCell.xib */; };
 		DA5F184B1D059AA30058723E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F184A1D059AA30058723E /* API.swift */; };
 		DA6328121D2E77B600C05970 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6328101D2E77B600C05970 /* NotificationTableViewCell.swift */; };
 		DA6328131D2E77B600C05970 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6328111D2E77B600C05970 /* NotificationTableViewCell.xib */; };
@@ -44,6 +46,8 @@
 		DA3DE7731D0D50F500D4CAED /* SessionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
 		DA4840E11D31D6C200825DB3 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		DA4840E31D31D87500825DB3 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		DA4840E51D31DFB400825DB3 /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
+		DA4840E61D31DFB400825DB3 /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
 		DA5F184A1D059AA30058723E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA6328101D2E77B600C05970 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		DA6328111D2E77B600C05970 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				DACEF66A1D0C4D3B00865293 /* SessionSectionHeaderView.xib */,
 				DA6328101D2E77B600C05970 /* NotificationTableViewCell.swift */,
 				DA6328111D2E77B600C05970 /* NotificationTableViewCell.xib */,
+				DA4840E51D31DFB400825DB3 /* SponsorTableViewCell.swift */,
+				DA4840E61D31DFB400825DB3 /* SponsorTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				DAF5957D1D042C7B005FBB63 /* LaunchScreen.storyboard in Resources */,
 				DAF5957A1D042C7B005FBB63 /* Assets.xcassets in Resources */,
 				DAF595781D042C7B005FBB63 /* Main.storyboard in Resources */,
+				DA4840E81D31DFB400825DB3 /* SponsorTableViewCell.xib in Resources */,
 				DACEF66B1D0C4D3B00865293 /* SessionSectionHeaderView.xib in Resources */,
 				DA7440421D06E67500433C9F /* SessionTableViewCell.xib in Resources */,
 			);
@@ -327,6 +334,7 @@
 				DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */,
 				DAAE06001D1026A100F6C0E5 /* InfoViewController.swift in Sources */,
 				DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */,
+				DA4840E71D31DFB400825DB3 /* SponsorTableViewCell.swift in Sources */,
 				DA4840E41D31D87500825DB3 /* SponsorsViewController.swift in Sources */,
 				DA3DE7741D0D50F500D4CAED /* SessionDetailViewController.swift in Sources */,
 				DACEF6671D09ADCE00865293 /* Style.swift in Sources */,

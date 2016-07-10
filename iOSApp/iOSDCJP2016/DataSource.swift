@@ -12,11 +12,13 @@ import AlamofireImage
 typealias SpeakerEntity = Speaker
 typealias SessionEntity = Session
 typealias NotificationEntity = Notification
+typealias SponsorEntity = Sponsor
 
 enum AnyEntity {
     case Speaker(speaker: SpeakerEntity)
     case Session(session: SessionEntity)
     case Notification(notification: NotificationEntity)
+    case Sponsor(sponsor: SponsorEntity)
     
     var cellId: String {
         get {
@@ -27,6 +29,8 @@ enum AnyEntity {
                 return "SessionTableViewCell"
             case .Notification:
                 return "NotificationTableViewCell"
+            case .Sponsor:
+                return "SponsorTableViewCell"
             }
         }
     }
@@ -40,7 +44,7 @@ protocol EntityProvider: class {
 
 class EntityCellMapper: NSObject, UITableViewDataSource {
     
-    static let cellIds = ["SpeakerTableViewCell", "SessionTableViewCell", "NotificationTableViewCell"]
+    static let cellIds = ["SpeakerTableViewCell", "SessionTableViewCell", "NotificationTableViewCell", "SponsorTableViewCell"]
     
     weak var entityProvider: EntityProvider? = nil
     
@@ -105,6 +109,8 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
                 filter: filter,
                 imageTransition: .CrossDissolve(0.2)
             )
+        case let (c as SponsorTableViewCell, .Sponsor(s)):
+            c.nameLabel.attributedText = NSAttributedString(string: s.name, style: .Body)
         default:
             break
         }
