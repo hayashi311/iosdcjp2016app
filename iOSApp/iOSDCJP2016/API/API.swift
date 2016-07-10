@@ -17,6 +17,11 @@ protocol IOSDCRequestType: RequestType {
 }
 
 extension IOSDCRequestType {
+
+    var method: HTTPMethod {
+        return .GET
+    }
+
     var baseURL: NSURL {
         return NSURL(string: APIBaseURL)!
     }
@@ -36,10 +41,6 @@ final class WebAPI {
     struct SessionsRequest: IOSDCRequestType {
         typealias Response = SessionsResponse
 
-        var method: HTTPMethod {
-            return .GET
-        }
-        
         var path: String {
             return "/sessions"
         }
@@ -47,10 +48,6 @@ final class WebAPI {
 
     struct SpeakersRequest: IOSDCRequestType {
         typealias Response = SpeakersResponse
-
-        var method: HTTPMethod {
-            return .GET
-        }
         
         var path: String {
             return "/speakers"
@@ -59,10 +56,6 @@ final class WebAPI {
 
     struct NotificationsRequest: IOSDCRequestType {
         typealias Response = NotificationsResponse
-
-        var method: HTTPMethod {
-            return .GET
-        }
         
         var path: String {
             return "/notifications"
@@ -72,12 +65,16 @@ final class WebAPI {
     struct WifiRequest: IOSDCRequestType {
         typealias Response = WifiResponse
 
-        var method: HTTPMethod {
-            return .GET
-        }
-        
         var path: String {
             return "/misc/wifi"
+        }
+    }
+
+    struct SponsorsRequest: IOSDCRequestType {
+        typealias Response = SponsorsResponse
+
+        var path: String {
+            return "/misc/sponsors"
         }
     }
 }
@@ -114,5 +111,12 @@ struct WifiResponse: Unboxable {
     init(unboxer: Unboxer) {
         network = unboxer.unbox("wifi.network", isKeyPath: true)
         password = unboxer.unbox("wifi.password", isKeyPath: true)
+    }
+}
+
+struct SponsorsResponse: Unboxable {
+    let tiers: [SponsorTier]
+    init(unboxer: Unboxer) {
+        tiers = unboxer.unbox("tiers")
     }
 }
