@@ -13,10 +13,14 @@ import Unbox
 struct Sponsor: Unboxable {
     let name: String
     let description: String?
+    let image: String?
+    let url: String?
     
     init(unboxer: Unboxer) {
         name = unboxer.unbox("name")
         description = unboxer.unbox("description")
+        image = unboxer.unbox("image")
+        url = unboxer.unbox("url")
     }
 }
 

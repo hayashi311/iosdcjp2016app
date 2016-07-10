@@ -110,7 +110,21 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
                 imageTransition: .CrossDissolve(0.2)
             )
         case let (c as SponsorTableViewCell, .Sponsor(s)):
+            c.sponsorImageView.image = nil
+            c.sponsorImageView.af_cancelImageRequest()
+            if let i = s.image, let imageURL = NSURL(string: i) {
+                c.sponsorImageView.af_setImageWithURL(imageURL)
+            }
             c.nameLabel.attributedText = NSAttributedString(string: s.name, style: .Body)
+            if let url = s.url {
+                c.urlLabel.hidden = false
+                c.urlLabel.attributedText = NSAttributedString(string: url, style: .Small, tweak: {
+                    builder in
+                    builder.color = UIColor.accentColor()
+                })
+            } else {
+                c.urlLabel.hidden = true
+            }
         default:
             break
         }
