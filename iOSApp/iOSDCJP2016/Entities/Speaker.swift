@@ -12,7 +12,7 @@ import Unbox
 struct Speaker: Unboxable {
     let name: String
     let company: String?
-    let twitterAccount: String
+    let twitterAccount: String?
     let image: String
 //    let session: Session?
     

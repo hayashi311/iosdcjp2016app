@@ -8,6 +8,7 @@
 
 import UIKit
 import APIKit
+import SafariServices
 
 class SponsorsViewController: UITableViewController, EntityProvider {
 
@@ -48,7 +49,6 @@ class SponsorsViewController: UITableViewController, EntityProvider {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func numberOfSections() -> Int {
@@ -81,5 +81,11 @@ class SponsorsViewController: UITableViewController, EntityProvider {
             builder.weight = .Bold
         }
         return h
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let url = entityAtIndexPath(indexPath)?.url else { return }
+        let vc = SFSafariViewController(URL: url)
+        presentViewController(vc, animated: true, completion: nil)
     }
 }

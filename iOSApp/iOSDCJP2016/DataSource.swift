@@ -34,6 +34,24 @@ enum AnyEntity {
             }
         }
     }
+
+    var url: NSURL? {
+        get {
+            switch self {
+            case let .Speaker(speaker):
+                guard let twitterAccount = speaker.twitterAccount else { return nil }
+                return NSURL(string: "https://twitter.com/\(twitterAccount)")
+            case let .Sponsor(sponsor):
+                guard let url = sponsor.url else { return nil }
+                return NSURL(string: url)
+            case let .Notification(notification):
+                guard let url = notification.url else { return nil }
+                return NSURL(string: url)
+            default:
+                return nil
+            }
+        }
+    }
 }
 
 protocol EntityProvider: class {
