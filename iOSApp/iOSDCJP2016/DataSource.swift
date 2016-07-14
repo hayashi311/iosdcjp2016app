@@ -38,9 +38,6 @@ enum AnyEntity {
     var url: NSURL? {
         get {
             switch self {
-            case let .Speaker(speaker):
-                guard let twitterAccount = speaker.twitterAccount else { return nil }
-                return NSURL(string: "https://twitter.com/\(twitterAccount)")
             case let .Sponsor(sponsor):
                 guard let url = sponsor.url else { return nil }
                 return NSURL(string: url)
@@ -113,20 +110,29 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
                 builder.color = UIColor.colorForRoom(s.room)
             }
         case let (c as NotificationTableViewCell, .Notification(n)):
-            let imageURL = "static/hayashi311.jpg"
-            let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(imageURL)
+            c.notificationImageView.image = nil
+            if let i = n.image, let URL = NSURL(string: i) {
+                let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                    size: c.notificationImageView.frame.size,
+                    radius: iconImageRadius
+                )
 
-            let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
-                size: c.notificationImageView.frame.size,
-                radius: iconImageRadius
-            )
+                c.notificationImageView.af_setImageWithURL(
+                    URL,
+                    placeholderImage: nil,
+                    filter: filter,
+                    imageTransition: .CrossDissolve(0.2)
+                )
+            }
 
-            c.notificationImageView.af_setImageWithURL(
-                URL,
-                placeholderImage: nil,
-                filter: filter,
-                imageTransition: .CrossDissolve(0.2)
-            )
+            c.textView.attributedText = NSAttributedString(string: n.message, style: .Body)
+
+            switch n.url {
+            case _?:
+                c.accessoryType = .DisclosureIndicator
+            case nil:
+                c.accessoryType = .None
+            }
         case let (c as SponsorTableViewCell, .Sponsor(s)):
             c.sponsorImageView.image = nil
             c.sponsorImageView.af_cancelImageRequest()

@@ -8,8 +8,9 @@
 
 import UIKit
 import APIKit
+import SafariServices
 
-class NotificationsViewController: UIViewController, EntityProvider {
+class NotificationsViewController: UIViewController, EntityProvider, UITableViewDelegate {
 
     let dataSource = EntityCellMapper()
     var notifications: [Notification] = []
@@ -30,6 +31,7 @@ class NotificationsViewController: UIViewController, EntityProvider {
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
+        tableView.delegate = self
         
         let r = WebAPI.NotificationsRequest()
         APIKit.Session.sendRequest(r) {
@@ -39,7 +41,6 @@ class NotificationsViewController: UIViewController, EntityProvider {
             case let .Success(response):
                 s.notifications = response.notifications
                 s.tableView.reloadData()
-                print(response.notifications)
             case let .Failure(e):
                 print(e)
             }
@@ -62,4 +63,11 @@ class NotificationsViewController: UIViewController, EntityProvider {
         guard notifications.indices.contains(index.row) else { return nil }
         return .Notification(notification: notifications[index.row])
     }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let url = entityAtIndexPath(indexPath)?.url else { return }
+        let vc = SFSafariViewController(URL: url)
+        presentViewController(vc, animated: true, completion: nil)
+    }
+
 }
