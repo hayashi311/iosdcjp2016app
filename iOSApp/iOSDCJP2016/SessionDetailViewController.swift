@@ -80,7 +80,15 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
         tableView.tableHeaderView = header
     }
 
+    @IBAction func handleVoteButtonTapped(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("InputVoteCode", sender: self)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    @IBAction func unwindFromVoteCodeInputVC(sender: UIStoryboardSegue) {
+        print("\(#file).\(#function)")
     }
 }

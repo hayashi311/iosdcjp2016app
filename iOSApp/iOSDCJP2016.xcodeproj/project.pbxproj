@@ -29,6 +29,8 @@
 		DACEF6671D09ADCE00865293 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6661D09ADCE00865293 /* Style.swift */; };
 		DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEF6681D0C4D2A00865293 /* SessionSectionHeaderView.swift */; };
 		DACEF66B1D0C4D3B00865293 /* SessionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACEF66A1D0C4D3B00865293 /* SessionSectionHeaderView.xib */; };
+		DAD0768D1D37AFBE006141F0 /* VoteCodeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0768C1D37AFBE006141F0 /* VoteCodeInputViewController.swift */; };
+		DAD0768F1D37B388006141F0 /* NSUserDefault+VodeCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0768E1D37B388006141F0 /* NSUserDefault+VodeCode.swift */; };
 		DAE518B91D279DD800877EB2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE518B81D279DD800877EB2 /* Notification.swift */; };
 		DAF595711D042C7B005FBB63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595701D042C7B005FBB63 /* AppDelegate.swift */; };
 		DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF595721D042C7B005FBB63 /* SessionsViewController.swift */; };
@@ -64,6 +66,8 @@
 		DACEF6661D09ADCE00865293 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		DACEF6681D0C4D2A00865293 /* SessionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSectionHeaderView.swift; sourceTree = "<group>"; };
 		DACEF66A1D0C4D3B00865293 /* SessionSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionSectionHeaderView.xib; sourceTree = "<group>"; };
+		DAD0768C1D37AFBE006141F0 /* VoteCodeInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCodeInputViewController.swift; sourceTree = "<group>"; };
+		DAD0768E1D37B388006141F0 /* NSUserDefault+VodeCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefault+VodeCode.swift"; sourceTree = "<group>"; };
 		DAE518B81D279DD800877EB2 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		DAF5956D1D042C7B005FBB63 /* iOSDCJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDCJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF595701D042C7B005FBB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				DABC09681D1043500067D67C /* NotificationService.swift */,
 				DAF8D3D61D2798590033C665 /* NotificationsViewController.swift */,
 				DA4840E31D31D87500825DB3 /* SponsorsViewController.swift */,
+				DAD0768C1D37AFBE006141F0 /* VoteCodeInputViewController.swift */,
+				DAD0768E1D37B388006141F0 /* NSUserDefault+VodeCode.swift */,
 			);
 			path = iOSDCJP2016;
 			sourceTree = "<group>";
@@ -333,10 +339,12 @@
 				DA4840E21D31D6C200825DB3 /* Sponsor.swift in Sources */,
 				DAF595731D042C7B005FBB63 /* SessionsViewController.swift in Sources */,
 				DAAE06001D1026A100F6C0E5 /* InfoViewController.swift in Sources */,
+				DAD0768D1D37AFBE006141F0 /* VoteCodeInputViewController.swift in Sources */,
 				DACEF6691D0C4D2A00865293 /* SessionSectionHeaderView.swift in Sources */,
 				DA4840E71D31DFB400825DB3 /* SponsorTableViewCell.swift in Sources */,
 				DA4840E41D31D87500825DB3 /* SponsorsViewController.swift in Sources */,
 				DA3DE7741D0D50F500D4CAED /* SessionDetailViewController.swift in Sources */,
+				DAD0768F1D37B388006141F0 /* NSUserDefault+VodeCode.swift in Sources */,
 				DACEF6671D09ADCE00865293 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
