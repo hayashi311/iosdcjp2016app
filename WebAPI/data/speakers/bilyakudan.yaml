@@ -1,0 +1,13 @@
+session:
+  description: '普通の開発では行うことがないXcodeプロジェクトの解析やipaファイルの解析をRubyを用いて行う方法を発表します。
+
+    DeployGateで提供しているCLIツールのdgコマンドで実際に行っているXcodeプロジェクトの解析手法など、実コードを交えながら紹介します。
+
+    https://github.com/DeployGate/deploygate-cli'
+  room: B
+  speaker:
+    name: へんてこ
+    twitter_account: bilyakudan
+  start_at: 2016/08/19 19:05
+  time: 15分
+  title: RubyでXcodeプロジェクトを解析してみよう

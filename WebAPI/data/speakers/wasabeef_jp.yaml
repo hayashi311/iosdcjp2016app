@@ -1,0 +1,15 @@
+session:
+  description: '今年のGoogle I/Oで紹介された新しいGoogleCastのSDK(v3)になります。
+
+    このSDKは、GoogleCastの機能を全面的に対応されています。
+
+    主な特徴は、QA必須UIコンポーネントと機能の提供で
+
+    全体的に開発のコストが大幅に出来るので、5分で簡単な紹介をします。'
+  room: A
+  speaker:
+    name: wasabeef
+    twitter_account: wasabeef_jp
+  start_at: 2016/08/20 16:15
+  time: 5分（LT）
+  title: New Cast SDK

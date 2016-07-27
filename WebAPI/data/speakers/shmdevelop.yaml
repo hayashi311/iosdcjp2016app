@@ -1,0 +1,13 @@
+session:
+  description: 'GeoFence機能の実装方法と、動作テストを繰り返す中で得た知見とTipsを共有します。
+
+    低消費電力、アプリが"Not running"状態からでも起動できる、など強力な利点があるこの機能ですが精度や地点登録個数など制限もあります。
+
+    デモアプリを通じて、CoreLocationのバックグラウンド実行との違いや使用に向いたケースや向かないケースについて説明します。'
+  room: B
+  speaker:
+    name: satoshi0212
+    twitter_account: shmdevelop
+  start_at: 2016/08/20 15:20
+  time: 15分
+  title: SwiftでのGeoFence実装 - Tipsを添えて

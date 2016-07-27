@@ -1,0 +1,9 @@
+session:
+  description: 2014年に発表されたCarPlayですが、日本でもようやくメーカーオプションでCarPlay対応のカーナビが選べるようになってきました。CarPlayの対応方法や、日本での現状、iOS10での変更点についてお話します。
+  room: B
+  speaker:
+    name: Yuji Hato
+    twitter_account: dekatotoro
+  start_at: 2016/08/20 15:40
+  time: 15分
+  title: CarPlayの対応方法と日本での現状

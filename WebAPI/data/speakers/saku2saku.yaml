@@ -1,0 +1,11 @@
+session:
+  description: 'mBaasサービスとしての大御所Parseのサービス終了が発表されてからAWS CognitoやLambdaを使おうと決意された方も多いと思いますが、情報が少ない、ハマりどころがあるという事で挫折された方もいるのでは無いかと思います
+
+    今回は自分がハマったCognito導入のノウハウをお話ししたいと思います'
+  room: A
+  speaker:
+    name: Yoichiro Sakurai
+    twitter_account: saku2saku
+  start_at: 2016/08/20 16:15
+  time: 5分（LT）
+  title: AWS Cognitoを実際のアプリで導入してハマったこと

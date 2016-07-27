@@ -1,0 +1,9 @@
+session:
+  description: あなたの会社が突然英語化したらどうしますか？謎の意識の高まりから、あえて英語化された会社に入ってしまった私が、どうにか辞めずに今までに至ってきた、英語との付き合い方と、英語に対する心の持ちようについてさくっと話そうと思います。
+  room: A
+  speaker:
+    name: Yusuke Ohashi
+    twitter_account: iMickx
+  start_at: 2016/08/20 16:15
+  time: 5分（LT）
+  title: 5分で開発者として英語対応する方法

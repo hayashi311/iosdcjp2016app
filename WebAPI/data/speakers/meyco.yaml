@@ -1,0 +1,9 @@
+session:
+  description: １人で開発していて、デザイナーがいない。でもいい感じのアイコンがほしい・・・そういうちょっとした時のために、Sketch3でつくるiOSアイコンの作り方と、綺麗に見えるアイコンのコツをお伝えいたします。
+  room: B
+  speaker:
+    name: meyco
+    twitter_account: meyco
+  start_at: 2016/08/20 11:00
+  time: 30分
+  title: エンジニア向けSketch3でアイコン作成はじめの一歩

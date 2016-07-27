@@ -1,0 +1,12 @@
+session:
+  description: The handling of rich text is not easy. We may consider a lot of things
+    like fonts, characters, glyphs, emojis, images, ligatures, etc. In this talk,
+    I will show you the basics of laying out text and how to handle complex text layouts
+    in Apple's OS.
+  room: A
+  speaker:
+    name: Kishikwa Katsumi
+    twitter_account: k_katsumi
+  start_at: 2016/08/20 10:20
+  time: 30分
+  title: Handling rich text in Swift

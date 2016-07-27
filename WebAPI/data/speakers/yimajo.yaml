@@ -1,0 +1,9 @@
+session:
+  description: つ、ついに、ｷﾀ-！禁断のトーク「やはりお前らの...が間違っている」シリーズがiosdc 5分LTで解禁だー！！テーマはiOSアプリ開発うう〜。範囲広い〜。これは期待していいのか！？それとも他の登壇者と広い会場にビビってがっかりな内容なのか！？iosdcでしか味わえない緊張感の中、何が間違っているというのか、乞うご期待です。
+  room: A
+  speaker:
+    name: yimajo
+    twitter_account: yimajo
+  start_at: 2016/08/20 16:15
+  time: 5分（LT）
+  title: やはりお前らのiOSアプリ開発は間違っている

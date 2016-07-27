@@ -1,0 +1,19 @@
+session:
+  description: 'ABテストをモバイルアプリに導入し、日々アプリの改善を行っていることについて発表します。
+
+
+    どのようにABテストを導入しているのか？
+
+    ABテストを導入してどんな成果が得られたか？
+
+    ABテストを運用時にどんな問題が起こったか？
+
+
+    の3点について発表する予定です。'
+  room: B
+  speaker:
+    name: kazunori kikuchi
+    twitter_account: kichikuchi
+  start_at: 2016/08/19 18:20
+  time: 15分
+  title: AB Tests in Mobile App

@@ -1,0 +1,9 @@
+session:
+  description: B2Bアプリではサポートが大事です。トレタでは24H/365Dのサポートを行っていますが、電話だけでは相手の状況が分からず困難です。そこでアプリの画面をリモートから見ること、相手の画面に手書きする事のできる「ミレタ」を開発し搭載しました。このシステムはCocoaPodsにしてあり導入が数行で行えること、またまだ導入事例の少ないWebRTCを採用しており技術的にも面白い内容になっています。
+  room: A
+  speaker:
+    name: Yuichiro Masui
+    twitter_account: masuidrive
+  start_at: 2016/08/20 14:55
+  time: 15分
+  title: 'iOSアプリのリモートサポートツール「ミレタ」の作り方 #WebRTC #Swift #PrivatePod'

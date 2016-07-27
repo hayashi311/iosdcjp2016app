@@ -1,0 +1,15 @@
+session:
+  description: '僕は怠惰な人間です。プログラミングの大半はデバッグに時間を費やすと思っているので、なるべく早く原因に辿りついたり効率のよいデバッグライフを送りたいと常々思っています。
+
+    プリントデバッグもいいのですが Xcode には便利な機能が色々とあります。それらを使うことで簡単に原因を特定できるケースがあります。
+
+    visualize されるのは分かりやすいですよね。
+
+    それらを tips で紹介できたらなと思います。'
+  room: A
+  speaker:
+    name: Toshihiro Morimoto
+    twitter_account: dealforest
+  start_at: 2016/08/20 15:40
+  time: 15分
+  title: Xcode で快適なデバッグライフを追い求める

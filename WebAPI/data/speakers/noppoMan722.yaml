@@ -1,0 +1,17 @@
+session:
+  description: 'Swift3の正式リリース間近ということで、以前にも増してServer Side Swiftへの熱が盛り上がってきいるのではないでしょうか。
+
+    このセッションでは、Swift3 Web Framework 「Slimane」の紹介と、
+
+    Slimaneと周辺ライブラリを使った実践的なwebアプリケーションを構築し、クラウド環境へのデプロイといった一連の作業のデモを行いながら、
+
+    Server Side Swiftを体験していきたいと思います。
+
+    また、時間の許す範囲で、Open-SwiftやServer Side Swiftのこれまでとこれからについても話します。'
+  room: B
+  speaker:
+    name: Yuki Takei
+    twitter_account: noppoMan722
+  start_at: 2016/08/19 17:40
+  time: 30分
+  title: Swift3 Web Framework SlimaneとServer Side Swift

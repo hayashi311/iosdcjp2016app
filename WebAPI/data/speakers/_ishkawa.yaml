@@ -1,0 +1,12 @@
+session:
+  description: 'RxSwiftの導入には希望もあれば不安もあると思います。実際、RxSwiftを導入したプロジェクトでの開発では、良いことばかりではなく問題にも直面しました。しかし、プロジェクトに参加してから半年以上たった現在では、やはりRxSwiftを導入して良かったと実感しています。
+
+
+    本トークでは、RxSwiftを利用して実際にどのようなコードを書いてきたのか、実例を交えて紹介します。'
+  room: A
+  speaker:
+    name: ishkawa
+    twitter_account: _ishkawa
+  start_at: 2016/08/20 11:00
+  time: 30分
+  title: RxSwiftは開発をどう変えたか?

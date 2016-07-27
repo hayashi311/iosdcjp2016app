@@ -1,0 +1,10 @@
+session:
+  description: iOS 3時代に「まりも」というアプリの開発を始めてから、そろそろ6年が経ちます。やることは水を換えるだけ、という非常にシンプルなアプリですが、実は
+    CoreMotion や輝度センサー、さらには UIKit Dynamics など、様々な技術を使っています。本トークでは「まりも」の進化とともに、iOSの歴史を振り返ります。
+  room: B
+  speaker:
+    name: Kosuke Ogawa
+    twitter_account: koogawa
+  start_at: 2016/08/20 13:35
+  time: 15分
+  title: 「まりも」とiOSの6年間

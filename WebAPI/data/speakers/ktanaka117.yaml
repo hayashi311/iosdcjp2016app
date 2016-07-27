@@ -1,0 +1,9 @@
+session:
+  description: アニメのOP, EDなどでよくみる水玉が点々と広がる動き、動きの速さを表す線が流れる動き、などなどをSwift, iOSで表現！ライブラリを用いてライブコーディングします！（現在はC4などを考えています）
+  room: A
+  speaker:
+    name: 田中賢治
+    twitter_account: ktanaka117
+  start_at: 2016/08/19 18:20
+  time: 15分
+  title: あのアニメのOP, EDっぽいアニメーションを実装する話（仮）
