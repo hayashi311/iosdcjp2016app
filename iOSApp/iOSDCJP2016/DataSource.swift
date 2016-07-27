@@ -86,20 +86,24 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
             default:
                 c.companyLabel.hidden = true
             }
-            
-            let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(s.image)
-            
-            let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
-                size: c.iconImageView.frame.size,
-                radius: iconImageRadius
-            )
 
-            c.iconImageView.af_setImageWithURL(
-                URL,
-                placeholderImage: nil,
-                filter: filter,
-                imageTransition: .CrossDissolve(0.2)
-            )
+            if let image = s.image {
+                let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(image)
+                
+                let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                    size: c.iconImageView.frame.size,
+                    radius: iconImageRadius
+                )
+
+                c.iconImageView.af_setImageWithURL(
+                    URL,
+                    placeholderImage: nil,
+                    filter: filter,
+                    imageTransition: .CrossDissolve(0.2)
+                )
+            } else {
+                c.iconImageView.image = nil
+            }
         case let (c as SessionTableViewCell, .Session(s)):
             c.titleLabel.attributedText = NSAttributedString(string: s.title, style: .Title)
             if let speakerName = s.speaker?.name {

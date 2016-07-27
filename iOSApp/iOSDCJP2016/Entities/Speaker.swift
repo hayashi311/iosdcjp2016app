@@ -13,7 +13,7 @@ struct Speaker: Unboxable {
     let name: String
     let company: String?
     let twitterAccount: String?
-    let image: String
+    let image: String?
 //    let session: Session?
     
     init(unboxer: Unboxer) {

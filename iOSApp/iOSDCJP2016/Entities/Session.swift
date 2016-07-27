@@ -18,8 +18,8 @@ struct Session: Unboxable {
     let speaker: Speaker?
     
     enum Room: String, UnboxableEnum {
-        case A = "A会場"
-        case B = "B会場"
+        case A = "A"
+        case B = "B"
 
         static func unboxFallbackValue() -> Room {
             return .A

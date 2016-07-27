@@ -57,19 +57,24 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
         }
         
         nameLabel.attributedText = NSAttributedString(string: speaker.name, style: .Title)
-        let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(speaker.image)
-        
-        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
-            size: iconImageView.frame.size,
-            radius: iconImageRadius
-        )
-        
-        iconImageView.af_setImageWithURL(
-            URL,
-            placeholderImage: nil,
-            filter: filter,
-            imageTransition: .CrossDissolve(0.2)
-        )
+
+        if let image = speaker.image {
+            let URL = NSURL(string: APIBaseURL)!.URLByAppendingPathComponent(image)
+            
+            let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                size: iconImageView.frame.size,
+                radius: iconImageRadius
+            )
+            
+            iconImageView.af_setImageWithURL(
+                URL,
+                placeholderImage: nil,
+                filter: filter,
+                imageTransition: .CrossDissolve(0.2)
+            )
+        } else {
+            iconImageView.image = nil
+        }
 
 
         header.bounds = CGRect(origin: CGPointZero, size: UIScreen.mainScreen().bounds.size)
