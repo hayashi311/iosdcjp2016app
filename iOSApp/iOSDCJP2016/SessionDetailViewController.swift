@@ -84,6 +84,15 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
         header.bounds = CGRect(origin: CGPointZero, size: headerSize)
         tableView.tableHeaderView = header
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.destinationViewController {
+        case let controller as VoteCodeInputViewController:
+            controller.nid = session.nid
+        default:
+            break
+        }
+    }
 
     @IBAction func handleVoteButtonTapped(sender: UIBarButtonItem) {
         performSegueWithIdentifier("InputVoteCode", sender: self)

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import APIKit
 
 class VoteCodeInputViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    
+    var nid: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +40,20 @@ class VoteCodeInputViewController: UIViewController {
     }
 
     @IBAction func handleSaveButtonTapped(sender: UIBarButtonItem) {
-        NSUserDefaults.standardUserDefaults().vodeCode = textField.text
+        guard let voteCode = textField.text else { return }
+        NSUserDefaults.standardUserDefaults().vodeCode = voteCode
         textField.resignFirstResponder()
-        performSegueWithIdentifier("Exit", sender: self)
+        let r = WebAPI.VoteRequest(ono: voteCode, nid: nid)
+        APIKit.Session.sendRequest(r) {
+            [weak self] result in
+            switch result {
+            case let .Success(response):
+                print(response)
+                self?.performSegueWithIdentifier("Exit", sender: self)
+            case let .Failure(e):
+                print(e)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,6 @@
 session:
   description: １人で開発していて、デザイナーがいない。でもいい感じのアイコンがほしい・・・そういうちょっとした時のために、Sketch3でつくるiOSアイコンの作り方と、綺麗に見えるアイコンのコツをお伝えいたします。
+  nid: '124'
   room: B
   speaker:
     name: meyco

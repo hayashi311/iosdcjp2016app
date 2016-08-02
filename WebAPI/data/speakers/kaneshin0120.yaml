@@ -1,6 +1,7 @@
 session:
   description: 人がコードを書くのはロジック部分のみにし、それ以外はコード生成させることを意識したコーディングをするために、まずはコード生成方法などをLTでお話できればと思います。（例えば、JSON
     Hyper-Schemaからモデルを生成させること）
+  nid: '37'
   room: A
   speaker:
     name: kaneshin

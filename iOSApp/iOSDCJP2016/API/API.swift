@@ -77,6 +77,40 @@ final class WebAPI {
             return "/misc/sponsors"
         }
     }
+    
+    struct VoteRequest: RequestType {
+        typealias Response = VoteResponse
+        
+        let ono: String
+        let nid: String
+        
+        var baseURL: NSURL {
+            return NSURL(string: "https://iosdc.jp")!
+        }
+
+        var path: String {
+            return "/api/vote"
+        }
+        
+        var method: HTTPMethod {
+            return .GET
+        }
+
+        var queryParameters: [String : AnyObject]? {
+            return [
+                "ono": ono,
+                "nid": nid
+            ]
+        }
+        
+        func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> VoteResponse {
+            guard let dict = object as? UnboxableDictionary,
+                let response: VoteResponse = try? Unbox(dict) else {
+                throw ResponseError.UnexpectedObject(object)
+            }
+            return response
+        }
+    }
 }
 
 
@@ -118,5 +152,26 @@ struct SponsorsResponse: Unboxable {
     let tiers: [SponsorTier]
     init(unboxer: Unboxer) {
         tiers = unboxer.unbox("tiers")
+    }
+}
+
+struct VoteResponse: Unboxable {
+    enum Result: String, UnboxableEnum {
+        case OK = "ok"
+        case Error = "error"
+        
+        static func unboxFallbackValue() -> Result {
+            return .Error
+        }
+    }
+    
+    let result: Result
+    let nid: String
+    let voted: Bool
+    
+    init(unboxer: Unboxer) {
+        result = unboxer.unbox("result")
+        nid = unboxer.unbox("nid")
+        voted = unboxer.unbox("voted")
     }
 }

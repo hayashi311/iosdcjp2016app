@@ -2,6 +2,7 @@ session:
   description: iOS には JavaScriptCore というフレームワークがあります。これを使うと JavaScript コードと Swift
     コードを相互に連絡しながらプログラムを実行できます。Swift で作った自作クラスをそのまま JavaScript で使用できたり、JavaScript コードを動的生成して実行できたり、可能性は無限大。このトークではそんな
     JavaScriptCore の基本のところをざっくり紹介します。
+  nid: '86'
   room: A
   speaker:
     name: 熊谷 友宏

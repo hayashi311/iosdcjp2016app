@@ -16,6 +16,7 @@ struct Session: Unboxable {
     let time: String
     let room: Room
     let speaker: Speaker?
+    let nid: String
     
     enum Room: String, UnboxableEnum {
         case A = "A"
@@ -33,6 +34,7 @@ struct Session: Unboxable {
         time = unboxer.unbox("time")
         room = unboxer.unbox("room")
         speaker = unboxer.unbox("speaker")
+        nid = unboxer.unbox("nid")
     }
 }
 

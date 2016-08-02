@@ -1,5 +1,6 @@
 session:
   description: アニメのOP, EDなどでよくみる水玉が点々と広がる動き、動きの速さを表す線が流れる動き、などなどをSwift, iOSで表現！ライブラリを用いてライブコーディングします！（現在はC4などを考えています）
+  nid: '34'
   room: A
   speaker:
     name: 田中賢治

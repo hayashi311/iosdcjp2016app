@@ -3,6 +3,7 @@ session:
     like fonts, characters, glyphs, emojis, images, ligatures, etc. In this talk,
     I will show you the basics of laying out text and how to handle complex text layouts
     in Apple's OS.
+  nid: '208'
   room: A
   speaker:
     name: Kishikwa Katsumi
