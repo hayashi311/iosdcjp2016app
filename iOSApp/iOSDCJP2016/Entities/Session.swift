@@ -34,7 +34,9 @@ struct Session: Unboxable {
         time = unboxer.unbox("time")
         room = unboxer.unbox("room")
         speaker = unboxer.unbox("speaker")
-        nid = unboxer.unbox("nid")
+        let n: Int = unboxer.unbox("nid")
+        nid = "\(n)"
+        print(self)
     }
 }
 
