@@ -96,7 +96,14 @@ final class WebAPI {
             return .GET
         }
 
+        var dataParser: DataParserType {
+            get {
+                return JSONDataParser(readingOptions: .AllowFragments)
+            }
+        }
+
         var queryParameters: [String : AnyObject]? {
+            print(self)
             return [
                 "ono": ono,
                 "nid": nid
@@ -104,6 +111,7 @@ final class WebAPI {
         }
         
         func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> VoteResponse {
+            print(object)
             guard let dict = object as? UnboxableDictionary,
                 let response: VoteResponse = try? Unbox(dict) else {
                 throw ResponseError.UnexpectedObject(object)

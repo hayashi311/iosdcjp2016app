@@ -27,7 +27,7 @@ extension UIColor {
     }
 
     static func secondaryAccentColor() -> UIColor {
-        return UIColor(red: 0.89, green: 0.16, blue: 0.54, alpha: 1.0)
+        return UIColor(red: 0.69, green: 0.82, blue: 0.03, alpha: 1.0)
     }
     
     static func twitterColor() -> UIColor {

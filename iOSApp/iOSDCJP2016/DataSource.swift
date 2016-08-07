@@ -109,7 +109,7 @@ class EntityCellMapper: NSObject, UITableViewDataSource {
             if let speakerName = s.speaker?.name {
                 c.speakerLabel.attributedText = NSAttributedString(string: speakerName, style: .Body)
             }
-            c.roomLabel.attributedText = NSAttributedString(string: s.room.rawValue, style: .Body) {
+            c.roomLabel.attributedText = NSAttributedString(string: s.room.title, style: .Body) {
                 builder in
                 builder.color = UIColor.colorForRoom(s.room)
             }

@@ -86,7 +86,9 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        switch segue.destinationViewController {
+        guard let navvc = segue.destinationViewController as? UINavigationController else { return }
+        
+        switch navvc.visibleViewController {
         case let controller as VoteCodeInputViewController:
             controller.nid = session.nid
         default:

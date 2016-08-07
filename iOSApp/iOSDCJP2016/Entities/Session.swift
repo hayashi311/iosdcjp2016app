@@ -25,6 +25,13 @@ struct Session: Unboxable {
         static func unboxFallbackValue() -> Room {
             return .A
         }
+        
+        var title: String {
+            get {
+                return "Track \(rawValue)"
+            }
+        
+        }
     }
     
     init(unboxer: Unboxer) {
@@ -36,7 +43,6 @@ struct Session: Unboxable {
         speaker = unboxer.unbox("speaker")
         let n: Int = unboxer.unbox("nid")
         nid = "\(n)"
-        print(self)
     }
 }
 
