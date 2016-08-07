@@ -1,5 +1,8 @@
 session:
   description: アニメのOP, EDなどでよくみる水玉が点々と広がる動き、動きの速さを表す線が流れる動き、などなどをSwift, iOSで表現！ライブラリを用いてライブコーディングします！（現在はC4などを考えています）
+  links:
+  - title: '@ktanaka117'
+    url: https://twitter.com/ktanaka117
   nid: '34'
   room: A
   speaker:

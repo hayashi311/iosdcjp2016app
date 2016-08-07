@@ -6,6 +6,9 @@ session:
     そんなここまでの動向と、Swift 3に盛り込まれる要素およびさらにその先に向けて議論されている内容などを分かりやすく解説します。
 
     サーバーサイドの開発への利用も盛り上がりを見せつつあり、そのあたりも触れていきます。'
+  links:
+  - title: '@_mono'
+    url: https://twitter.com/_mono
   nid: '155'
   room: B
   speaker:

@@ -2,6 +2,9 @@ session:
   description: 'mBaasサービスとしての大御所Parseのサービス終了が発表されてからAWS CognitoやLambdaを使おうと決意された方も多いと思いますが、情報が少ない、ハマりどころがあるという事で挫折された方もいるのでは無いかと思います
 
     今回は自分がハマったCognito導入のノウハウをお話ししたいと思います'
+  links:
+  - title: '@saku2saku'
+    url: https://twitter.com/saku2saku
   nid: '187'
   room: A
   speaker:

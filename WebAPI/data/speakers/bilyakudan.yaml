@@ -4,6 +4,9 @@ session:
     DeployGateで提供しているCLIツールのdgコマンドで実際に行っているXcodeプロジェクトの解析手法など、実コードを交えながら紹介します。
 
     https://github.com/DeployGate/deploygate-cli'
+  links:
+  - title: '@bilyakudan'
+    url: https://twitter.com/bilyakudan
   nid: '110'
   room: B
   speaker:

@@ -1,5 +1,8 @@
 session:
   description: ここ1, 2年のSwiftの登場とFunctional Reactive Programming (FRP)の普及によって、iOSアプリ開発の現場では劇的なパラダイムシフトが起きています。しかし一方で、副作用を伴うアプリの状態管理に苦労する点が未だ多くあり、バグの温床となっています。このプレゼンでは、状態管理の基礎理論であるオートマトン（ステートマシン）を基に、Reduxなどのフレームワークとの対比も交えながら、FRPでの効率的な設計手法について探ります。
+  links:
+  - title: '@inamiy'
+    url: https://twitter.com/inamiy
   nid: '32'
   room: A
   speaker:

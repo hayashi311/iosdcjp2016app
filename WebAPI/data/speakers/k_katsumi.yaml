@@ -3,10 +3,13 @@ session:
     like fonts, characters, glyphs, emojis, images, ligatures, etc. In this talk,
     I will show you the basics of laying out text and how to handle complex text layouts
     in Apple's OS.
+  links:
+  - title: '@k_katsumi'
+    url: https://twitter.com/k_katsumi
   nid: '208'
   room: A
   speaker:
-    name: Kishikwa Katsumi
+    name: Kishikawa Katsumi
     twitter_account: k_katsumi
   start_at: 2016/08/20 10:20
   time: 30分

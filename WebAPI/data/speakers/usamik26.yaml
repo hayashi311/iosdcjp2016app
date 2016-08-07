@@ -1,5 +1,8 @@
 session:
   description: iOS アプリ開発においては、大なり小なり、周辺の補助ツールを使用します。ライブラリ管理ツール、リソース管理ツール、Lint ツール、ビルドツール、などを上手に組み合わせたベストプラクティスについて語ります。
+  links:
+  - title: '@usamik26'
+    url: https://twitter.com/usamik26
   nid: '40'
   room: B
   speaker:

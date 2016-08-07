@@ -3,6 +3,9 @@ session:
 
 
     本トークでは、RxSwiftを利用して実際にどのようなコードを書いてきたのか、実例を交えて紹介します。'
+  links:
+  - title: '@_ishkawa'
+    url: https://twitter.com/_ishkawa
   nid: '139'
   room: A
   speaker:

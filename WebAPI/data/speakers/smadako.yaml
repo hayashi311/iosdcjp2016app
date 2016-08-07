@@ -3,6 +3,9 @@ session:
     \n 日本地域は2011年2月3日にIPv4の新規配布がほぼ終わって、いよいよIPv6環境でアプリを動かさないといけない時期がやってきました。\n\n 多くの方はご存じかと存じますが，この流れの中，\
     \ Apple は，2016年6月より，\nIPv6 only 環境でのiOSアプリケーションの動作を必須化しました．\n今回は，Apple が公開しているNAT64/DNS64の解説文書\
     \ の読み方と，\nNAT64/DNS64の動作，この環境での動くアプリの作り方を可能な範囲で共有します！"
+  links:
+  - title: '@smadako'
+    url: https://twitter.com/smadako
   nid: '168'
   room: B
   speaker:

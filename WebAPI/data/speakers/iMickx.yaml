@@ -1,5 +1,8 @@
 session:
   description: あなたの会社が突然英語化したらどうしますか？謎の意識の高まりから、あえて英語化された会社に入ってしまった私が、どうにか辞めずに今までに至ってきた、英語との付き合い方と、英語に対する心の持ちようについてさくっと話そうと思います。
+  links:
+  - title: '@iMickx'
+    url: https://twitter.com/iMickx
   nid: '188'
   room: A
   speaker:

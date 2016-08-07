@@ -4,6 +4,9 @@ session:
     TableViewより柔軟なレイアウトがくめる分、深く考えずに実装をすすめてしまうと、コードが煩雑になったり、パフォーマンスが悪くなったり、予想通りの効果をだすことができないことも……。
 
     ここでは、複数のレイアウトを柔軟に適用する技術、また高いFPSを持ち、メンテナンス性の高いCollectionView/TableViewを作るための秘策をお教えします。'
+  links:
+  - title: '@TachibanaKaoru'
+    url: https://twitter.com/TachibanaKaoru
   nid: '184'
   room: A
   speaker:

@@ -1,5 +1,8 @@
 session:
   description: 2014年に発表されたCarPlayですが、日本でもようやくメーカーオプションでCarPlay対応のカーナビが選べるようになってきました。CarPlayの対応方法や、日本での現状、iOS10での変更点についてお話します。
+  links:
+  - title: '@dekatotoro'
+    url: https://twitter.com/dekatotoro
   nid: '71'
   room: B
   speaker:

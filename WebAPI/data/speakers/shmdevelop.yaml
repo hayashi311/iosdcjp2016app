@@ -4,6 +4,9 @@ session:
     低消費電力、アプリが"Not running"状態からでも起動できる、など強力な利点があるこの機能ですが精度や地点登録個数など制限もあります。
 
     デモアプリを通じて、CoreLocationのバックグラウンド実行との違いや使用に向いたケースや向かないケースについて説明します。'
+  links:
+  - title: '@shmdevelop'
+    url: https://twitter.com/shmdevelop
   nid: '161'
   room: B
   speaker:

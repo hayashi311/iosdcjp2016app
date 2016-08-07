@@ -1,7 +1,12 @@
 session:
   description: 'フリマアプリ フリルはここ1年で2度の大規模リニューアルを行いました。
+
     このトークではフリルでの経験を元に、ユーザーに受け入れられ、問題を起こしづらいリニューアルの進め方をエンジニア目線でお話しします。
+
     リニューアルでありがちな大きなバグの発生や、星1レビューの嵐をいかにして防ぐか、開発チームの総力戦となる大規模プロジェクトをいかにスムーズに進めるかについてお話しします。'
+  links:
+  - title: '@shobyshoby'
+    url: https://twitter.com/shobyshoby
   nid: '84'
   room: A
   speaker:
@@ -10,10 +15,3 @@ session:
   start_at: 2016/08/19 17:40
   time: 30分
   title: ユーザーに受け入れられ、問題を起こしづらい大規模リニューアルの進め方
-  links:
-    -
-      title: タイトル
-      url: https://google.com
-    -
-      title: リンク2
-      url: https://google.com
