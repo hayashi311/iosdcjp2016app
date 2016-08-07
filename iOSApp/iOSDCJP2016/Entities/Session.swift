@@ -17,6 +17,7 @@ struct Session: Unboxable {
     let room: Room
     let speaker: Speaker?
     let nid: String
+    let links: [Link]?
     
     enum Room: String, UnboxableEnum {
         case A = "A"
@@ -34,6 +35,16 @@ struct Session: Unboxable {
         }
     }
     
+    struct Link: Unboxable {
+        let title: String
+        let url: NSURL
+        
+        init(unboxer: Unboxer) {
+            title = unboxer.unbox("title")
+            url = unboxer.unbox("url")
+        }
+    }
+    
     init(unboxer: Unboxer) {
         title = unboxer.unbox("title")
         description = unboxer.unbox("description")
@@ -43,6 +54,7 @@ struct Session: Unboxable {
         speaker = unboxer.unbox("speaker")
         let n: Int = unboxer.unbox("nid")
         nid = "\(n)"
+        links = unboxer.unbox("links")
     }
 }
 

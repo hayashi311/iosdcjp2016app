@@ -8,8 +8,9 @@
 
 import UIKit
 import AlamofireImage
+import SafariServices
 
-class SessionDetailViewController: UIViewController, NSLayoutManagerDelegate {
+class SessionDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSLayoutManagerDelegate {
     var session: Session!
 
     @IBOutlet weak var header: UIView!
@@ -24,13 +25,13 @@ class SessionDetailViewController: UIViewController, NSLayoutManagerDelegate {
     @IBOutlet weak var companyLabel: UILabel!
 
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         roomLabel.attributedText = NSAttributedString(string: session.room.title, style: .Body) {
             builder in
-            builder.color = UIColor.colorForRoom(self.session.room)
+            builder.color = UIColor.secondaryTextColor()
         }
         
         startAtLabel.attributedText = NSAttributedString(string: session.startAt + "- (\(session.time))", style: .Body) {
@@ -83,6 +84,11 @@ class SessionDetailViewController: UIViewController, NSLayoutManagerDelegate {
         let headerSize = header.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         header.bounds = CGRect(origin: CGPointZero, size: headerSize)
         tableView.tableHeaderView = header
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
+        print(session.links)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -112,5 +118,25 @@ class SessionDetailViewController: UIViewController, NSLayoutManagerDelegate {
                        lineSpacingAfterGlyphAtIndex glyphIndex: Int,
                        withProposedLineFragmentRect rect: CGRect) -> CGFloat {
         return defaultLineHeight
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return session.links?.count ?? 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Link")!
+        guard let link = session.links?[indexPath.row] else { return cell }
+        cell.textLabel?.attributedText = NSAttributedString(string: link.title, style: .Body) {
+            builder in
+            builder.color = UIColor.accentColor()
+        }
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let link = session.links?[indexPath.row] else { return }
+        let vc = SFSafariViewController(URL: link.url)
+        presentViewController(vc, animated: true, completion: nil)
     }
 }

@@ -13,7 +13,7 @@ session:
   links:
     -
       title: タイトル
-      link: https://google.com
+      url: https://google.com
     -
       title: リンク2
-      link: https://google.com
+      url: https://google.com
