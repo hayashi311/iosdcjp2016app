@@ -28,9 +28,9 @@ class SessionDetailViewController: UIViewController, NSLayoutManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roomLabel.attributedText = NSAttributedString(string: session.room.rawValue, style: .Body) {
+        roomLabel.attributedText = NSAttributedString(string: session.room.title, style: .Body) {
             builder in
-            builder.color = UIColor.secondaryTextColor()
+            builder.color = UIColor.colorForRoom(self.session.room)
         }
         
         startAtLabel.attributedText = NSAttributedString(string: session.startAt + "- (\(session.time))", style: .Body) {
