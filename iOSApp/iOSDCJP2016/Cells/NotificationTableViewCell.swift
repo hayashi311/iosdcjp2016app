@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationTableViewCell: UITableViewCell, DefaultLineHeight {
+class NotificationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var notificationImageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
@@ -18,7 +18,6 @@ class NotificationTableViewCell: UITableViewCell, DefaultLineHeight {
 
         textView.textContainer.lineFragmentPadding = 0
         textView.layoutMargins = UIEdgeInsetsZero
-        textView.layoutManager.delegate = self
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -128,13 +128,6 @@ extension NSAttributedString {
     }
 }
 
-protocol DefaultLineHeight: NSLayoutManagerDelegate {
-}
-
-extension DefaultLineHeight {
-    func layoutManager(layoutManager: NSLayoutManager, lineSpacingAfterGlyphAtIndex glyphIndex: Int, withProposedLineFragmentRect rect: CGRect) -> CGFloat {
-        return 12
-    }
-}
+let defaultLineHeight: CGFloat = 4
 
 let iconImageRadius: CGFloat = 36

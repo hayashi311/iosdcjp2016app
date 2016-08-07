@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class SessionDetailViewController: UIViewController, DefaultLineHeight {
+class SessionDetailViewController: UIViewController, NSLayoutManagerDelegate {
     var session: Session!
 
     @IBOutlet weak var header: UIView!
@@ -43,10 +43,10 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
             builder.weight = .Bold
             builder.color = UIColor.darkPrimaryTextColor()
         }
-        descriptionTextView.attributedText = NSAttributedString(string: session.description, style: .Body)
         descriptionTextView.textContainer.lineFragmentPadding = 0
         descriptionTextView.layoutMargins = UIEdgeInsetsZero
         descriptionTextView.layoutManager.delegate = self
+        descriptionTextView.attributedText = NSAttributedString(string: session.description, style: .Body)
         guard let speaker = session.speaker else { return }
         
         switch speaker.company {
@@ -106,5 +106,11 @@ class SessionDetailViewController: UIViewController, DefaultLineHeight {
 
     @IBAction func unwindFromVoteCodeInputVC(sender: UIStoryboardSegue) {
         print("\(#file).\(#function)")
+    }
+    
+    func layoutManager(layoutManager: NSLayoutManager,
+                       lineSpacingAfterGlyphAtIndex glyphIndex: Int,
+                       withProposedLineFragmentRect rect: CGRect) -> CGFloat {
+        return defaultLineHeight
     }
 }
