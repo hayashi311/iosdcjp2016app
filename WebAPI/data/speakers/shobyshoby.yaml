@@ -12,3 +12,10 @@ session:
   start_at: 2016/08/19 17:40
   time: 30分
   title: ユーザーに受け入れられ、問題を起こしづらい大規模リニューアルの進め方
+  links:
+    -
+      title: タイトル
+      link: https://google.com
+    -
+      title: リンク2
+      link: https://google.com
