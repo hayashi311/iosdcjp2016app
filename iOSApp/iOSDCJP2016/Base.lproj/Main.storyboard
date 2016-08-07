@@ -465,7 +465,7 @@
         <!--Vote Code Input View Controller-->
         <scene sceneID="crX-X5-SpY">
             <objects>
-                <viewController id="Yxu-Wj-npn" customClass="VoteCodeInputViewController" customModule="iOSDCJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VoteCodeInputViewController" id="Yxu-Wj-npn" customClass="VoteCodeInputViewController" customModule="iOSDCJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMA-MR-6Br"/>
                         <viewControllerLayoutGuide type="bottom" id="tky-OT-uDM"/>

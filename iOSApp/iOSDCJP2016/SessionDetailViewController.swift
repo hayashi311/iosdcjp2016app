@@ -128,8 +128,9 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let link = session.links?[indexPath.row] else { return }
-        Navigator.pushURL(link.url)
-        let vc = SFSafariViewController(URL: link.url)
-        presentViewController(vc, animated: true, completion: nil)
+        if !Navigator.openURL(link.url) {
+            let vc = SFSafariViewController(URL: link.url)
+            presentViewController(vc, animated: true, completion: nil)
+        }
     }
 }
