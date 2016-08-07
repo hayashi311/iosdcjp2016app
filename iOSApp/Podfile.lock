@@ -8,6 +8,7 @@ PODS:
   - Result (2.0.0)
   - Unbox (1.7)
   - UrbanAirship-iOS-SDK (7.2.0)
+  - URLNavigator (0.6.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - NJKScrollFullScreen (~> 0.2)
   - Unbox (~> 1.7)
   - UrbanAirship-iOS-SDK (~> 7.2)
+  - URLNavigator (~> 0.6)
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
@@ -25,5 +27,6 @@ SPEC CHECKSUMS:
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   Unbox: 576f1470399f84c411ced0a8ce4c4caaeb8acf1d
   UrbanAirship-iOS-SDK: ad55c5d44af1aa5d007b0e047d30b48858eff9b8
+  URLNavigator: 3f4d7c1e5ec5bace93caea71d1b68ac52edbbddb
 
 COCOAPODS: 0.39.0

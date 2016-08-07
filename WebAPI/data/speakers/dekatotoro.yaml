@@ -3,6 +3,8 @@ session:
   links:
   - title: '@dekatotoro'
     url: https://twitter.com/dekatotoro
+  - title: 投票
+    url: iosdc://vote/71
   nid: '71'
   room: B
   speaker:

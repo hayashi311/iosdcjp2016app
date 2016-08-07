@@ -8,5 +8,6 @@ target 'iOSDCJP2016' do
   pod 'Alamofire', '~> 3.4'
   pod 'AlamofireImage', '~> 2.4'
   pod 'UrbanAirship-iOS-SDK', '~> 7.2'
+  pod 'URLNavigator', '~> 0.6'
 end
 

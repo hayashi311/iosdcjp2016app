@@ -6,6 +6,8 @@ session:
   links:
   - title: '@smadako'
     url: https://twitter.com/smadako
+  - title: 投票
+    url: iosdc://vote/168
   nid: '168'
   room: B
   speaker:

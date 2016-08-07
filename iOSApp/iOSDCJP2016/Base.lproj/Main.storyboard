@@ -85,13 +85,7 @@
                             <constraint firstItem="fyi-Qi-eur" firstAttribute="top" secondItem="Ux8-Ox-O19" secondAttribute="top" id="ug0-75-sXn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JbJ-ic-5Y5">
-                        <barButtonItem key="rightBarButtonItem" title="投票" id="GAV-qg-CZB">
-                            <connections>
-                                <action selector="handleVoteButtonTapped:" destination="Aty-HK-8Ti" id="tvM-cC-2Mu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="JbJ-ic-5Y5"/>
                     <connections>
                         <outlet property="companyLabel" destination="qiP-92-7YU" id="X6O-sZ-I2U"/>
                         <outlet property="descriptionTextView" destination="u6S-1L-vjm" id="lfG-2U-uVG"/>
@@ -102,7 +96,6 @@
                         <outlet property="startAtLabel" destination="oCm-Te-bYR" id="PNQ-55-7bn"/>
                         <outlet property="tableView" destination="fyi-Qi-eur" id="2xj-9h-4K0"/>
                         <outlet property="titleLabel" destination="CPg-mz-eOo" id="9PJ-8z-kTP"/>
-                        <segue destination="rXQ-qJ-M68" kind="presentation" identifier="InputVoteCode" id="rP1-4W-dC7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxp-ZP-8Do" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,14 +195,6 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="2259" y="-320"/>
-        </scene>
-        <!--VoteInputNavigationController-->
-        <scene sceneID="KLq-wO-mdz">
-            <objects>
-                <viewControllerPlaceholder referencedIdentifier="VoteInputNavigationController" id="rXQ-qJ-M68" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="88u-iW-zGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2786.5" y="-320"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="wg7-f3-ORb">

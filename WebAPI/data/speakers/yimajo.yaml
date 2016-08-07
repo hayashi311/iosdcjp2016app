@@ -3,6 +3,8 @@ session:
   links:
   - title: '@yimajo'
     url: https://twitter.com/yimajo
+  - title: 投票
+    url: iosdc://vote/165
   nid: '165'
   room: A
   speaker:

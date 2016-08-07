@@ -9,6 +9,8 @@ session:
   links:
   - title: '@shu223'
     url: https://twitter.com/shu223
+  - title: 投票
+    url: iosdc://vote/146
   nid: '146'
   room: B
   speaker:

@@ -13,6 +13,8 @@ session:
   links:
   - title: '@kichikuchi'
     url: https://twitter.com/kichikuchi
+  - title: 投票
+    url: iosdc://vote/123
   nid: '123'
   room: B
   speaker:

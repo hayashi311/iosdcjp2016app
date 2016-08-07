@@ -9,6 +9,8 @@
 import UIKit
 import AlamofireImage
 import SafariServices
+import URLNavigator
+
 
 class SessionDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSLayoutManagerDelegate {
     var session: Session!
@@ -25,6 +27,8 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var companyLabel: UILabel!
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,20 +92,8 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        print(session.links)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let navvc = segue.destinationViewController as? UINavigationController else { return }
-        
-        switch navvc.visibleViewController {
-        case let controller as VoteCodeInputViewController:
-            controller.nid = session.nid
-        default:
-            break
-        }
-    }
-
     @IBAction func handleVoteButtonTapped(sender: UIBarButtonItem) {
         performSegueWithIdentifier("InputVoteCode", sender: self)
     }
@@ -136,6 +128,7 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let link = session.links?[indexPath.row] else { return }
+        Navigator.pushURL(link.url)
         let vc = SFSafariViewController(URL: link.url)
         presentViewController(vc, animated: true, completion: nil)
     }

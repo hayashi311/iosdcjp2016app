@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import URLNavigator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         UINavigationBar.appearance().tintColor = UIColor.accentColor()
         NotificationService.sharedInstance.connect()
+        Navigator.map("iosdc://vote/<nid>", VoteCodeInputViewController.self)
         return true
     }
 

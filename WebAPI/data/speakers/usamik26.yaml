@@ -3,6 +3,8 @@ session:
   links:
   - title: '@usamik26'
     url: https://twitter.com/usamik26
+  - title: 投票
+    url: iosdc://vote/40
   nid: '40'
   room: B
   speaker:

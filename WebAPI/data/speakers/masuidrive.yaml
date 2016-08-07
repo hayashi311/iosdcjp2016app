@@ -3,6 +3,8 @@ session:
   links:
   - title: '@masuidrive'
     url: https://twitter.com/masuidrive
+  - title: 投票
+    url: iosdc://vote/100
   nid: '100'
   room: A
   speaker:

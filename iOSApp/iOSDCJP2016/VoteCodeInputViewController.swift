@@ -8,14 +8,32 @@
 
 import UIKit
 import APIKit
+import URLNavigator
 
-class VoteCodeInputViewController: UIViewController {
+class VoteCodeInputViewController: UIViewController, URLNavigable {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
-    var nid: String!
+    let nid: String
+    
+    init(nid: String) {
+        self.nid = nid
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    convenience required init?(URL: URLConvertible, values: [String : AnyObject]) {
+        guard let nid = values["nid"] as? String else {
+            return nil
+        }
+        self.init(nid: nid)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
