@@ -254,7 +254,7 @@
         <scene sceneID="adP-yV-fgh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tOJ-u2-mbe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="スケジュール" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="スケジュール" image="calendar" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oiS-Di-ndQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -449,7 +449,7 @@
         <scene sceneID="Ajn-p4-gfy">
             <objects>
                 <navigationController id="ocy-qY-GwI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="その他" image="first" id="ody-gl-ABO"/>
+                    <tabBarItem key="tabBarItem" title="その他" image="wifi" id="ody-gl-ABO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="noo-IK-exq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -519,7 +519,7 @@
         <scene sceneID="cxI-KB-XuL">
             <objects>
                 <navigationController id="CLL-C6-nE5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="スポンサー" image="first" id="vn0-XB-SDf"/>
+                    <tabBarItem key="tabBarItem" title="スポンサー" image="fire" id="vn0-XB-SDf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lkk-uA-kr4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -600,7 +600,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="calendar" width="30" height="23"/>
+        <image name="fire" width="24" height="31"/>
         <image name="second" width="30" height="30"/>
+        <image name="wifi" width="31" height="22"/>
     </resources>
 </document>

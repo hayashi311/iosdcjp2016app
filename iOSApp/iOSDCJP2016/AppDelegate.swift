@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Navigator.push(c)
             return true
         }
+        UITabBar.appearance().tintColor = UIColor.accentColor()
         return true
     }
 

@@ -133,4 +133,9 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
             presentViewController(vc, animated: true, completion: nil)
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        tableView.contentInset = UIEdgeInsets(top: topLayoutGuide.length, left: 0,
+                                              bottom: bottomLayoutGuide.length + 30, right: 0)
+    }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import APIKit
+import SafariServices
 
 class InfoViewController: UITableViewController {
     
@@ -45,6 +46,24 @@ class InfoViewController: UITableViewController {
                 print(e)
             }
         }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch (indexPath.section, indexPath.row) {
+        case (1, 1):
+            print("licence")
+        case (0, 0):
+            openURL("https://google.com")
+            break
+        default:
+            break
+        }
+    }
+    
+    func openURL(url: String) {
+        guard let u = NSURL(string: url) else { return }
+        let vc = SFSafariViewController(URL: u)
+        presentViewController(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
