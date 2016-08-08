@@ -1,1 +1,0 @@
-../../../NJKScrollFullScreen/NJKScrollFullScreen/UIViewController+NJKFullScreenSupport.h

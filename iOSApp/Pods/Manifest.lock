@@ -1,29 +1,29 @@
 PODS:
+  - AcknowList (1.0)
   - Alamofire (3.4.0)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
   - APIKit (2.0.1):
     - Result (~> 2.0.0)
-  - NJKScrollFullScreen (0.2.6)
   - Result (2.0.0)
   - Unbox (1.7)
   - UrbanAirship-iOS-SDK (7.2.0)
   - URLNavigator (0.6.0)
 
 DEPENDENCIES:
+  - AcknowList
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.4)
   - APIKit (~> 2.0)
-  - NJKScrollFullScreen (~> 0.2)
   - Unbox (~> 1.7)
   - UrbanAirship-iOS-SDK (~> 7.2)
   - URLNavigator (~> 0.6)
 
 SPEC CHECKSUMS:
+  AcknowList: 06a183d117b7e2bb0c6f5654366d2912dc64a6c4
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   APIKit: 7b61788273235bab213477b22f1897872047da10
-  NJKScrollFullScreen: 13e370f935da7385b92779644b31df8d83a91447
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   Unbox: 576f1470399f84c411ced0a8ce4c4caaeb8acf1d
   UrbanAirship-iOS-SDK: ad55c5d44af1aa5d007b0e047d30b48858eff9b8

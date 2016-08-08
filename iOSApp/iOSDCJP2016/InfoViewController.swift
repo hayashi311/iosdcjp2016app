@@ -9,6 +9,7 @@
 import UIKit
 import APIKit
 import SafariServices
+import AcknowList
 
 class InfoViewController: UITableViewController {
     
@@ -50,11 +51,22 @@ class InfoViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            // iOSDCについて
+            openURL("https://iosdc.jp/2016")
+        case (0, 1):
+            // 会場
+            openURL("https://iosdc.jp/2016/c/venue")
+        case (0, 2):
+            // 行動規範
+            openURL("https://iosdc.jp/2016/conduct.html")
+        case (1, 0):
+            // 実行委員
+            openURL("https://iosdc.jp/2016")
         case (1, 1):
             print("licence")
-        case (0, 0):
-            openURL("https://google.com")
-            break
+            let c = AcknowListViewController()
+            navigationController?.pushViewController(c, animated: true)
         default:
             break
         }

@@ -85,9 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-iOSDCJP2016/APIKit.framework"
+  install_framework "Pods-iOSDCJP2016/AcknowList.framework"
   install_framework "Pods-iOSDCJP2016/Alamofire.framework"
   install_framework "Pods-iOSDCJP2016/AlamofireImage.framework"
-  install_framework "Pods-iOSDCJP2016/NJKScrollFullScreen.framework"
   install_framework "Pods-iOSDCJP2016/Result.framework"
   install_framework "Pods-iOSDCJP2016/URLNavigator.framework"
   install_framework "Pods-iOSDCJP2016/Unbox.framework"
@@ -95,9 +95,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iOSDCJP2016/APIKit.framework"
+  install_framework "Pods-iOSDCJP2016/AcknowList.framework"
   install_framework "Pods-iOSDCJP2016/Alamofire.framework"
   install_framework "Pods-iOSDCJP2016/AlamofireImage.framework"
-  install_framework "Pods-iOSDCJP2016/NJKScrollFullScreen.framework"
   install_framework "Pods-iOSDCJP2016/Result.framework"
   install_framework "Pods-iOSDCJP2016/URLNavigator.framework"
   install_framework "Pods-iOSDCJP2016/Unbox.framework"
