@@ -6,8 +6,9 @@ target 'iOSDCJP2016' do
   pod 'Unbox', '~> 1.7'
   pod 'Alamofire', '~> 3.4'
   pod 'AlamofireImage', '~> 2.4'
-  pod 'UrbanAirship-iOS-SDK', '~> 7.2'
+#  pod 'UrbanAirship-iOS-SDK', '~> 7.2'
   pod 'URLNavigator', '~> 0.6'
   pod 'AcknowList'
+  pod 'SVProgressHUD'
 end
 

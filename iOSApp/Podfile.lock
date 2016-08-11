@@ -6,8 +6,8 @@ PODS:
   - APIKit (2.0.1):
     - Result (~> 2.0.0)
   - Result (2.0.0)
+  - SVProgressHUD (2.0.3)
   - Unbox (1.7)
-  - UrbanAirship-iOS-SDK (7.2.0)
   - URLNavigator (0.6.0)
 
 DEPENDENCIES:
@@ -15,8 +15,8 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.4)
   - APIKit (~> 2.0)
+  - SVProgressHUD
   - Unbox (~> 1.7)
-  - UrbanAirship-iOS-SDK (~> 7.2)
   - URLNavigator (~> 0.6)
 
 SPEC CHECKSUMS:
@@ -25,8 +25,8 @@ SPEC CHECKSUMS:
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   APIKit: 7b61788273235bab213477b22f1897872047da10
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   Unbox: 576f1470399f84c411ced0a8ce4c4caaeb8acf1d
-  UrbanAirship-iOS-SDK: ad55c5d44af1aa5d007b0e047d30b48858eff9b8
   URLNavigator: 3f4d7c1e5ec5bace93caea71d1b68ac52edbbddb
 
 COCOAPODS: 0.39.0

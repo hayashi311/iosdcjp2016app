@@ -89,9 +89,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-iOSDCJP2016/Alamofire.framework"
   install_framework "Pods-iOSDCJP2016/AlamofireImage.framework"
   install_framework "Pods-iOSDCJP2016/Result.framework"
+  install_framework "Pods-iOSDCJP2016/SVProgressHUD.framework"
   install_framework "Pods-iOSDCJP2016/URLNavigator.framework"
   install_framework "Pods-iOSDCJP2016/Unbox.framework"
-  install_framework "Pods-iOSDCJP2016/AirshipKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iOSDCJP2016/APIKit.framework"
@@ -99,7 +99,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iOSDCJP2016/Alamofire.framework"
   install_framework "Pods-iOSDCJP2016/AlamofireImage.framework"
   install_framework "Pods-iOSDCJP2016/Result.framework"
+  install_framework "Pods-iOSDCJP2016/SVProgressHUD.framework"
   install_framework "Pods-iOSDCJP2016/URLNavigator.framework"
   install_framework "Pods-iOSDCJP2016/Unbox.framework"
-  install_framework "Pods-iOSDCJP2016/AirshipKit.framework"
 fi

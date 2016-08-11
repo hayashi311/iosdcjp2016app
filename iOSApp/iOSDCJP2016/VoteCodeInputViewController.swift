@@ -9,6 +9,7 @@
 import UIKit
 import APIKit
 import URLNavigator
+import SVProgressHUD
 
 class VoteCodeInputViewController: UIViewController {
 
@@ -44,15 +45,17 @@ class VoteCodeInputViewController: UIViewController {
         guard let voteCode = textField.text else { return }
         NSUserDefaults.standardUserDefaults().vodeCode = voteCode
         textField.resignFirstResponder()
+        SVProgressHUD.show()
         let r = WebAPI.VoteRequest(ono: voteCode, nid: nid)
         APIKit.Session.sendRequest(r) {
             [weak self] result in
             switch result {
-            case let .Success(response):
-                print(response)
+            case .Success:
+                SVProgressHUD.showSuccessWithStatus("Yeah!")
+                SVProgressHUD.dismissWithDelay(0.5)
                 self?.performSegueWithIdentifier("Exit", sender: self)
             case let .Failure(e):
-                print(e)
+                SVProgressHUD.showErrorWithStatus("oh...")
             }
         }
     }
