@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-C0-6mM">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-AE-5jH">
                                 <rect key="frame" x="240" y="274" width="120" height="51"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CwO-C0-6mM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QVd-FV-hu5"/>
-                            <constraint firstItem="CwO-C0-6mM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="SIu-yT-JCl"/>
+                            <constraint firstItem="DgG-AE-5jH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3qc-ap-7Rd"/>
+                            <constraint firstItem="DgG-AE-5jH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ggc-OV-kDB"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="120" height="51"/>
+        <image name="title" width="120" height="51"/>
     </resources>
 </document>

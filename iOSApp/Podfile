@@ -11,4 +11,3 @@ target 'iOSDCJP2016' do
   pod 'AcknowList'
   pod 'SVProgressHUD'
 end
-
