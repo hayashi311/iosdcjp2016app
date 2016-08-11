@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         UINavigationBar.appearance().tintColor = UIColor.accentColor()
-        NotificationService.sharedInstance.connect()
+//        NotificationService.sharedInstance.connect()
         Navigator.map("iosdc://vote/<nid>") {
             (URL, values) -> Bool in
             guard let c = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("VoteCodeInputViewController") as? VoteCodeInputViewController else {

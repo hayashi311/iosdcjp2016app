@@ -10,7 +10,7 @@ import Foundation
 import APIKit
 import Unbox
 
-let APIBaseURL = "http://iosdc.herokuapp.com"
+let APIBaseURL = "https://iosdc-herokuapp-com.global.ssl.fastly.net"
 
 protocol IOSDCRequestType: RequestType {
     
