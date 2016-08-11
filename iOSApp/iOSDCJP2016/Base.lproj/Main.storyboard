@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-LC-8f9">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -28,7 +28,7 @@
                             <constraint firstItem="XL6-LC-8f9" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Bf4-QG-BGH"/>
                             <constraint firstAttribute="trailing" secondItem="XL6-LC-8f9" secondAttribute="trailing" id="EMp-Iu-esa"/>
                             <constraint firstItem="XL6-LC-8f9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Zwc-Dg-cjt"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="XL6-LC-8f9" secondAttribute="bottom" id="gEU-h1-y5h"/>
+                            <constraint firstAttribute="bottom" secondItem="XL6-LC-8f9" secondAttribute="bottom" id="itl-I7-MBn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2oo-Ks-Wbe"/>
@@ -388,7 +388,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Nnf-9z-F3p">
+                            <tableViewSection footerTitle="会場内のWi-Fi接続はクックパッド株式会社の提供でお使い頂けます。運営の妨げとなりますのでモバイルルータやテザリングは使用しないでください。ネットワークの構築運用はCONBUのボランティア協力によって実現しています" id="Nnf-9z-F3p">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wpy-yq-QmH" style="IBUITableViewCellStyleDefault" id="EJY-0c-wdt">
                                         <rect key="frame" x="0.0" y="355" width="600" height="44"/>
