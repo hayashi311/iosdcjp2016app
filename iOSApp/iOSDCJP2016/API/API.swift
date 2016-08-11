@@ -89,7 +89,7 @@ final class WebAPI {
         }
 
         var path: String {
-            return "/api/vote"
+            return "/2016/c/api/vote/\(ono)/\(nid)/"
         }
         
         var method: HTTPMethod {
@@ -102,13 +102,13 @@ final class WebAPI {
             }
         }
 
-        var queryParameters: [String : AnyObject]? {
-            print(self)
-            return [
-                "ono": ono,
-                "nid": nid
-            ]
-        }
+//        var queryParameters: [String : AnyObject]? {
+//            print(self)
+//            return [
+//                "ono": ono,
+//                "nid": nid
+//            ]
+//        }
         
         func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> VoteResponse {
             print(object)

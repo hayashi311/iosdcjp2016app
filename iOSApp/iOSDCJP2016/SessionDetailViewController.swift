@@ -27,9 +27,8 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var companyLabel: UILabel!
 
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +37,7 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
             builder.color = UIColor.secondaryTextColor()
         }
         
-        startAtLabel.attributedText = NSAttributedString(string: session.startAt + "- (\(session.time))", style: .Body) {
+        startAtLabel.attributedText = NSAttributedString(string: session.startAt + "- \(session.time)", style: .Body) {
             builder in
             builder.color = UIColor.secondaryTextColor()
         }
@@ -81,7 +80,6 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
             iconImageView.image = nil
         }
 
-
         header.bounds = CGRect(origin: CGPointZero, size: UIScreen.mainScreen().bounds.size)
         header.setNeedsLayout()
         header.layoutIfNeeded()
@@ -92,6 +90,7 @@ class SessionDetailViewController: UIViewController, UITableViewDataSource, UITa
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+        
     }
     
     @IBAction func handleVoteButtonTapped(sender: UIBarButtonItem) {

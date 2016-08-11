@@ -46,6 +46,8 @@ class SessionsViewController: UIViewController, EntityProvider, UITableViewDeleg
                 print(e)
             }
         }
+
+        title = "セッション"
     }
     
     override func viewWillAppear(animated: Bool) {
