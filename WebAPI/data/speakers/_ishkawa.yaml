@@ -11,6 +11,7 @@ session:
   nid: '139'
   room: A
   speaker:
+    image: /static/speakers/_ishkawa.jpg
     name: ishkawa
     twitter_account: _ishkawa
   start_at: 2016/08/20 11:00

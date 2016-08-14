@@ -12,6 +12,7 @@ session:
   nid: '184'
   room: A
   speaker:
+    image: /static/speakers/TachibanaKaoru.jpg
     name: TachibanaKaoru
     twitter_account: TachibanaKaoru
   start_at: 2016/08/20 11:40

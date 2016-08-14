@@ -12,6 +12,7 @@ session:
   nid: '110'
   room: B
   speaker:
+    image: /static/speakers/bilyakudan.png
     name: へんてこ
     twitter_account: bilyakudan
   start_at: 2016/08/19 19:05

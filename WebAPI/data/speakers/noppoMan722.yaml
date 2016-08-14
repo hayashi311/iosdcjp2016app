@@ -16,6 +16,7 @@ session:
   nid: '72'
   room: B
   speaker:
+    image: /static/speakers/noppoMan722.jpg
     name: Yuki Takei
     twitter_account: noppoMan722
   start_at: 2016/08/19 17:40

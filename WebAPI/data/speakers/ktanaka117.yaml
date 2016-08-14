@@ -8,6 +8,7 @@ session:
   nid: '34'
   room: A
   speaker:
+    image: /static/speakers/ktanaka117.jpg
     name: 田中賢治
     twitter_account: ktanaka117
   start_at: 2016/08/19 18:20

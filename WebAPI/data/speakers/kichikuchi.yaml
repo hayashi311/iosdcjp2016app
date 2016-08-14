@@ -18,6 +18,7 @@ session:
   nid: '123'
   room: B
   speaker:
+    image: /static/speakers/kichikuchi.jpg
     name: kazunori kikuchi
     twitter_account: kichikuchi
   start_at: 2016/08/19 18:20

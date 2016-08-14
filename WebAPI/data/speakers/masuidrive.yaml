@@ -8,6 +8,7 @@ session:
   nid: '100'
   room: A
   speaker:
+    image: /static/speakers/masuidrive.jpg
     name: Yuichiro Masui
     twitter_account: masuidrive
   start_at: 2016/08/20 14:55

@@ -8,6 +8,7 @@ session:
   nid: '129'
   room: A
   speaker:
+    image: /static/speakers/rayfix.jpg
     name: Ray Fix
     twitter_account: rayfix
   start_at: 2016/08/20 13:55

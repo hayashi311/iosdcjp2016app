@@ -8,6 +8,7 @@ session:
   nid: '165'
   room: A
   speaker:
+    image: /static/speakers/yimajo.png
     name: yimajo
     twitter_account: yimajo
   start_at: 2016/08/20 16:15

@@ -12,6 +12,7 @@ session:
   nid: '84'
   room: A
   speaker:
+    image: /static/speakers/shobyshoby.jpg
     name: shoby
     twitter_account: shobyshoby
   start_at: 2016/08/19 17:40

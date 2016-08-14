@@ -8,6 +8,7 @@ session:
   nid: '40'
   room: B
   speaker:
+    image: /static/speakers/usamik26.jpg
     name: 宇佐見 公輔
     twitter_account: usamik26
   start_at: 2016/08/19 18:45

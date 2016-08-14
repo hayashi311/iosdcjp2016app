@@ -14,6 +14,7 @@ session:
   nid: '65'
   room: B
   speaker:
+    image: /static/speakers/nakajijapan.png
     name: nakajijapan
     twitter_account: nakajijapan
   start_at: 2016/08/20 14:20

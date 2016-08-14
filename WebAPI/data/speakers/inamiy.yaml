@@ -8,6 +8,7 @@ session:
   nid: '32'
   room: A
   speaker:
+    image: /static/speakers/inamiy.jpg
     name: 稲見 泰宏
     twitter_account: inamiy
   start_at: 2016/08/20 13:00

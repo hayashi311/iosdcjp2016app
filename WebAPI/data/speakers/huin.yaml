@@ -14,6 +14,7 @@ session:
   nid: '36'
   room: A
   speaker:
+    image: /static/speakers/huin.png
     name: huin
     twitter_account: huin
   start_at: 2016/08/19 18:45

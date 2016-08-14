@@ -9,6 +9,7 @@ session:
   nid: '54'
   room: B
   speaker:
+    image: /static/speakers/koogawa.png
     name: Kosuke Ogawa
     twitter_account: koogawa
   start_at: 2016/08/20 13:35

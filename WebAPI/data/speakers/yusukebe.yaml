@@ -9,6 +9,7 @@ session:
   nid: '122'
   room: B
   speaker:
+    image: /static/speakers/yusukebe.jpg
     name: Yusuke Wada
     twitter_account: yusukebe
   start_at: 2016/08/20 13:00

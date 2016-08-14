@@ -8,6 +8,7 @@ session:
   nid: '133'
   room: A
   speaker:
+    image: /static/speakers/mao_nishi.jpg
     name: Mao Nishi
     twitter_account: mao_nishi
   start_at: 2016/08/20 13:35

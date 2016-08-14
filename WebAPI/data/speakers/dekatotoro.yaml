@@ -8,6 +8,7 @@ session:
   nid: '71'
   room: B
   speaker:
+    image: /static/speakers/dekatotoro.jpg
     name: Yuji Hato
     twitter_account: dekatotoro
   start_at: 2016/08/20 15:40

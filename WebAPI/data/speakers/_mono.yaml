@@ -14,6 +14,7 @@ session:
   nid: '155'
   room: B
   speaker:
+    image: /static/speakers/_mono.png
     name: 小野 将之
     twitter_account: _mono
   start_at: 2016/08/20 14:55

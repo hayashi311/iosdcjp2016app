@@ -8,6 +8,7 @@ session:
   nid: '78'
   room: B
   speaker:
+    image: /static/speakers/nolili.jpg
     name: Noritaka Kamiya
     twitter_account: nolili
   start_at: 2016/08/20 13:55
