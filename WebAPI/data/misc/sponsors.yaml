@@ -64,8 +64,8 @@ tiers:
       - &handslab
         name: ハンズラボ株式会社
         description:
-        image:
-        url:
+        image: https://iosdc.jp/2016/images/sponsor/platinum-handslab.png
+        url: https://www.hands-lab.com/
   -
     name: ゴールドスポンサー
     sponsors:
@@ -81,6 +81,12 @@ tiers:
           株式会社トレタが手がけているのは、飲食店向けの予約／顧客管理に特化したクラウド型サービスです。紙の予約台帳に置き換わるiPad予約台帳アプリ「トレタ」を中心に、最近では各社POSシステムとシームレスに連携する「POSコネクト」、様々なグルメサービスからの即時予約と予約実績管理を実現する「メディアコネクト」などの新機能を次々に開発しています。トレタは、予約管理・顧客管理の面から飲食店のIT化を牽引する「予約サービスのインフラ」を目指します。
         image: https://iosdc.jp/2016/images/sponsor/gold-toreta.png
         url: https://toreta.in/jp/
+      -
+        name: からくり株式会社
+        description: |-
+          からくり株式会社は「想像できないことを創造する」という企業理念のもとにiOS/Androidアプリを開発している会社です。iOS/Androidの黎明期より、ニュースアプリ、動画視聴アプリ、販促アプリ、電子書籍アプリ、写真売買アプリなどを手がけています。クライアントが保有しているコンテンツの活用、店舗への来店促進、売上利益を上げるという経営課題の1つの解決策として、アプリ開発を提供しています。
+        image: https://iosdc.jp/2016/images/sponsor/gold-caraquri.png
+        url: http://caraquri.com/
   -
     name: シルバースポンサー
     sponsors:
@@ -162,6 +168,11 @@ tiers:
         description:
         image:
         url: http://voyagegroup.com
+      -
+        name: VOYAGE GROUP
+        description:
+        image:
+        url: http://voyagegroup.com
   -
     name: Wi-Fiスポンサー
     sponsors:
@@ -197,7 +208,38 @@ tiers:
       -
         *livesense
   -
-    name: 運営協力
+    name: メディアスポンサー
+    sponsors:
+      -
+        name: トゥギャッター株式会社
+        description:
+        image: https://iosdc.jp/2016/images/sponsor/gold-togetter.png
+        url: http://togetter.com/
+  -
+    name: ネットワーク技術協力
+    sponsors:
+      -
+        name: CONBU
+        description:
+        image: https://iosdc.jp/2016/images/sponsor/network-conbu.png
+        url: https://conbu.net/
+      -
+        name: ジュニパーネットワークス株式会社
+        description:
+        image: https://iosdc.jp/2016/images/sponsor/network-juniper.png
+        url: https://www.juniper.net/jp/jp/
+      - &dmmlabo
+        name: 株式会社DMM.comラボ
+        description:
+        image: https://iosdc.jp/2016/images/sponsor/network-dmm-labo.png
+        url: http://labo.dmm.com
+      -
+        name: 株式会社ブロードバンドタワー
+        description:
+        image: https://iosdc.jp/2016/images/sponsor/network-bbtower.png
+        url: http://www.bbtower.co.jp
+  -
+    name: ストリーミング配信協力
     sponsors:
       -
         name: デジタルサーカス株式会社
@@ -205,3 +247,8 @@ tiers:
           デジタルサーカスは「スマートフォン」「デジタルマーケティングプラットフォーム」の領域で活動する技術屋集団です。「不可能に思えることを実現する」を合言葉に多数クライアントに最先端のITサービスを提供しています。
         image: https://iosdc.jp/2016/images/sponsor/accounting-digitalcircus.png
         url: http://www.dgcircus.com
+  -
+    name: 運営協力
+    sponsors:
+      -
+        *dmmlabo
