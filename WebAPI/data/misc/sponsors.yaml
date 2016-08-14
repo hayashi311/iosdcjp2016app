@@ -237,13 +237,13 @@ tiers:
     name: ストリーミング配信協力
     sponsors:
       -
+        *dmmlabo
+  -
+    name: 運営協力
+    sponsors:
+      -
         name: デジタルサーカス株式会社
         description: |-
           デジタルサーカスは「スマートフォン」「デジタルマーケティングプラットフォーム」の領域で活動する技術屋集団です。「不可能に思えることを実現する」を合言葉に多数クライアントに最先端のITサービスを提供しています。
         image: https://iosdc.jp/2016/images/sponsor/accounting-digitalcircus.png
         url: http://www.dgcircus.com
-  -
-    name: 運営協力
-    sponsors:
-      -
-        *dmmlabo
