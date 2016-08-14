@@ -161,17 +161,12 @@ tiers:
       -
         name: クラウド印刷API「Codenberg」
         description:
-        image:
+        image: https://iosdc.jp/2016/images/sponsor/silver-codenberg.png
         url: https://codenberg.io/
       -
         name: VOYAGE GROUP
         description:
-        image:
-        url: http://voyagegroup.com
-      -
-        name: VOYAGE GROUP
-        description:
-        image:
+        image: https://iosdc.jp/2016/images/sponsor/silver-voyage-group.png
         url: http://voyagegroup.com
   -
     name: Wi-Fiスポンサー
