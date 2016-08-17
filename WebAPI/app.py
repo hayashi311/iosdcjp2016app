@@ -11,6 +11,7 @@ import datetime
 import time
 import uuid
 import sys
+from flask.ext.sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
@@ -19,6 +20,9 @@ base_path = path.dirname(path.abspath(__file__))
 ua_app_key = environ['UA_APP_KEY']
 ua_master_secret = environ['UA_MASTER_SECRET']
 airship = ua.Airship(ua_app_key, ua_master_secret)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = environ['DATABASE_URL']
+db = SQLAlchemy(app)
 
 
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
