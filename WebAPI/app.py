@@ -11,7 +11,7 @@ import datetime
 import time
 import uuid
 import sys
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
@@ -21,8 +21,22 @@ ua_app_key = environ['UA_APP_KEY']
 ua_master_secret = environ['UA_MASTER_SECRET']
 airship = ua.Airship(ua_app_key, ua_master_secret)
 
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = environ['DATABASE_URL']
 db = SQLAlchemy(app)
+
+
+class Vote(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    code = db.Column(db.String(80))
+    nid = db.Column(db.String(80))
+
+    def __init__(self, code, nid):
+        self.code = code
+        self.nid = nid
+
+    def __repr__(self):
+        return '<Vote %r,%r>' % (self.code, self.nid)
 
 
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
