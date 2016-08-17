@@ -27,8 +27,7 @@ db = SQLAlchemy(app)
 
 
 class Vote(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    code = db.Column(db.String(80))
+    code = db.Column(db.String(80), primary_key=True)
     nid = db.Column(db.String(80))
 
     def __init__(self, code, nid):
@@ -39,25 +38,25 @@ class Vote(db.Model):
         return '<Vote %r,%r>' % (self.code, self.nid)
 
 
+class Talk(db.Model):
+    nid = db.Column(db.String(80), primary_key=True)
+    title = db.Column(db.String(1000))
+    speaker = db.Column(db.String(80))
+
+    def __init__(self, nid, title, speaker):
+        self.nid = nid
+        self.title = title
+        self.speaker = speaker
+
+    def __repr__(self):
+        return '<Talk %r,%r>' % (self.nid, self.title)
+
+
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, datetime.datetime):
             return o.isoformat()
         return super(DateTimeSupportJSONEncoder, self).default(o)
-
-
-class Session:
-    def __init__(self, title, name, room, type=None):
-        self.title = title
-        self.name = name
-        self.room = room
-
-    def to_json(self):
-        return json.dumps(self.to_hash())
-
-    def to_hash(self):
-        return {'title': self.title, 'name': self.name, 'room': self.room,
-                'type': 'session'}
 
 
 class Notification:
@@ -209,6 +208,22 @@ def get_misc(entity):
         yaml_data = open(m).read()
         return jsonify(yaml.load(yaml_data))
     abort(404)
+
+
+def vote(code, nid):
+    v = Vote.query.get(code)
+    if v is not None:
+        v.nid = nid
+        try:
+            db.session.add(v)
+            db.session.commit()
+            return True
+        except:
+            db.session.rollback()
+    return False
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
