@@ -7,8 +7,6 @@ session:
   links:
   - title: '@eduraaa'
     url: https://twitter.com/eduraaa
-  - title: 投票
-    url: iosdc://vote/55
   nid: '55'
   room: A
   speaker:

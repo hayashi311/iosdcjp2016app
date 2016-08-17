@@ -7,8 +7,6 @@ session:
   links:
   - title: '@shobyshoby'
     url: https://twitter.com/shobyshoby
-  - title: 投票
-    url: iosdc://vote/84
   nid: '84'
   room: A
   speaker:

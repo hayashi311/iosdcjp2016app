@@ -9,8 +9,6 @@ session:
   links:
   - title: '@wasabeef_jp'
     url: https://twitter.com/wasabeef_jp
-  - title: 投票
-    url: iosdc://vote/117
   nid: '117'
   room: A
   speaker:

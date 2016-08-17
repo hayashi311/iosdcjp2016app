@@ -3,8 +3,6 @@ session:
   links:
   - title: '@iMickx'
     url: https://twitter.com/iMickx
-  - title: 投票
-    url: iosdc://vote/188
   nid: '188'
   room: A
   speaker:

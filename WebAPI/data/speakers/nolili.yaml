@@ -3,8 +3,6 @@ session:
   links:
   - title: '@nolili'
     url: https://twitter.com/nolili
-  - title: 投票
-    url: iosdc://vote/78
   nid: '78'
   room: B
   speaker:

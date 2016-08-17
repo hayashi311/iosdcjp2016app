@@ -9,8 +9,6 @@ session:
   links:
   - title: '@huin'
     url: https://twitter.com/huin
-  - title: 投票
-    url: iosdc://vote/36
   nid: '36'
   room: A
   speaker:

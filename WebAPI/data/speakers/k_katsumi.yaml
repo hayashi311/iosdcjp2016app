@@ -6,8 +6,6 @@ session:
   links:
   - title: '@k_katsumi'
     url: https://twitter.com/k_katsumi
-  - title: 投票
-    url: iosdc://vote/208
   nid: '208'
   room: A
   speaker:

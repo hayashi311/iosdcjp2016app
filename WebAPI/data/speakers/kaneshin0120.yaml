@@ -4,8 +4,6 @@ session:
   links:
   - title: '@kaneshin0120'
     url: https://twitter.com/kaneshin0120
-  - title: 投票
-    url: iosdc://vote/37
   nid: '37'
   room: A
   speaker:

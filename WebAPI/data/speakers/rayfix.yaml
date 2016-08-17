@@ -3,8 +3,6 @@ session:
   links:
   - title: '@rayfix'
     url: https://twitter.com/rayfix
-  - title: 投票
-    url: iosdc://vote/129
   nid: '129'
   room: A
   speaker:
