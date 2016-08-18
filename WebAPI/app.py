@@ -52,6 +52,17 @@ class Talk(db.Model):
         return '<Talk %r,%r>' % (self.nid, self.title)
 
 
+class Address(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    address = db.Column(db.String(1000))
+
+    def __init__(self, address):
+        self.address = address
+
+    def __repr__(self):
+        return '<EMail %r>' % self.address
+
+
 class DateTimeSupportJSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, datetime.datetime):
@@ -216,7 +227,6 @@ def vote(code, nid):
         v.nid = nid
         try:
             db.session.add(v)
-            db.session.flush()
             db.session.commit()
             return True
         except:
@@ -247,7 +257,18 @@ def thanks():
 
 @app.route('/vote/thanks', methods=["POST"])
 def post_thanks():
-    return render_template("thanks.html")
+    mail = request.form['email']
+    if mail is not None:
+        db.session.add(Address(address=mail))
+        db.session.commit()
+        # print(mail)
+        # try:
+        #     db.session.add(EMail(address=mail))
+        #     db.session.commit()
+        # except:
+        #     db.session.rollback()
+        #     return render_template("thanks.html", error=True)
+    return render_template("thanks.html", ok=True)
 
 
 if __name__ == '__main__':
