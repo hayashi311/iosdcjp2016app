@@ -3,6 +3,8 @@ session:
   links:
   - title: '@meyco'
     url: https://twitter.com/meyco
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/124
   nid: '124'
   room: B
   speaker:

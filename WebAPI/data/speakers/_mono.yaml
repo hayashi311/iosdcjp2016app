@@ -9,6 +9,8 @@ session:
   links:
   - title: '@_mono'
     url: https://twitter.com/_mono
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/155
   nid: '155'
   room: B
   speaker:

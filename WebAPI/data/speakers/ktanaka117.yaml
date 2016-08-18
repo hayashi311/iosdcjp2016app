@@ -3,6 +3,8 @@ session:
   links:
   - title: '@ktanaka117'
     url: https://twitter.com/ktanaka117
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/34
   nid: '34'
   room: A
   speaker:

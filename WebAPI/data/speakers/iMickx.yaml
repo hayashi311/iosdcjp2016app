@@ -3,6 +3,8 @@ session:
   links:
   - title: '@iMickx'
     url: https://twitter.com/iMickx
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/188
   nid: '188'
   room: A
   speaker:

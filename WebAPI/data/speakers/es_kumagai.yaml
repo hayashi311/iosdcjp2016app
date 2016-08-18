@@ -5,6 +5,8 @@ session:
   links:
   - title: '@es_kumagai'
     url: https://twitter.com/es_kumagai
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/86
   nid: '86'
   room: A
   speaker:

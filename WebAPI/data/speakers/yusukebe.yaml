@@ -4,6 +4,8 @@ session:
   links:
   - title: '@yusukebe'
     url: https://twitter.com/yusukebe
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/122
   nid: '122'
   room: B
   speaker:

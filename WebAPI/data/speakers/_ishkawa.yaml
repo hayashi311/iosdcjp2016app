@@ -6,6 +6,8 @@ session:
   links:
   - title: '@_ishkawa'
     url: https://twitter.com/_ishkawa
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/139
   nid: '139'
   room: A
   speaker:

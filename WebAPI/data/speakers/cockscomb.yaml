@@ -5,6 +5,8 @@ session:
   links:
   - title: '@cockscomb'
     url: https://twitter.com/cockscomb
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/176
   nid: '176'
   room: A
   speaker:

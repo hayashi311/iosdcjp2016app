@@ -7,6 +7,8 @@ session:
   links:
   - title: '@shmdevelop'
     url: https://twitter.com/shmdevelop
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/161
   nid: '161'
   room: B
   speaker:

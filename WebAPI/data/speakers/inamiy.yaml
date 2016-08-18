@@ -3,6 +3,8 @@ session:
   links:
   - title: '@inamiy'
     url: https://twitter.com/inamiy
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/32
   nid: '32'
   room: A
   speaker:

@@ -11,6 +11,8 @@ session:
   links:
   - title: '@noppoMan722'
     url: https://twitter.com/noppoMan722
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/72
   nid: '72'
   room: B
   speaker:

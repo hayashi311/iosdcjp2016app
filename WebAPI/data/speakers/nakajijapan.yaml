@@ -9,6 +9,8 @@ session:
   links:
   - title: '@nakajijapan'
     url: https://twitter.com/nakajijapan
+  - title: 投票
+    url: https://iosdc.herokuapp.com/vote/65
   nid: '65'
   room: B
   speaker:
