@@ -3,8 +3,6 @@ session:
   links:
   - title: '@yopita_'
     url: https://twitter.com/yopita_
-  - title: 投票
-    url: https://iosdc.herokuapp.com/vote/46
   nid: '46'
   room: A
   speaker:

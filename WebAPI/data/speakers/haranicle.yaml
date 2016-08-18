@@ -7,8 +7,6 @@ session:
   links:
   - title: '@haranicle'
     url: https://twitter.com/haranicle
-  - title: 投票
-    url: https://iosdc.herokuapp.com/vote/162
   nid: '162'
   room: A
   speaker:

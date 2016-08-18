@@ -21,7 +21,7 @@
   {% endif %}
       <form class="form-signin" action="/vote/{{ talk.nid }}" method="post">
         <h2 class="form-signin-heading">{{ talk.title }}</h2>
-        <p>チケットIDを入力して投票してください（重複投票の場合は最新の票が採用されます）</p>
+        <p>お申し込み番号(01から始まる12桁の文字列)を入力して投票してください（重複投票の場合は最新の票が採用されます）</p>
         <label for="inputCode" class="sr-only">Email address</label>
         <input type="text" id="inputCode" name="code" class="form-control" placeholder="チケットID (ex: 01ABCDEFG)" required autofocus>
         <hr>

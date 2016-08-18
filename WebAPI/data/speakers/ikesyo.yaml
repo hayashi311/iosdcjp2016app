@@ -6,8 +6,6 @@ session:
   links:
   - title: '@ikesyo'
     url: https://twitter.com/ikesyo
-  - title: 投票
-    url: https://iosdc.herokuapp.com/vote/189
   nid: '189'
   room: A
   speaker:

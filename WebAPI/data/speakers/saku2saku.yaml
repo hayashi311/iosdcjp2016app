@@ -5,8 +5,6 @@ session:
   links:
   - title: '@saku2saku'
     url: https://twitter.com/saku2saku
-  - title: 投票
-    url: https://iosdc.herokuapp.com/vote/187
   nid: '187'
   room: A
   speaker:

@@ -8,8 +8,6 @@ session:
   links:
   - title: '@niwatako'
     url: https://twitter.com/niwatako
-  - title: 投票
-    url: https://iosdc.herokuapp.com/vote/182
   nid: '182'
   room: A
   speaker:
