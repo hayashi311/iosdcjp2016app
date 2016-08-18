@@ -6,7 +6,8 @@ tiers:
         name: ヤフー株式会社
         description: |-
           日本最大級のインターネットの総合情報サイト「Yahoo! JAPAN」を運営するヤフー株式会社は、ITを使って人々や社会のさまざまな「課題」を解決していく「課題解決エンジン」として、いろいろな取り組みを進めています。
-        image: https://iosdc.jp/2016/images/sponsor/diamond-yahoo.png
+        # image: https://iosdc.jp/2016/images/sponsor/diamond-yahoo.png
+        image:
         url: http://www.yahoo.co.jp
       -
         name: UIEvolution株式会社
