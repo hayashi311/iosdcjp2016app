@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from os import path, environ
-from flask import Flask, jsonify, abort
+from flask import Flask, jsonify, abort, render_template, request, redirect
+from flask import url_for, flash
 import yaml
 import json
 from glob import glob
@@ -12,7 +13,6 @@ import time
 import uuid
 import sys
 from flask_sqlalchemy import SQLAlchemy
-
 
 app = Flask(__name__)
 base_path = path.dirname(path.abspath(__file__))
@@ -216,6 +216,7 @@ def vote(code, nid):
         v.nid = nid
         try:
             db.session.add(v)
+            db.session.flush()
             db.session.commit()
             return True
         except:
@@ -223,6 +224,30 @@ def vote(code, nid):
     return False
 
 
+@app.route('/vote/<nid>', methods=["GET"])
+def get_vote(nid):
+    t = Talk.query.get(nid)
+    if t is None:
+        abort(404)
+    return render_template("vote.html", talk=t)
+
+
+@app.route('/vote/<nid>', methods=["POST"])
+def post_vote(nid):
+    if vote(request.form['code'], nid):
+        return redirect(url_for('thanks'))
+    t = Talk.query.get(nid)
+    return render_template("vote.html", talk=t, error=True)
+
+
+@app.route('/vote/thanks', methods=["GET"])
+def thanks():
+    return render_template("thanks.html")
+
+
+@app.route('/vote/thanks', methods=["POST"])
+def post_thanks():
+    return render_template("thanks.html")
 
 
 if __name__ == '__main__':
