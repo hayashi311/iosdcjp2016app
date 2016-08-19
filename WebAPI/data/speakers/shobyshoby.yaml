@@ -7,8 +7,8 @@ session:
   links:
   - title: '@shobyshoby'
     url: https://twitter.com/shobyshoby
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/84
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/84
   nid: '84'

@@ -4,8 +4,8 @@ session:
   links:
   - title: '@yusukebe'
     url: https://twitter.com/yusukebe
-  - title: '#iosdc #b'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23b
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/122
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/122
   nid: '122'

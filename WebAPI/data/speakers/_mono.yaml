@@ -9,8 +9,8 @@ session:
   links:
   - title: '@_mono'
     url: https://twitter.com/_mono
-  - title: '#iosdc #b'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23b
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/155
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/155
   nid: '155'

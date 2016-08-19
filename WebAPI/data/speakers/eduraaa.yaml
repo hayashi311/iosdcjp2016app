@@ -7,8 +7,8 @@ session:
   links:
   - title: '@eduraaa'
     url: https://twitter.com/eduraaa
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/55
   nid: '55'
   room: A
   speaker:

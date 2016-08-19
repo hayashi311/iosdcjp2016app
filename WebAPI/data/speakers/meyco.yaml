@@ -3,8 +3,8 @@ session:
   links:
   - title: '@meyco'
     url: https://twitter.com/meyco
-  - title: '#iosdc #b'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23b
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/124
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/124
   nid: '124'

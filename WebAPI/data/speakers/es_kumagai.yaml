@@ -5,8 +5,8 @@ session:
   links:
   - title: '@es_kumagai'
     url: https://twitter.com/es_kumagai
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/86
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/86
   nid: '86'

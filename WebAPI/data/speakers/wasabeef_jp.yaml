@@ -9,8 +9,8 @@ session:
   links:
   - title: '@wasabeef_jp'
     url: https://twitter.com/wasabeef_jp
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/117
   nid: '117'
   room: A
   speaker:

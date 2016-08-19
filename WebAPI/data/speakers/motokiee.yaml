@@ -12,8 +12,8 @@ session:
   links:
   - title: '@motokiee'
     url: https://twitter.com/motokiee
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/154
   nid: '154'
   room: A
   speaker:

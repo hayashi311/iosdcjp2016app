@@ -3,8 +3,8 @@ session:
   links:
   - title: '@iMickx'
     url: https://twitter.com/iMickx
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/188
   nid: '188'
   room: A
   speaker:

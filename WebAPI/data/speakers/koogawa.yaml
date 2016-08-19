@@ -4,8 +4,8 @@ session:
   links:
   - title: '@koogawa'
     url: https://twitter.com/koogawa
-  - title: '#iosdc #b'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23b
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/54
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/54
   nid: '54'

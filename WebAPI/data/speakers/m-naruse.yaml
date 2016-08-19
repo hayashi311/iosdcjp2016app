@@ -1,8 +1,8 @@
 session:
   description: プログラミングなんて全然わからなかった私が自分の名前でiPhoneアプリをリリースし、気がつけば今iOSエンジニアとしてはたらいています。はじめてXcodeを開いてからの紆余曲折についてお話しします！
   links:
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/173
   nid: '173'
   room: A
   speaker:

@@ -8,8 +8,8 @@ session:
   links:
   - title: '@niwatako'
     url: https://twitter.com/niwatako
-  - title: '#iosdc #a'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/182
   nid: '182'
   room: A
   speaker:

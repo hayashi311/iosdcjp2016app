@@ -7,8 +7,8 @@ session:
   links:
   - title: '@bilyakudan'
     url: https://twitter.com/bilyakudan
-  - title: '#iosdc #b'
-    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23b
+  - title: リンク
+    url: https://iosdc.jp/2016/c/node/110
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/110
   nid: '110'
