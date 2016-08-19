@@ -6,6 +6,8 @@ session:
   links:
   - title: '@k_katsumi'
     url: https://twitter.com/k_katsumi
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/208
   nid: '208'

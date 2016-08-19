@@ -3,6 +3,8 @@ session:
   links:
   - title: '@yimajo'
     url: https://twitter.com/yimajo
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   nid: '165'
   room: A
   speaker:

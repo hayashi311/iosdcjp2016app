@@ -7,6 +7,8 @@ session:
   links:
   - title: '@TachibanaKaoru'
     url: https://twitter.com/TachibanaKaoru
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/184
   nid: '184'

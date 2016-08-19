@@ -13,6 +13,8 @@ session:
   links:
   - title: '@kichikuchi'
     url: https://twitter.com/kichikuchi
+  - title: '#iosdc #b'
+    url: https://twitter.com/search?q=%23iosdc%20%23b
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/123
   nid: '123'

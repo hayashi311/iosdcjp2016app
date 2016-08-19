@@ -3,6 +3,8 @@ session:
   links:
   - title: '@ktanaka117'
     url: https://twitter.com/ktanaka117
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/34
   nid: '34'

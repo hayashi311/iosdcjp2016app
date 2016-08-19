@@ -3,6 +3,8 @@ session:
   links:
   - title: '@rayfix'
     url: https://twitter.com/rayfix
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/129
   nid: '129'

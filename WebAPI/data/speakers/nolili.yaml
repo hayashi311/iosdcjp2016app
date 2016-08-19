@@ -3,6 +3,8 @@ session:
   links:
   - title: '@nolili'
     url: https://twitter.com/nolili
+  - title: '#iosdc #b'
+    url: https://twitter.com/search?q=%23iosdc%20%23b
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/78
   nid: '78'

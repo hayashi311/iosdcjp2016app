@@ -3,6 +3,8 @@ session:
   links:
   - title: '@yopita_'
     url: https://twitter.com/yopita_
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   nid: '46'
   room: A
   speaker:

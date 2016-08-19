@@ -9,6 +9,8 @@ session:
   links:
   - title: '@wasabeef_jp'
     url: https://twitter.com/wasabeef_jp
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   nid: '117'
   room: A
   speaker:

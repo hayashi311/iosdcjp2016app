@@ -15,6 +15,8 @@ session:
   links:
   - title: '@yuky_az'
     url: https://twitter.com/yuky_az
+  - title: '#iosdc #b'
+    url: https://twitter.com/search?q=%23iosdc%20%23b
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/41
   nid: '41'

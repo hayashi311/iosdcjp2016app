@@ -9,6 +9,8 @@ session:
   links:
   - title: '@dealforest'
     url: https://twitter.com/dealforest
+  - title: '#iosdc #a'
+    url: https://twitter.com/search?q=%23iosdc%20%23a
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/116
   nid: '116'
