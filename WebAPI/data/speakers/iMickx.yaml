@@ -4,7 +4,7 @@ session:
   - title: '@iMickx'
     url: https://twitter.com/iMickx
   - title: '#iosdc #a'
-    url: https://twitter.com/search?q=%23iosdc%20%23a
+    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
   nid: '188'
   room: A
   speaker:

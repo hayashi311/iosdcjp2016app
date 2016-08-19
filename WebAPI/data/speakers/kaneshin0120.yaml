@@ -5,7 +5,7 @@ session:
   - title: '@kaneshin0120'
     url: https://twitter.com/kaneshin0120
   - title: '#iosdc #a'
-    url: https://twitter.com/search?q=%23iosdc%20%23a
+    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
   nid: '37'
   room: A
   speaker:

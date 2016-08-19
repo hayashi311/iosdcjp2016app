@@ -7,7 +7,7 @@ session:
   - title: '@_ishkawa'
     url: https://twitter.com/_ishkawa
   - title: '#iosdc #a'
-    url: https://twitter.com/search?q=%23iosdc%20%23a
+    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23a
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/139
   nid: '139'

@@ -7,7 +7,7 @@ session:
   - title: '@smadako'
     url: https://twitter.com/smadako
   - title: '#iosdc #b'
-    url: https://twitter.com/search?q=%23iosdc%20%23b
+    url: https://twitter.com/intent/tweet?text=%23iosdc%20%23b
   - title: 投票
     url: https://iosdc.herokuapp.com/vote/168
   nid: '168'
